@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM Ventor - Selecciona Versión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --cm-blue: #1e40af;
+            --cm-blue-light: #3b82f6;
+            --cm-blue-dark: #1e3a8a;
+            --cm-yellow: #f59e0b;
+            --cm-yellow-dark: #d97706;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #dbeafe 0%, #ffffff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .logo i {
+            font-size: 3rem;
+            color: var(--cm-blue);
+        }
+        
+        .logo-text h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: var(--cm-blue);
+            margin-bottom: 0.25rem;
+        }
+        
+        .logo-text p {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+        
+        .versions {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (min-width: 768px) {
+            .versions {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .version-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .version-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--cm-blue), var(--cm-blue-light));
+        }
+        
+        .version-card.v2::before {
+            background: linear-gradient(90deg, var(--cm-yellow), var(--cm-yellow-dark));
+        }
+        
+        .version-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.08);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .badge.current {
+            background: var(--cm-blue);
+            color: white;
+        }
+        
+        .badge.new {
+            background: var(--cm-yellow);
+            color: var(--text-dark);
+        }
+        
+        .version-card h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .version-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            color: var(--text-light);
+        }
+        
+        .features li i {
+            color: #10b981;
+            font-size: 1.25rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--cm-blue);
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: var(--cm-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--cm-yellow);
+            color: var(--text-dark);
+            box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cm-yellow-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.4);
+        }
+        
+        .info {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .info p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .info a {
+            color: var(--cm-blue);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .info a:hover {
+            color: var(--cm-blue-dark);
+        }
+        
+        @media (max-width: 767px) {
+            .logo-text h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .version-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-industry"></i>
+                <div class="logo-text">
+                    <h1>CM Ventor</h1>
+                    <p>Torres de Enfriamiento</p>
+                </div>
+            </div>
+            <p class="subtitle">Selecciona la versión del sitio web que deseas ver</p>
+        </div>
+        
+        <div class="versions">
+            <div class="version-card">
+                <span class="badge current">Versión Original</span>
+                <h2>Diseño Corporativo</h2>
+                <p>Versión actual del sitio web con diseño tradicional y profesional.</p>
+                
+                <ul class="features">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Diseño corporativo clásico</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Layout directo y funcional</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Navegación simple</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Totalmente responsive</span>
+                    </li>
+                </ul>
+                
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i>
+                    Ver Versión Original
+                </a>
+            </div>
+            
+            <div class="version-card v2">
+                <span class="badge new">Versión Nueva ✨</span>
+                <h2>Diseño Moderno</h2>
+                <p>Nueva versión con diseño contemporáneo, animaciones suaves y mejor experiencia visual.</p>
+                
+                <ul class="features">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Diseño moderno y atractivo</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Animaciones elegantes</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Efectos interactivos</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>UX mejorada</span>
+                    </li>
+                </ul>
+                
+                <a href="index-v2.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-right"></i>
+                    Ver Versión Moderna
+                </a>
+            </div>
+        </div>
+        
+        <div class="info">
+            <p>
+                <i class="fas fa-info-circle" style="color: var(--cm-blue);"></i>
+                Ambas versiones mantienen los colores corporativos de CM Ventor y son completamente funcionales.
+                <br>
+                Lee el archivo <a href="COMPARACION-VERSIONES.md" target="_blank">COMPARACION-VERSIONES.md</a> para más detalles.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+

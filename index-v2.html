@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CM Ventor - Más de 30 años fabricando y manteniendo torres de enfriamiento. Certificados por CTI, instalación, reparación y mantenimiento en toda la República Mexicana.">
+  <meta name="keywords" content="torres de enfriamiento, enfriadores, mantenimiento industrial, CTI, México">
+  <title>CM Ventor S.A. de C.V. | Especialistas en Torres de Enfriamiento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" crossorigin href="css/styles-v2.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__logo" onclick="scrollToSection('inicio')">
+          <i class="fas fa-industry header__logo-icon"></i>
+          <div class="header__logo-text">
+            <h1 class="header__logo-title">CM Ventor</h1>
+            <p class="header__logo-subtitle">Torres de Enfriamiento</p>
+          </div>
+        </div>
+        
+        <nav class="header__nav" id="navMenu">
+          <ul class="header__nav-list">
+            <li><a class="header__nav-link" onclick="scrollToSection('inicio')">Inicio</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('empresa')">Empresa</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('servicios')">Servicios</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('productos')">Productos</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('proyectos')">Proyectos</a></li>
+          </ul>
+          <div class="header__nav-cta">
+            <button class="btn btn-primary" onclick="scrollToSection('contacto')">Contacto</button>
+          </div>
+        </nav>
+        
+        <button class="header__mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero__background">
+      <div class="hero__shape hero__shape--1"></div>
+      <div class="hero__shape hero__shape--2"></div>
+      <div class="hero__shape hero__shape--3"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1 class="hero__title">
+            Especialistas en 
+            <span class="hero__title-highlight">Torres de Enfriamiento</span>
+          </h1>
+          <p class="hero__subtitle">
+            Más de 30 años de experiencia fabricando, instalando y manteniendo torres de enfriamiento 
+            certificadas por el Cooling Technology Institute (CTI) en toda la República Mexicana.
+          </p>
+          
+          <div class="hero__features">
+            <div class="hero__feature">
+              <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
+              Certificados CTI
+            </div>
+            <div class="hero__feature">
+              <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
+              30+ Años de Experiencia
+            </div>
+            <div class="hero__feature">
+              <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
+              Cobertura Nacional
+            </div>
+          </div>
+          
+          <div class="hero__cta">
+            <button class="btn btn-primary btn-large" onclick="scrollToSection('contacto')">
+              Solicitar Cotización
+            </button>
+            <button class="btn btn-secondary btn-large" onclick="scrollToSection('productos')">
+              Ver Productos
+            </button>
+          </div>
+          
+          <div class="hero__contact-quick">
+            <div class="hero__contact-item">
+              <i class="fas fa-phone hero__contact-icon"></i>
+              <div>
+                <p class="hero__contact-label">Llámanos</p>
+                <p class="hero__contact-value">(81) 8327-7529</p>
+              </div>
+            </div>
+            <div class="hero__contact-item">
+              <i class="fas fa-envelope hero__contact-icon"></i>
+              <div>
+                <p class="hero__contact-label">Escríbenos</p>
+                <p class="hero__contact-value">cm_ventor@prodigy.net.mx</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero__image">
+          <div class="hero__image-wrapper">
+            <div class="hero__image-placeholder">
+              <i class="fas fa-industry hero__image-icon"></i>
+              <p>Torre de Enfriamiento CM Ventor</p>
+            </div>
+            
+            <div class="hero__badge hero__badge--1">
+              <span class="hero__badge-number"><i class="fas fa-certificate"></i></span>
+              <span class="hero__badge-text">Certificado CTI</span>
+            </div>
+            
+            <div class="hero__badge hero__badge--2">
+              <span class="hero__badge-number">500+</span>
+              <span class="hero__badge-text">Proyectos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empresa Section -->
+  <section id="empresa" class="profile">
+    <div class="container">
+      <div class="profile__header text-center">
+        <h2 class="profile__title">Sobre CM Ventor</h2>
+        <p class="profile__subtitle">Comprometidos con la excelencia desde 1990</p>
+      </div>
+      
+      <div class="profile__content">
+        <div class="profile__main">
+          <div class="profile__image-container">
+            <div class="profile__image-placeholder">
+              <i class="fas fa-building hero__image-icon"></i>
+              <p>Instalaciones CM Ventor</p>
+            </div>
+          </div>
+          
+          <div class="profile__bio">
+            <h3 class="profile__bio-title">Nuestra Historia</h3>
+            <p class="profile__bio-text">
+              Somos una empresa fundada en 1990, comprometida en evaluar y actualizar constantemente 
+              sus procesos cumpliendo con los estándares internacionales del CTI (Cooling Technology Institute), 
+              a fines de crear valor con nuestros clientes, brindando productos y servicios de la más alta calidad.
+            </p>
+            <p class="profile__bio-text">
+              Con más de tres décadas de experiencia, nos hemos consolidado como líderes en el mercado mexicano 
+              de torres de enfriamiento, ofreciendo soluciones innovadoras y confiables para la industria.
+            </p>
+          </div>
+        </div>
+        
+        <div class="profile__credentials">
+          <div class="card profile__credential-section">
+            <div class="profile__credential-header">
+              <i class="fas fa-bullseye profile__credential-icon"></i>
+              <h4 class="profile__credential-title">Misión</h4>
+            </div>
+            <ul class="profile__credential-list">
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Innovar siempre con la tecnología más avanzada
+              </li>
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Maximizar el desempeño de nuestros clientes
+              </li>
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Ofrecer soluciones integrales en Torres de Enfriamiento
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card profile__credential-section">
+            <div class="profile__credential-header">
+              <i class="fas fa-eye profile__credential-icon"></i>
+              <h4 class="profile__credential-title">Visión</h4>
+            </div>
+            <ul class="profile__credential-list">
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Ser el integrador líder en el mercado mexicano
+              </li>
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Convertirnos en el aliado comercial de preferencia
+              </li>
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Expandir nuestra presencia nacional
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card profile__credential-section">
+            <div class="profile__credential-header">
+              <i class="fas fa-award profile__credential-icon"></i>
+              <h4 class="profile__credential-title">Certificaciones</h4>
+            </div>
+            <ul class="profile__credential-list">
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Cooling Technology Institute (CTI)
+              </li>
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Estándares ISO de calidad
+              </li>
+              <li class="profile__credential-item">
+                <span class="profile__credential-bullet">•</span>
+                Cumplimiento normativo mexicano
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Section -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <div class="services__header text-center">
+        <h2 class="services__title">Nuestros Servicios</h2>
+        <p class="services__subtitle">
+          Soluciones completas para torres de enfriamiento con la más alta calidad y profesionalismo
+        </p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card services__card">
+          <i class="fas fa-tools services__icon"></i>
+          <h3 class="services__card-title">Instalación y Reparación</h3>
+          <p class="services__card-description">
+            Instalación profesional, reparación y mantenimiento especializado de torres de enfriamiento 
+            con personal altamente capacitado y certificado.
+          </p>
+          <ul class="services__features">
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Instalación completa llave en mano
+            </li>
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Reparaciones especializadas de componentes
+            </li>
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Mantenimiento preventivo y correctivo
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card services__card">
+          <i class="fas fa-bolt services__icon"></i>
+          <h3 class="services__card-title">Instalaciones Eléctricas</h3>
+          <p class="services__card-description">
+            Instalaciones mecánicas y eléctricas especializadas, incluyendo tableros eléctricos 
+            para sistemas de enfriamiento industrial.
+          </p>
+          <ul class="services__features">
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Tableros eléctricos industriales
+            </li>
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Instalaciones mecánicas certificadas
+            </li>
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Automatización de sistemas de control
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card services__card">
+          <i class="fas fa-cogs services__icon"></i>
+          <h3 class="services__card-title">Mantenimiento Especializado</h3>
+          <p class="services__card-description">
+            Mantenimiento preventivo y correctivo profesional a intercambiadores de calor 
+            y sistemas de enfriamiento completos.
+          </p>
+          <ul class="services__features">
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Programas de mantenimiento preventivo
+            </li>
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Servicio a intercambiadores de calor
+            </li>
+            <li class="services__feature">
+              <span class="services__feature-check"><i class="fas fa-check"></i></span>
+              Diagnóstico técnico especializado
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos Section -->
+  <section id="productos" class="productos">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <p class="section-subtitle">
+          Tecnología de vanguardia certificada por CTI para máxima eficiencia
+        </p>
+      </div>
+      
+      <div class="grid grid-2">
+        <div class="card">
+          <i class="fas fa-industry services__icon"></i>
+          <h3 class="services__card-title">Torres de Enfriamiento</h3>
+          <p class="services__card-description">
+            Torres de enfriamiento de alta eficiencia con materiales resistentes a la corrosión 
+            y diseño optimizado para máximo rendimiento.
+          </p>
+          <div class="producto-features">
+            <span class="feature">Capacidad: 50-2000 TR</span>
+            <span class="feature">Material: FRP</span>
+            <span class="feature">Certificado CTI</span>
+          </div>
+        </div>
+        
+        <div class="card">
+          <i class="fas fa-fan services__icon"></i>
+          <h3 class="services__card-title">Motores y Ventiladores</h3>
+          <p class="services__card-description">
+            Motores de alta eficiencia energética y ventiladores optimizados para 
+            máximo rendimiento con bajo consumo eléctrico.
+          </p>
+          <div class="producto-features">
+            <span class="feature">Eficiencia IE3</span>
+            <span class="feature">Bajo mantenimiento</span>
+            <span class="feature">Garantía extendida</span>
+          </div>
+        </div>
+        
+        <div class="card">
+          <i class="fas fa-layer-group services__icon"></i>
+          <h3 class="services__card-title">Rellenos Enfriadores</h3>
+          <p class="services__card-description">
+            Rellenos tipo film y splash de alta eficiencia para máximo intercambio térmico 
+            y larga vida útil.
+          </p>
+          <div class="producto-features">
+            <span class="feature">Tipo Film/Splash</span>
+            <span class="feature">Alta eficiencia</span>
+            <span class="feature">Resistente a químicos</span>
+          </div>
+        </div>
+        
+        <div class="card">
+          <i class="fas fa-water services__icon"></i>
+          <h3 class="services__card-title">Aspersores</h3>
+          <p class="services__card-description">
+            Sistemas de aspersión optimizados para distribución uniforme del agua 
+            con bajo consumo y fácil mantenimiento.
+          </p>
+          <div class="producto-features">
+            <span class="feature">Distribución uniforme</span>
+            <span class="feature">Bajo consumo</span>
+            <span class="feature">Fácil mantenimiento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos Section -->
+  <section id="proyectos" class="testimonials">
+    <div class="container">
+      <div class="testimonials__header text-center">
+        <h2 class="testimonials__title">Proyectos Destacados</h2>
+        <p class="testimonials__subtitle">
+          Casos de éxito en toda la República Mexicana
+        </p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="proyecto-icon">
+            <i class="fas fa-hospital"></i>
+          </div>
+          <h3 class="services__card-title">Hospital Regional</h3>
+          <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Monterrey, N.L.</p>
+          <p class="services__card-description">
+            Instalación de 4 torres de enfriamiento de 500 TR cada una para el sistema HVAC 
+            del hospital con tecnología de última generación.
+          </p>
+          <div class="proyecto-stats">
+            <span class="stat-badge">500 TR c/u</span>
+            <span class="stat-badge">4 Torres</span>
+            <span class="stat-badge-year">2023</span>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="proyecto-icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h3 class="services__card-title">Planta Industrial</h3>
+          <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Tampico, Tamps.</p>
+          <p class="services__card-description">
+            Mantenimiento integral y modernización de sistema de enfriamiento para planta 
+            petroquímica con optimización energética.
+          </p>
+          <div class="proyecto-stats">
+            <span class="stat-badge">1500 TR</span>
+            <span class="stat-badge">Modernización</span>
+            <span class="stat-badge-year">2023</span>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="proyecto-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3 class="services__card-title">Centro Comercial</h3>
+          <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Guadalajara, Jal.</p>
+          <p class="services__card-description">
+            Instalación de sistema de enfriamiento para centro comercial con alta eficiencia 
+            energética y bajo impacto ambiental.
+          </p>
+          <div class="proyecto-stats">
+            <span class="stat-badge">800 TR</span>
+            <span class="stat-badge">Eficiencia IE3</span>
+            <span class="stat-badge-year">2022</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonials__stats">
+        <div class="card testimonials__stat">
+          <p class="testimonials__stat-number">30+</p>
+          <p class="testimonials__stat-label">Años de Experiencia</p>
+        </div>
+        <div class="card testimonials__stat">
+          <p class="testimonials__stat-number">500+</p>
+          <p class="testimonials__stat-label">Proyectos Completados</p>
+        </div>
+        <div class="card testimonials__stat">
+          <p class="testimonials__stat-number">100%</p>
+          <p class="testimonials__stat-label">Satisfacción del Cliente</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto Section -->
+  <section id="contacto" class="appointment">
+    <div class="container">
+      <div class="appointment__header text-center">
+        <h2 class="appointment__title">Contáctanos</h2>
+        <p class="appointment__subtitle">
+          Estamos aquí para resolver tus necesidades de enfriamiento industrial
+        </p>
+      </div>
+      
+      <div class="appointment__content">
+        <div class="appointment__info">
+          <div class="card appointment__info-card">
+            <h3 class="appointment__info-title">Información de Contacto</h3>
+            
+            <div class="appointment__contact-item">
+              <i class="fas fa-phone appointment__contact-icon"></i>
+              <div>
+                <p class="appointment__contact-label">Teléfono</p>
+                <a href="tel:+528183277529" class="appointment__contact-value">(81) 8327-7529</a>
+                <p class="appointment__contact-note">Lun - Vie: 8:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+            
+            <div class="appointment__contact-item">
+              <i class="fas fa-envelope appointment__contact-icon"></i>
+              <div>
+                <p class="appointment__contact-label">Email</p>
+                <a href="mailto:cm_ventor@prodigy.net.mx" class="appointment__contact-value">
+                  cm_ventor@prodigy.net.mx
+                </a>
+                <p class="appointment__contact-note">Respuesta en 24 horas</p>
+              </div>
+            </div>
+            
+            <div class="appointment__contact-item">
+              <i class="fas fa-map-marker-alt appointment__contact-icon"></i>
+              <div>
+                <p class="appointment__contact-label">Dirección</p>
+                <p class="appointment__contact-value">
+                  Puerto Vallarta #413<br>
+                  Col. La Fe<br>
+                  San Nicolás de los Garza, N.L.
+                </p>
+              </div>
+            </div>
+            
+            <div class="appointment__map-placeholder">
+              <i class="fas fa-map-marked-alt appointment__map-icon"></i>
+              <p>Mapa de ubicación</p>
+            </div>
+          </div>
+          
+          <div class="card appointment__hours">
+            <h3 class="appointment__hours-title">Horarios de Atención</h3>
+            <div class="appointment__hours-list">
+              <div class="appointment__hours-item">
+                <span class="appointment__hours-day">Lunes - Viernes</span>
+                <span class="appointment__hours-time">8:00 AM - 6:00 PM</span>
+              </div>
+              <div class="appointment__hours-item">
+                <span class="appointment__hours-day">Sábados</span>
+                <span class="appointment__hours-time">8:00 AM - 2:00 PM</span>
+              </div>
+              <div class="appointment__hours-item appointment__hours-item--closed">
+                <span class="appointment__hours-day">Domingos</span>
+                <span class="appointment__hours-time">Cerrado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="appointment__form-container">
+          <form class="card appointment__form" id="contactForm">
+            <h3 class="appointment__form-title">Solicita una Cotización</h3>
+            
+            <div class="appointment__form-row">
+              <div class="appointment__form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+              
+              <div class="appointment__form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa">
+              </div>
+            </div>
+            
+            <div class="appointment__form-row">
+              <div class="appointment__form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="appointment__form-group">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required>
+              </div>
+            </div>
+            
+            <div class="appointment__form-group">
+              <label for="servicio">Servicio de Interés</label>
+              <select id="servicio" name="servicio">
+                <option value="">Seleccionar servicio</option>
+                <option value="instalacion">Instalación</option>
+                <option value="mantenimiento">Mantenimiento</option>
+                <option value="reparacion">Reparación</option>
+                <option value="cotizacion">Cotización de Productos</option>
+              </select>
+            </div>
+            
+            <div class="appointment__form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+              Enviar Mensaje
+            </button>
+            
+            <p class="appointment__form-note">
+              * Campos requeridos. Responderemos en menos de 24 horas.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section footer__section--main">
+          <div class="footer__logo">
+            <i class="fas fa-industry footer__logo-icon"></i>
+            <div class="footer__logo-text">
+              <p class="footer__logo-title">CM Ventor</p>
+              <p class="footer__logo-subtitle">Torres de Enfriamiento</p>
+            </div>
+          </div>
+          <p class="footer__description">
+            Especialistas en torres de enfriamiento con más de 30 años de experiencia, 
+            certificados por CTI y comprometidos con la calidad y la innovación.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__section-title">Servicios</h4>
+          <ul class="footer__links">
+            <li><a class="footer__link" onclick="scrollToSection('servicios')">Instalación</a></li>
+            <li><a class="footer__link" onclick="scrollToSection('servicios')">Mantenimiento</a></li>
+            <li><a class="footer__link" onclick="scrollToSection('servicios')">Reparación</a></li>
+            <li><a class="footer__link" onclick="scrollToSection('servicios')">Instalaciones Eléctricas</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__section-title">Productos</h4>
+          <ul class="footer__links">
+            <li><a class="footer__link" onclick="scrollToSection('productos')">Torres de Enfriamiento</a></li>
+            <li><a class="footer__link" onclick="scrollToSection('productos')">Motores</a></li>
+            <li><a class="footer__link" onclick="scrollToSection('productos')">Ventiladores</a></li>
+            <li><a class="footer__link" onclick="scrollToSection('productos')">Rellenos</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__section-title">Contacto</h4>
+          <p class="footer__text">
+            <span class="footer__contact-item">
+              <i class="fas fa-phone footer__contact-icon"></i>
+              (81) 8327-7529
+            </span>
+          </p>
+          <p class="footer__text">
+            <span class="footer__contact-item">
+              <i class="fas fa-envelope footer__contact-icon"></i>
+              cm_ventor@prodigy.net.mx
+            </span>
+          </p>
+          <p class="footer__text">
+            <span class="footer__contact-item">
+              <i class="fas fa-map-marker-alt footer__contact-icon"></i>
+              Puerto Vallarta #413, Col. La Fe
+            </span>
+          </p>
+          
+          <div class="footer__hours">
+            <p class="footer__hours-title">Horarios</p>
+            <p class="footer__hours-text">Lun - Vie: 8:00 AM - 6:00 PM</p>
+            <p class="footer__hours-text">Sábados: 8:00 AM - 2:00 PM</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <div class="footer__bottom-content">
+          <p class="footer__copyright">
+            &copy; 2024 CM Ventor S.A. de C.V. Todos los derechos reservados.
+          </p>
+          <div class="footer__legal">
+            <a href="#privacidad" class="footer__legal-link">Aviso de Privacidad</a>
+            <span class="footer__legal-separator">|</span>
+            <a href="#terminos" class="footer__legal-link">Términos y Condiciones</a>
+          </div>
+        </div>
+        <p class="footer__note">
+          Sitio web desarrollado con los más altos estándares de calidad
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/52818327529?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20torres%20de%20enfriamiento%20de%20CM%20Ventor" 
+       target="_blank" 
+       class="whatsapp-btn"
+       title="Contáctanos por WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script src="js/script-v2.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Destacados - CM Ventor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+        }
+        
+        .project-hero {
+            background: linear-gradient(135deg, var(--cm-blue), var(--cm-blue-dark));
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        
+        .project-grid {
+            display: grid;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .project-detail {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-detail:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            height: 300px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            color: var(--cm-blue);
+            margin: 0;
+        }
+        
+        .project-year {
+            background: var(--cm-yellow);
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .project-location {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .project-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-specs {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-specs h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .spec-label {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .spec-value {
+            color: var(--text-light);
+        }
+        
+        .project-challenges {
+            background: #fef3cd;
+            border-left: 4px solid var(--cm-yellow);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-challenges h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .project-results {
+            background: #d1edff;
+            border-left: 4px solid var(--cm-blue);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .project-results h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .results-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .results-list i {
+            color: var(--secondary-color);
+        }
+        
+        .stats-section {
+            background: var(--bg-light);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--cm-blue);
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/logo-cmventor.svg" alt="CM Ventor Logo" class="logo">
+                    <span class="logo-text">CM Ventor</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#empresa" class="nav-link">Empresa</a></li>
+                    <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#productos" class="nav-link">Productos</a></li>
+                    <li><a href="index.html#proyectos" class="nav-link active">Proyectos</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Proyectos Detallados -->
+    <section class="projects-container">
+        <div class="project-hero">
+            <h1>Proyectos Destacados</h1>
+            <p>Casos de éxito que demuestran nuestra experiencia y compromiso con la calidad</p>
+        </div>
+
+        <!-- Proyecto Hospital -->
+        <div class="project-detail">
+            <div class="project-image">
+                <i class="fas fa-hospital" style="font-size: 4rem; opacity: 0.3;"></i>
+                <span style="margin-left: 1rem;">Imagen del Hospital Regional</span>
+            </div>
+            <div class="project-content">
+                <div class="project-header">
+                    <h2 class="project-title">Hospital Regional Monterrey</h2>
+                    <span class="project-year">2023</span>
+                </div>
+                <div class="project-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Monterrey, Nuevo León
+                </div>
+                <p class="project-description">
+                    Instalación completa de sistema de enfriamiento para el nuevo edificio de consultorios del Hospital Regional. 
+                    El proyecto incluyó la instalación de 4 torres de enfriamiento de alta eficiencia para el sistema HVAC 
+                    que sirve a más de 200 consultorios y áreas administrativas.
+                </p>
+                
+                <div class="project-specs">
+                    <h4>Especificaciones del Proyecto</h4>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Capacidad Total:</span>
+                            <span class="spec-value">2,000 TR</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Torres Instaladas:</span>
+                            <span class="spec-value">4 unidades</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Capacidad por Torre:</span>
+                            <span class="spec-value">500 TR c/u</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Material:</span>
+                            <span class="spec-value">FRP</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Certificación:</span>
+                            <span class="spec-value">CTI Certified</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Tiempo de Instalación:</span>
+                            <span class="spec-value">8 semanas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-challenges">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Desafíos del Proyecto</h4>
+                    <ul>
+                        <li>Instalación en área urbana con restricciones de acceso</li>
+                        <li>Coordinación con múltiples contratistas del hospital</li>
+                        <li>Minimizar interrupciones al servicio médico existente</li>
+                        <li>Cumplimiento estricto de normativas hospitalarias</li>
+                    </ul>
+                </div>
+                
+                <div class="project-results">
+                    <h4><i class="fas fa-trophy"></i> Resultados Obtenidos</h4>
+                    <ul class="results-list">
+                        <li><i class="fas fa-check"></i> Reducción del 25% en consumo energético vs. sistema anterior</li>
+                        <li><i class="fas fa-check"></i> Cumplimiento 100% de normativas hospitalarias</li>
+                        <li><i class="fas fa-check"></i> Instalación completada en tiempo y forma</li>
+                        <li><i class="fas fa-check"></i> Cliente satisfecho con la calidad del servicio</li>
+                        <li><i class="fas fa-check"></i> Sistema operando sin interrupciones desde la instalación</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto Industrial -->
+        <div class="project-detail">
+            <div class="project-image">
+                <i class="fas fa-industry" style="font-size: 4rem; opacity: 0.3;"></i>
+                <span style="margin-left: 1rem;">Imagen de la Planta Industrial</span>
+            </div>
+            <div class="project-content">
+                <div class="project-header">
+                    <h2 class="project-title">Planta Petroquímica Tampico</h2>
+                    <span class="project-year">2023</span>
+                </div>
+                <div class="project-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Tampico, Tamaulipas
+                </div>
+                <p class="project-description">
+                    Modernización integral del sistema de enfriamiento para una planta petroquímica de gran escala. 
+                    El proyecto incluyó la sustitución de torres obsoletas por equipos de última generación, 
+                    optimización del sistema de bombeo y automatización completa del control de temperatura.
+                </p>
+                
+                <div class="project-specs">
+                    <h4>Especificaciones del Proyecto</h4>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Capacidad Total:</span>
+                            <span class="spec-value">1,500 TR</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Tipo de Proyecto:</span>
+                            <span class="spec-value">Modernización</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Torres Modernizadas:</span>
+                            <span class="spec-value">3 unidades</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Eficiencia:</span>
+                            <span class="spec-value">IE3 Premium</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Automatización:</span>
+                            <span class="spec-value">Sistema PLC</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Duración:</span>
+                            <span class="spec-value">12 semanas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-challenges">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Desafíos del Proyecto</h4>
+                    <ul>
+                        <li>Mantener operación continua de la planta durante la modernización</li>
+                        <li>Trabajar en ambiente corrosivo con químicos agresivos</li>
+                        <li>Integrar nuevo sistema con controles existentes</li>
+                        <li>Cumplir normativas ambientales estrictas</li>
+                    </ul>
+                </div>
+                
+                <div class="project-results">
+                    <h4><i class="fas fa-trophy"></i> Resultados Obtenidos</h4>
+                    <ul class="results-list">
+                        <li><i class="fas fa-check"></i> Incremento del 35% en eficiencia energética</li>
+                        <li><i class="fas fa-check"></i> Reducción del 40% en costos de mantenimiento</li>
+                        <li><i class="fas fa-check"></i> Automatización completa del sistema de control</li>
+                        <li><i class="fas fa-check"></i> Cumplimiento total de normativas ambientales</li>
+                        <li><i class="fas fa-check"></i> ROI proyectado de 3.2 años</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto Comercial -->
+        <div class="project-detail">
+            <div class="project-image">
+                <i class="fas fa-store" style="font-size: 4rem; opacity: 0.3;"></i>
+                <span style="margin-left: 1rem;">Imagen del Centro Comercial</span>
+            </div>
+            <div class="project-content">
+                <div class="project-header">
+                    <h2 class="project-title">Centro Comercial Guadalajara</h2>
+                    <span class="project-year">2022</span>
+                </div>
+                <div class="project-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Guadalajara, Jalisco
+                </div>
+                <p class="project-description">
+                    Instalación de sistema de enfriamiento para centro comercial de 50,000 m². 
+                    El proyecto requirió una solución de alta eficiencia energética que cumpliera 
+                    con los estrictos requisitos de confort térmico para más de 200 locales comerciales.
+                </p>
+                
+                <div class="project-specs">
+                    <h4>Especificaciones del Proyecto</h4>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Capacidad Total:</span>
+                            <span class="spec-value">800 TR</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Área Servida:</span>
+                            <span class="spec-value">50,000 m²</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Torres Instaladas:</span>
+                            <span class="spec-value">2 unidades</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Eficiencia:</span>
+                            <span class="spec-value">IE3 Premium</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Nivel de Ruido:</span>
+                            <span class="spec-value">< 65 dB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Tiempo de Instalación:</span>
+                            <span class="spec-value">6 semanas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-challenges">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Desafíos del Proyecto</h4>
+                    <ul>
+                        <li>Minimizar ruido para no afectar la experiencia de compras</li>
+                        <li>Optimizar espacio disponible en azotea</li>
+                        <li>Garantizar confort térmico en todas las áreas</li>
+                        <li>Coordinar con apertura del centro comercial</li>
+                    </ul>
+                </div>
+                
+                <div class="project-results">
+                    <h4><i class="fas fa-trophy"></i> Resultados Obtenidos</h4>
+                    <ul class="results-list">
+                        <li><i class="fas fa-check"></i> Nivel de ruido 15% menor al especificado</li>
+                        <li><i class="fas fa-check"></i> Eficiencia energética 30% superior al promedio</li>
+                        <li><i class="fas fa-check"></i> Confort térmico óptimo en todas las áreas</li>
+                        <li><i class="fas fa-check"></i> Instalación completada antes de la apertura</li>
+                        <li><i class="fas fa-check"></i> Cliente altamente satisfecho con el resultado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estadísticas Generales -->
+        <div class="stats-section">
+            <h3>Nuestro Impacto en Números</h3>
+            <p>Resultados que respaldan nuestra experiencia y compromiso</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Proyectos Completados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Años de Experiencia</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfacción del Cliente</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Soporte Técnico</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section" style="background: linear-gradient(135deg, var(--cm-blue), var(--cm-blue-dark)); color: white; padding: 3rem; border-radius: 12px; text-align: center;">
+            <h3>¿Listo para tu próximo proyecto?</h3>
+            <p>Contáctanos para una consulta personalizada y descubre cómo podemos optimizar tu sistema de enfriamiento.</p>
+            <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="index.html#contacto" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Solicitar Consulta
+                </a>
+                <a href="index.html#contacto" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i> Llamar Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-cmventor-white.svg" alt="CM Ventor Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">CM Ventor</span>
+                    </div>
+                    <p class="footer-description">
+                        Especialistas en torres de enfriamiento con más de 30 años de experiencia, 
+                        certificados por CTI y comprometidos con la calidad.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> (81) 8327-7529</p>
+                        <p><i class="fas fa-envelope"></i> cm_ventor@prodigy.net.mx</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Puerto Vallarta #413, Col. La Fe<br>San Nicolás de los Garza, N.L.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CM Ventor S.A. de C.V. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/52818327529?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20proyectos%20y%20servicios%20de%20torres%20de%20enfriamiento" 
+           target="_blank" 
+           class="whatsapp-btn"
+           title="Contáctanos por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">WhatsApp</span>
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
