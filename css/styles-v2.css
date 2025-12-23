@@ -588,6 +588,14 @@ a:hover {
     margin-bottom: 0.25rem;
 }
 
+.hero__badge-logo {
+    display: block;
+    width: 60px;
+    height: auto;
+    margin: 0 auto 0.5rem;
+    object-fit: contain;
+}
+
 .hero__badge-text {
     display: block;
     font-size: 0.75rem;
