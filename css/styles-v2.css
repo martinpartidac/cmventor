@@ -204,6 +204,7 @@ a:hover {
     background: var(--bg-white);
     transition: all 0.3s ease-in-out;
     padding: 1rem 0;
+    min-height: fit-content;
 }
 
 .header--scrolled {
@@ -224,13 +225,16 @@ a:hover {
     gap: 1rem;
     cursor: pointer;
     z-index: 1030;
+    padding: 0.5rem 0;
 }
 
 .header__logo-icon {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     object-fit: contain;
     display: block;
+    flex-shrink: 0;
+    margin: -0.5rem 0;
 }
 
 .header__logo-text {
