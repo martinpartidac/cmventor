@@ -203,13 +203,13 @@ a:hover {
     z-index: 1020;
     background: var(--bg-white);
     transition: all 0.3s ease-in-out;
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
     min-height: fit-content;
 }
 
 .header--scrolled {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    padding: 0.25rem 0;
+    padding: 0.15rem 0;
 }
 
 .header__content {
