@@ -313,6 +313,8 @@ a:hover {
     align-items: center;
     gap: 1rem;
     flex-shrink: 0;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 @media (max-width: 1024px) {
@@ -379,7 +381,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.625rem 1.25rem !important;
     background: var(--bg-white) !important;
     border: 2px solid var(--cm-blue) !important;
     border-radius: 0.5rem;
@@ -390,9 +392,11 @@ a:hover {
     transition: all 0.3s ease;
     visibility: visible !important;
     opacity: 1 !important;
-    min-width: auto;
+    min-width: 80px;
     width: auto;
     height: auto;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .language-btn:hover {
