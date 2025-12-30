@@ -299,6 +299,28 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
+// ===================================
+// PRODUCTO GALLERY - Cambiar imagen principal
+// ===================================
+function changeProductImage(thumbElement, imageSrc) {
+    // Cambiar la imagen principal
+    const mainImage = document.getElementById('producto-main-image');
+    if (mainImage) {
+        mainImage.src = imageSrc;
+        mainImage.style.opacity = '0';
+        setTimeout(() => {
+            mainImage.style.opacity = '1';
+        }, 150);
+    }
+    
+    // Actualizar la clase active en las miniaturas
+    const thumbs = document.querySelectorAll('.producto-thumb');
+    thumbs.forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+    thumbElement.classList.add('active');
+}
+
 // Log para debugging (remover en producción)
 console.log('CM Ventor V2 - Script inicializado correctamente');
 console.log('Versión: 2.0');

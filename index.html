@@ -321,16 +321,38 @@
       </div>
       
       <div class="grid grid-2">
-        <div class="card">
-          <i class="fas fa-industry services__icon"></i>
+        <div class="card producto-gallery-card">
           <h3 class="services__card-title">Torres de Enfriamiento</h3>
-          <p class="services__card-description">
-            Torres de enfriamiento de alta eficiencia con materiales resistentes a la corrosión 
-            y diseño optimizado para máximo rendimiento.
+          
+          <div class="producto-gallery">
+            <div class="producto-gallery-main">
+              <img id="producto-main-image" src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torre de Enfriamiento" class="producto-main-img">
+            </div>
+            <div class="producto-gallery-thumbs">
+              <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torre 1" class="producto-thumb active" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-1.webp')">
+              <img src="images/torres enfriamiento/torre de enfriamiento-2.webp" alt="Torre 2" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-2.webp')">
+              <img src="images/torres enfriamiento/torre de enfriamiento-3.webp" alt="Torre 3" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-3.webp')">
+              <img src="images/torres enfriamiento/torre de enfriamiento-4.webp" alt="Torre 4" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-4.webp')">
+              <img src="images/torres enfriamiento/torre de enfriamiento-5.webp" alt="Torre 5" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-5.webp')">
+              <img src="images/torres enfriamiento/torre de enfriamiento-6.webp" alt="Torre 6" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-6.webp')">
+            </div>
+          </div>
+          
+          <p class="services__card-description" style="margin-top: 1.5rem;">
+            Amplia variedad de modelos de acuerdo a los requerimientos y necesidades de nuestros clientes.
           </p>
-          <div class="producto-features">
+          
+          <div class="producto-materials">
+            <p style="font-weight: 600; color: var(--cm-blue); margin-bottom: 0.75rem;">Fabricadas en:</p>
+            <ul class="materials-list">
+              <li><i class="fas fa-check-circle"></i> Fibra de vidrio</li>
+              <li><i class="fas fa-check-circle"></i> Acero galvanizado</li>
+              <li><i class="fas fa-check-circle"></i> Acero inoxidable</li>
+            </ul>
+          </div>
+          
+          <div class="producto-features" style="margin-top: 1.5rem;">
             <span class="feature">Capacidad: 50-2000 TR</span>
-            <span class="feature">Material: FRP</span>
             <span class="feature">Certificado CTI</span>
           </div>
         </div>
