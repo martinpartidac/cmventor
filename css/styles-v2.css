@@ -1689,6 +1689,13 @@ a:hover {
     padding: 0.5rem;
 }
 
+@media (min-width: 1024px) {
+    .producto-gallery-main {
+        height: 400px;
+        padding: 1rem;
+    }
+}
+
 .producto-main-img {
     width: 100%;
     height: 100%;
