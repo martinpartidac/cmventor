@@ -1833,6 +1833,105 @@ a:hover {
 }
 
 /* ===================================
+   FEATURES HIGHLIGHT SECTION
+   =================================== */
+
+.features-highlight {
+    background: linear-gradient(135deg, #dbeafe, var(--bg-white));
+    padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    .features-highlight {
+        padding: 6rem 0;
+    }
+}
+
+.features-highlight__header {
+    margin-bottom: 4rem;
+}
+
+.features-highlight__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cm-blue-dark);
+    margin-bottom: 1rem;
+}
+
+.features-highlight__subtitle {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.features-highlight__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .features-highlight__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-highlight__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.features-highlight__item {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--cm-blue);
+}
+
+.features-highlight__item:hover {
+    transform: translateY(-8px);
+    border-top-color: var(--cm-yellow);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.features-highlight__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--cm-blue), var(--cm-blue-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--bg-white);
+    box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.3);
+    transition: all 0.3s ease;
+}
+
+.features-highlight__item:hover .features-highlight__icon {
+    background: linear-gradient(135deg, var(--cm-yellow), var(--cm-yellow-dark));
+    transform: scale(1.1);
+    box-shadow: 0 15px 20px -3px rgba(245, 158, 11, 0.4);
+}
+
+.features-highlight__item-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cm-blue-dark);
+    margin-bottom: 1rem;
+}
+
+.features-highlight__item-description {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===================================
    ACCESIBILIDAD
    =================================== */
 
