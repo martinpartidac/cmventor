@@ -302,9 +302,9 @@ function getUrlParameter(name) {
 // ===================================
 // PRODUCTO GALLERY - Cambiar imagen principal
 // ===================================
-function changeProductImage(thumbElement, imageSrc) {
+function changeProductImage(thumbElement, imageSrc, mainImageId = 'producto-main-image') {
     // Cambiar la imagen principal
-    const mainImage = document.getElementById('producto-main-image');
+    const mainImage = document.getElementById(mainImageId);
     if (mainImage) {
         mainImage.src = imageSrc;
         mainImage.style.opacity = '0';
@@ -313,12 +313,15 @@ function changeProductImage(thumbElement, imageSrc) {
         }, 150);
     }
     
-    // Actualizar la clase active en las miniaturas
-    const thumbs = document.querySelectorAll('.producto-thumb');
-    thumbs.forEach(thumb => {
-        thumb.classList.remove('active');
-    });
-    thumbElement.classList.add('active');
+    // Actualizar la clase active solo en las miniaturas del mismo contenedor
+    const galleryContainer = thumbElement.closest('.producto-gallery');
+    if (galleryContainer) {
+        const thumbs = galleryContainer.querySelectorAll('.producto-thumb');
+        thumbs.forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        thumbElement.classList.add('active');
+    }
 }
 
 // Log para debugging (remover en producción)
