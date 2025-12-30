@@ -676,15 +676,24 @@ a:hover {
 .profile__image-placeholder {
     background: linear-gradient(135deg, #dbeafe, var(--bg-white));
     border-radius: 1rem;
-    padding: 4rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 500px;
     text-align: center;
-    border: 3px dashed var(--border-color);
+    overflow: hidden;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.profile__image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+    min-height: 500px;
 }
 
 .profile__bio {
