@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="htmlLang">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CM Ventor - Más de 30 años fabricando y manteniendo torres de enfriamiento. Certificados por CTI, instalación, reparación y mantenimiento en toda la República Mexicana.">
   <meta name="keywords" content="torres de enfriamiento, enfriadores, mantenimiento industrial, CTI, México">
   <title>CM Ventor S.A. de C.V. | Especialistas en Torres de Enfriamiento</title>
+  <link rel="icon" type="image/jpeg" href="images/logotipo.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="images/logotipo.jpg">
+  <link rel="apple-touch-icon" href="images/logotipo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" crossorigin href="css/styles-v2.css">
+  <script src="js/translations.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -27,14 +31,29 @@
         
         <nav class="header__nav" id="navMenu">
           <ul class="header__nav-list">
-            <li><a class="header__nav-link" onclick="scrollToSection('inicio')">Inicio</a></li>
-            <li><a class="header__nav-link" onclick="scrollToSection('empresa')">Empresa</a></li>
-            <li><a class="header__nav-link" onclick="scrollToSection('servicios')">Servicios</a></li>
-            <li><a class="header__nav-link" onclick="scrollToSection('productos')">Productos</a></li>
-            <li><a class="header__nav-link" onclick="scrollToSection('proyectos')">Proyectos</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('inicio')" data-translate="navInicio">Inicio</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('empresa')" data-translate="navEmpresa">Empresa</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('servicios')" data-translate="navServicios">Servicios</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('productos')" data-translate="navProductos">Productos</a></li>
+            <li><a class="header__nav-link" onclick="scrollToSection('proyectos')" data-translate="navProyectos">Proyectos</a></li>
           </ul>
           <div class="header__nav-cta">
-            <button class="btn btn-primary" onclick="scrollToSection('contacto')">Contacto</button>
+            <div class="language-selector">
+              <button class="language-btn" id="langBtn" onclick="toggleLanguageMenu()">
+                <i class="fas fa-globe"></i>
+                <span id="currentLang">ES</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="language-menu" id="languageMenu">
+                <button class="language-option" onclick="changeLanguage('es')">
+                  <span>🇲🇽</span> Español
+                </button>
+                <button class="language-option" onclick="changeLanguage('en')">
+                  <span>🇺🇸</span> English
+                </button>
+              </div>
+            </div>
+            <button class="btn btn-primary" onclick="scrollToSection('contacto')" data-translate="btnContacto">Contacto</button>
           </div>
         </nav>
         
@@ -59,10 +78,10 @@
       <div class="hero__content">
         <div class="hero__text">
           <h1 class="hero__title">
-            Especialistas en 
-            <span class="hero__title-highlight">Torres de Enfriamiento</span>
+            <span data-translate="heroTitle">Especialistas en</span> 
+            <span class="hero__title-highlight" data-translate="heroTitleHighlight">Torres de Enfriamiento</span>
           </h1>
-          <p class="hero__subtitle">
+          <p class="hero__subtitle" data-translate="heroSubtitle">
             Más de 30 años de experiencia fabricando, instalando y manteniendo torres de enfriamiento 
             certificadas por el Cooling Technology Institute (CTI) en toda la República Mexicana.
           </p>
@@ -70,23 +89,23 @@
           <div class="hero__features">
             <div class="hero__feature">
               <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
-              Certificados CTI
+              <span data-translate="heroFeature1">Certificados CTI</span>
             </div>
             <div class="hero__feature">
               <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
-              30+ Años de Experiencia
+              <span data-translate="heroFeature2">30+ Años de Experiencia</span>
             </div>
             <div class="hero__feature">
               <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
-              Cobertura Nacional
+              <span data-translate="heroFeature3">Cobertura Nacional</span>
             </div>
           </div>
           
           <div class="hero__cta">
-            <button class="btn btn-primary btn-large" onclick="scrollToSection('contacto')">
+            <button class="btn btn-primary btn-large" onclick="scrollToSection('contacto')" data-translate="heroBtnCotizacion">
               Solicitar Cotización
             </button>
-            <button class="btn btn-secondary btn-large" onclick="scrollToSection('productos')">
+            <button class="btn btn-secondary btn-large" onclick="scrollToSection('productos')" data-translate="heroBtnProductos">
               Ver Productos
             </button>
           </div>
@@ -95,14 +114,14 @@
             <div class="hero__contact-item">
               <i class="fas fa-phone hero__contact-icon"></i>
               <div>
-                <p class="hero__contact-label">Llámanos</p>
+                <p class="hero__contact-label" data-translate="heroLlamanos">Llámanos</p>
                 <p class="hero__contact-value">(81) 8327-7529</p>
               </div>
             </div>
             <div class="hero__contact-item">
               <i class="fas fa-envelope hero__contact-icon"></i>
               <div>
-                <p class="hero__contact-label">Escríbenos</p>
+                <p class="hero__contact-label" data-translate="heroEscribenos">Escríbenos</p>
                 <p class="hero__contact-value">cm_ventor@prodigy.net.mx</p>
               </div>
             </div>
@@ -133,8 +152,8 @@
   <section id="empresa" class="profile">
     <div class="container">
       <div class="profile__header text-center">
-        <h2 class="profile__title">Sobre CM Ventor</h2>
-        <p class="profile__subtitle">Comprometidos con la excelencia desde 1990</p>
+        <h2 class="profile__title" data-translate="empresaTitle">Sobre CM Ventor</h2>
+        <p class="profile__subtitle" data-translate="empresaSubtitle">Comprometidos con la excelencia desde 1990</p>
       </div>
       
       <div class="profile__content">
@@ -146,13 +165,13 @@
           </div>
           
           <div class="profile__bio">
-            <h3 class="profile__bio-title">Nuestra Historia</h3>
-            <p class="profile__bio-text">
+            <h3 class="profile__bio-title" data-translate="empresaHistoria">Nuestra Historia</h3>
+            <p class="profile__bio-text" data-translate="empresaHistoria1">
               Somos una empresa fundada en 1990, comprometida en evaluar y actualizar constantemente 
               sus procesos cumpliendo con los estándares internacionales del CTI (Cooling Technology Institute), 
               a fines de crear valor con nuestros clientes, brindando productos y servicios de la más alta calidad.
             </p>
-            <p class="profile__bio-text">
+            <p class="profile__bio-text" data-translate="empresaHistoria2">
               Con más de tres décadas de experiencia, nos hemos consolidado como líderes en el mercado mexicano 
               de torres de enfriamiento, ofreciendo soluciones innovadoras y confiables para la industria.
             </p>
@@ -231,8 +250,8 @@
   <section id="servicios" class="services">
     <div class="container">
       <div class="services__header text-center">
-        <h2 class="services__title">Nuestros Servicios</h2>
-        <p class="services__subtitle">
+        <h2 class="services__title" data-translate="serviciosTitle">Nuestros Servicios</h2>
+        <p class="services__subtitle" data-translate="serviciosSubtitle">
           Soluciones completas para torres de enfriamiento con la más alta calidad y profesionalismo
         </p>
       </div>
@@ -314,8 +333,8 @@
   <section class="features-highlight">
     <div class="container">
       <div class="features-highlight__header text-center">
-        <h2 class="features-highlight__title">Características Destacadas</h2>
-        <p class="features-highlight__subtitle">Lo que nos distingue en el mercado</p>
+        <h2 class="features-highlight__title" data-translate="featuresTitle">Características Destacadas</h2>
+        <p class="features-highlight__subtitle" data-translate="featuresSubtitle">Lo que nos distingue en el mercado</p>
       </div>
       
       <div class="features-highlight__grid">
@@ -323,8 +342,8 @@
           <div class="features-highlight__icon">
             <i class="fas fa-clock"></i>
           </div>
-          <h3 class="features-highlight__item-title">Vida Útil Extendida</h3>
-          <p class="features-highlight__item-description">
+          <h3 class="features-highlight__item-title" data-translate="feature1Title">Vida Útil Extendida</h3>
+          <p class="features-highlight__item-description" data-translate="feature1Desc">
             Al menos 2 veces más vida útil que una torre de acero galvanizado, 
             garantizando una inversión a largo plazo.
           </p>
@@ -334,8 +353,8 @@
           <div class="features-highlight__icon">
             <i class="fas fa-shield-alt"></i>
           </div>
-          <h3 class="features-highlight__item-title">Resistencia a la Corrosión</h3>
-          <p class="features-highlight__item-description">
+          <h3 class="features-highlight__item-title" data-translate="feature2Title">Resistencia a la Corrosión</h3>
+          <p class="features-highlight__item-description" data-translate="feature2Desc">
             No se oxida ni corroe, con alta resistencia a tratamientos químicos 
             agresivos del agua.
           </p>
@@ -345,8 +364,8 @@
           <div class="features-highlight__icon">
             <i class="fas fa-tools"></i>
           </div>
-          <h3 class="features-highlight__item-title">Mantenimiento Mínimo</h3>
-          <p class="features-highlight__item-description">
+          <h3 class="features-highlight__item-title" data-translate="feature3Title">Mantenimiento Mínimo</h3>
+          <p class="features-highlight__item-description" data-translate="feature3Desc">
             Construcción en FRP reduce significativamente el tiempo y costos 
             de mantenimiento de nuestros equipos.
           </p>
@@ -356,8 +375,8 @@
           <div class="features-highlight__icon">
             <i class="fas fa-bolt"></i>
           </div>
-          <h3 class="features-highlight__item-title">Eficiencia Energética</h3>
-          <p class="features-highlight__item-description">
+          <h3 class="features-highlight__item-title" data-translate="feature4Title">Eficiencia Energética</h3>
+          <p class="features-highlight__item-description" data-translate="feature4Desc">
             Nuestras unidades superan los requisitos de eficiencia energética 
             para reducir costos operativos.
           </p>
@@ -367,8 +386,8 @@
           <div class="features-highlight__icon">
             <i class="fas fa-leaf"></i>
           </div>
-          <h3 class="features-highlight__item-title">Sostenibilidad</h3>
-          <p class="features-highlight__item-description">
+          <h3 class="features-highlight__item-title" data-translate="feature5Title">Sostenibilidad</h3>
+          <p class="features-highlight__item-description" data-translate="feature5Desc">
             Ahorro de agua, alta eficiencia y sin problemas de fugas, 
             contribuyendo al cuidado del medio ambiente.
           </p>
@@ -378,8 +397,8 @@
           <div class="features-highlight__icon">
             <i class="fas fa-certificate"></i>
           </div>
-          <h3 class="features-highlight__item-title">Certificación CTI</h3>
-          <p class="features-highlight__item-description">
+          <h3 class="features-highlight__item-title" data-translate="feature6Title">Certificación CTI</h3>
+          <p class="features-highlight__item-description" data-translate="feature6Desc">
             Más de 30 años de experiencia con certificación del Cooling Technology 
             Institute (CTI), garantía de calidad y confiabilidad.
           </p>
@@ -392,15 +411,15 @@
   <section id="productos" class="productos">
     <div class="container">
       <div class="section-header text-center">
-        <h2 class="section-title">Nuestros Productos</h2>
-        <p class="section-subtitle">
+        <h2 class="section-title" data-translate="productosTitle">Nuestros Productos</h2>
+        <p class="section-subtitle" data-translate="productosSubtitle">
           Tecnología de vanguardia certificada por CTI para máxima eficiencia
         </p>
       </div>
       
       <div class="grid grid-2">
         <div class="card producto-gallery-card">
-          <h3 class="services__card-title">Torres de Enfriamiento</h3>
+          <h3 class="services__card-title" data-translate="torresTitle">Torres de Enfriamiento</h3>
           
           <div class="producto-gallery">
             <div class="producto-gallery-main">
@@ -427,27 +446,27 @@
             </div>
           </div>
           
-          <p class="services__card-description" style="margin-top: 1.5rem;">
+          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="torresVariedad">
             Amplia variedad de modelos de acuerdo a los requerimientos y necesidades de nuestros clientes.
           </p>
           
           <div class="producto-materials">
-            <p style="font-weight: 600; color: var(--cm-blue); margin-bottom: 0.75rem;">Fabricadas en:</p>
+            <p style="font-weight: 600; color: var(--cm-blue); margin-bottom: 0.75rem;" data-translate="torresFabricadas">Fabricadas en:</p>
             <ul class="materials-list">
-              <li><i class="fas fa-check-circle"></i> Fibra de vidrio</li>
-              <li><i class="fas fa-check-circle"></i> Acero galvanizado</li>
-              <li><i class="fas fa-check-circle"></i> Acero inoxidable</li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="torresFibra">Fibra de vidrio</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="torresAcero">Acero galvanizado</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="torresInox">Acero inoxidable</span></li>
             </ul>
           </div>
           
           <div class="producto-features" style="margin-top: 1.5rem;">
-            <span class="feature">Capacidad: 50-2000 TR</span>
-            <span class="feature">Certificado CTI</span>
+            <span class="feature" data-translate="torresCapacidad">Capacidad: 50-2000 TR</span>
+            <span class="feature" data-translate="torresCTI">Certificado CTI</span>
           </div>
         </div>
         
         <div class="card">
-          <h3 class="services__card-title">Motores</h3>
+          <h3 class="services__card-title" data-translate="motoresTitle">Motores</h3>
           
           <div class="producto-gallery">
             <div class="producto-gallery-main">
@@ -455,25 +474,25 @@
             </div>
           </div>
           
-          <p class="services__card-description" style="margin-top: 1.5rem;">
+          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="motoresDesc">
             Diseños exclusivos para Torre de Enfriamiento, con las siguientes características:
           </p>
           <ul class="materials-list" style="margin-top: 1rem;">
-            <li><i class="fas fa-check-circle"></i> Recubrimiento epóxico en interior y exterior de equipo</li>
-            <li><i class="fas fa-check-circle"></i> Sello de flecha en bronce alta eficiencia inpro/seal</li>
-            <li><i class="fas fa-check-circle"></i> Sellado de caja de conexiones a prueba de goteo</li>
-            <li><i class="fas fa-check-circle"></i> Carcaza fabricada en hierro fundido</li>
-            <li><i class="fas fa-check-circle"></i> Baleros y rodamientos sellados</li>
+            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature1">Recubrimiento epóxico en interior y exterior de equipo</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature2">Sello de flecha en bronce alta eficiencia inpro/seal</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature3">Sellado de caja de conexiones a prueba de goteo</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature4">Carcaza fabricada en hierro fundido</span></li>
+            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature5">Baleros y rodamientos sellados</span></li>
           </ul>
           <div class="producto-features" style="margin-top: 1.5rem;">
-            <span class="feature">Eficiencia IE3</span>
-            <span class="feature">Bajo mantenimiento</span>
-            <span class="feature">Garantía extendida</span>
+            <span class="feature" data-translate="motoresIE3">Eficiencia IE3</span>
+            <span class="feature" data-translate="motoresMantenimiento">Bajo mantenimiento</span>
+            <span class="feature" data-translate="motoresGarantia">Garantía extendida</span>
           </div>
         </div>
         
         <div class="card producto-gallery-card">
-          <h3 class="services__card-title">Ventiladores</h3>
+          <h3 class="services__card-title" data-translate="ventiladoresTitle">Ventiladores</h3>
           
           <div class="producto-gallery">
             <div class="producto-gallery-main">
@@ -491,7 +510,7 @@
             </div>
           </div>
           
-          <p class="services__card-description" style="margin-top: 1.5rem;">
+          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="ventiladoresDesc">
             Diseños personalizados para su aplicación, fabricados en poliamida reforzada con fibra de vidrio (PAG), 
             centro en aluminio inyectado, alta eficiencia, resistencia mecánica, bajo ruido sonoro, 
             consumo de energía inferior, resistente a la corrosión y ligero.
@@ -499,7 +518,7 @@
         </div>
         
         <div class="card producto-gallery-card">
-          <h3 class="services__card-title">Rellenos Enfriadores</h3>
+          <h3 class="services__card-title" data-translate="rellenosTitle">Rellenos Enfriadores</h3>
           
           <div class="producto-gallery">
             <div class="producto-gallery-main">
@@ -515,14 +534,14 @@
           </div>
           
           <div class="producto-materials" style="margin-top: 1.5rem;">
-            <p style="font-weight: 600; color: var(--cm-blue); margin-bottom: 1rem;">Tipos:</p>
+            <p style="font-weight: 600; color: var(--cm-blue); margin-bottom: 1rem;" data-translate="rellenosTipos">Tipos:</p>
             
             <div style="margin-bottom: 1.5rem;">
               <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
                 <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
-                Splash Fill
+                <span data-translate="rellenosSplash">Splash Fill</span>
               </p>
-              <p class="services__card-description" style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;">
+              <p class="services__card-description" style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;" data-translate="rellenosSplashDesc">
                 Logra un alto rendimiento térmico en torres de enfriamiento de contraflujo y flujo cruzado, 
                 su diseño abierto y resistente al ensuciamiento hacen que sea una de las mejores opciones 
                 para éstas. Lo convierte en una opción ideal para aplicaciones de agua sucia, como en 
@@ -534,9 +553,9 @@
             <div style="margin-bottom: 1.5rem;">
               <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
                 <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
-                Film Fill
+                <span data-translate="rellenosFilm">Film Fill</span>
               </p>
-              <p class="services__card-description" style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;">
+              <p class="services__card-description" style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;" data-translate="rellenosFilmDesc">
                 Cuenta con una entrada/salida vertical que promueve el flujo libre de escombros, mientras 
                 que las ondulaciones transversales maximizan el área de la superficie y crean turbulencia 
                 para asegurar una transferencia de calor eficiente.
@@ -546,14 +565,14 @@
             <div>
               <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
                 <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
-                Madera tratada
+                <span data-translate="rellenosMadera">Madera tratada</span>
               </p>
             </div>
           </div>
         </div>
         
         <div class="card producto-gallery-card">
-          <h3 class="services__card-title">Espreas</h3>
+          <h3 class="services__card-title" data-translate="espreasTitle">Espreas</h3>
           
           <div class="producto-gallery">
             <div class="producto-gallery-main">
@@ -566,7 +585,7 @@
             </div>
           </div>
           
-          <p class="services__card-description" style="margin-top: 1.5rem;">
+          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="espreasDesc">
             Diseño único que provee la dispersión de agua de forma uniforme en todas las direcciones, 
             previniendo fugas y asegurando un amplio contacto con el relleno, para conseguir el mejor 
             funcionamiento de las Torres de Enfriamiento.
@@ -580,8 +599,8 @@
   <section id="proyectos" class="testimonials">
     <div class="container">
       <div class="testimonials__header text-center">
-        <h2 class="testimonials__title">Proyectos Destacados</h2>
-        <p class="testimonials__subtitle">
+        <h2 class="testimonials__title" data-translate="proyectosTitle">Proyectos Destacados</h2>
+        <p class="testimonials__subtitle" data-translate="proyectosSubtitle">
           Casos de éxito en toda la República Mexicana
         </p>
       </div>
@@ -660,8 +679,8 @@
   <section id="contacto" class="appointment">
     <div class="container">
       <div class="appointment__header text-center">
-        <h2 class="appointment__title">Contáctanos</h2>
-        <p class="appointment__subtitle">
+        <h2 class="appointment__title" data-translate="contactoTitle">Contáctanos</h2>
+        <p class="appointment__subtitle" data-translate="contactoSubtitle">
           Estamos aquí para resolver tus necesidades de enfriamiento industrial
         </p>
       </div>
@@ -669,12 +688,12 @@
       <div class="appointment__content">
         <div class="appointment__info">
           <div class="card appointment__info-card">
-            <h3 class="appointment__info-title">Información de Contacto</h3>
+            <h3 class="appointment__info-title" data-translate="contactoInfo">Información de Contacto</h3>
             
             <div class="appointment__contact-item">
               <i class="fas fa-phone appointment__contact-icon"></i>
               <div>
-                <p class="appointment__contact-label">Teléfono</p>
+                <p class="appointment__contact-label" data-translate="contactoTelefono">Teléfono</p>
                 <a href="tel:+528183277529" class="appointment__contact-value">(81) 8327-7529</a>
                 <p class="appointment__contact-note">Lun - Vie: 8:00 AM - 6:00 PM</p>
               </div>
@@ -683,18 +702,18 @@
             <div class="appointment__contact-item">
               <i class="fas fa-envelope appointment__contact-icon"></i>
               <div>
-                <p class="appointment__contact-label">Email</p>
+                <p class="appointment__contact-label" data-translate="contactoEmail">Email</p>
                 <a href="mailto:cm_ventor@prodigy.net.mx" class="appointment__contact-value">
                   cm_ventor@prodigy.net.mx
                 </a>
-                <p class="appointment__contact-note">Respuesta en 24 horas</p>
+                <p class="appointment__contact-note" data-translate="contactoRespuesta">Respuesta en 24 horas</p>
               </div>
             </div>
             
             <div class="appointment__contact-item">
               <i class="fas fa-map-marker-alt appointment__contact-icon"></i>
               <div>
-                <p class="appointment__contact-label">Dirección</p>
+                <p class="appointment__contact-label" data-translate="contactoDireccion">Dirección</p>
                 <p class="appointment__contact-value">
                   Puerto Vallarta 413<br>
                   La Fe, 66477<br>
@@ -719,19 +738,19 @@
           </div>
           
           <div class="card appointment__hours">
-            <h3 class="appointment__hours-title">Horarios de Atención</h3>
+            <h3 class="appointment__hours-title" data-translate="contactoHorarios">Horarios de Atención</h3>
             <div class="appointment__hours-list">
               <div class="appointment__hours-item">
-                <span class="appointment__hours-day">Lunes - Viernes</span>
+                <span class="appointment__hours-day" data-translate="contactoHorario1">Lunes - Viernes</span>
                 <span class="appointment__hours-time">8:00 AM - 6:00 PM</span>
               </div>
               <div class="appointment__hours-item">
-                <span class="appointment__hours-day">Sábados</span>
+                <span class="appointment__hours-day" data-translate="contactoHorario2">Sábados</span>
                 <span class="appointment__hours-time">8:00 AM - 2:00 PM</span>
               </div>
               <div class="appointment__hours-item appointment__hours-item--closed">
-                <span class="appointment__hours-day">Domingos</span>
-                <span class="appointment__hours-time">Cerrado</span>
+                <span class="appointment__hours-day" data-translate="contactoHorario3">Domingos</span>
+                <span class="appointment__hours-time" data-translate="contactoCerrado">Cerrado</span>
               </div>
             </div>
           </div>
@@ -739,16 +758,16 @@
         
         <div class="appointment__form-container">
           <form class="card appointment__form" id="contactForm">
-            <h3 class="appointment__form-title">Solicita una Cotización</h3>
+            <h3 class="appointment__form-title" data-translate="contactoFormTitle">Solicita una Cotización</h3>
             
             <div class="appointment__form-row">
               <div class="appointment__form-group">
-                <label for="nombre">Nombre *</label>
+                <label for="nombre" data-translate="contactoNombre">Nombre *</label>
                 <input type="text" id="nombre" name="nombre" required>
               </div>
               
               <div class="appointment__form-group">
-                <label for="empresa">Empresa</label>
+                <label for="empresa" data-translate="contactoEmpresa">Empresa</label>
                 <input type="text" id="empresa" name="empresa">
               </div>
             </div>
@@ -760,32 +779,32 @@
               </div>
               
               <div class="appointment__form-group">
-                <label for="telefono">Teléfono *</label>
+                <label for="telefono" data-translate="contactoTelefonoField">Teléfono *</label>
                 <input type="tel" id="telefono" name="telefono" required>
               </div>
             </div>
             
             <div class="appointment__form-group">
-              <label for="servicio">Servicio de Interés</label>
+              <label for="servicio" data-translate="contactoServicio">Servicio de Interés</label>
               <select id="servicio" name="servicio">
-                <option value="">Seleccionar servicio</option>
-                <option value="instalacion">Instalación</option>
-                <option value="mantenimiento">Mantenimiento</option>
-                <option value="reparacion">Reparación</option>
-                <option value="cotizacion">Cotización de Productos</option>
+                <option value="" data-translate="contactoServicioSelect">Seleccionar servicio</option>
+                <option value="instalacion" data-translate="contactoServicio1">Instalación</option>
+                <option value="mantenimiento" data-translate="contactoServicio2">Mantenimiento</option>
+                <option value="reparacion" data-translate="contactoServicio3">Reparación</option>
+                <option value="cotizacion" data-translate="contactoServicio4">Cotización de Productos</option>
               </select>
             </div>
             
             <div class="appointment__form-group">
-              <label for="mensaje">Mensaje *</label>
+              <label for="mensaje" data-translate="contactoMensaje">Mensaje *</label>
               <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
             </div>
             
-            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;" data-translate="contactoEnviar">
               Enviar Mensaje
             </button>
             
-            <p class="appointment__form-note">
+            <p class="appointment__form-note" data-translate="contactoNota">
               * Campos requeridos. Responderemos en menos de 24 horas.
             </p>
           </form>

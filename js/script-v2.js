@@ -5,6 +5,7 @@
 
 // Variables globales
 let isScrolled = false;
+let currentLanguage = localStorage.getItem('cmventor-language') || 'es';
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initSmoothScroll();
     initContactForm();
+    initLanguage();
 });
 
 // ===================================
@@ -324,8 +326,106 @@ function changeProductImage(thumbElement, imageSrc, mainImageId = 'producto-main
     }
 }
 
+// ===================================
+// LANGUAGE SYSTEM
+// ===================================
+function initLanguage() {
+    // Cargar idioma guardado o usar español por defecto
+    changeLanguage(currentLanguage, false);
+}
+
+function toggleLanguageMenu() {
+    const menu = document.getElementById('languageMenu');
+    if (menu) {
+        menu.classList.toggle('language-menu--open');
+    }
+}
+
+function changeLanguage(lang, save = true) {
+    currentLanguage = lang;
+    
+    // Guardar preferencia
+    if (save) {
+        localStorage.setItem('cmventor-language', lang);
+    }
+    
+    // Actualizar botón de idioma
+    const langBtn = document.getElementById('currentLang');
+    if (langBtn) {
+        langBtn.textContent = lang.toUpperCase();
+    }
+    
+    // Cerrar menú
+    const menu = document.getElementById('languageMenu');
+    if (menu) {
+        menu.classList.remove('language-menu--open');
+    }
+    
+    // Traducir todos los elementos
+    translatePage(lang);
+}
+
+function translatePage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+    
+    // Traducir elementos con data-translate
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (t[key]) {
+            if (element.tagName === 'INPUT') {
+                if (element.type === 'submit' || element.type === 'button') {
+                    element.value = t[key];
+                } else {
+                    // Para inputs, actualizar placeholder si existe
+                    if (element.placeholder) {
+                        element.placeholder = t[key];
+                    }
+                }
+            } else if (element.tagName === 'SELECT') {
+                // Para selects, traducir todas las opciones
+                element.querySelectorAll('option[data-translate]').forEach(option => {
+                    const optionKey = option.getAttribute('data-translate');
+                    if (t[optionKey]) {
+                        option.textContent = t[optionKey];
+                    }
+                });
+            } else if (element.tagName === 'TEXTAREA') {
+                if (element.placeholder) {
+                    element.placeholder = t[key];
+                }
+            } else if (element.tagName === 'LABEL') {
+                // Para labels, mantener el asterisco si existe
+                const text = element.textContent.trim();
+                if (text.endsWith('*')) {
+                    element.textContent = t[key] + ' *';
+                } else {
+                    element.textContent = t[key];
+                }
+            } else {
+                element.textContent = t[key];
+            }
+        }
+    });
+    
+    // Actualizar atributo lang del HTML
+    const htmlElement = document.getElementById('htmlLang') || document.documentElement;
+    htmlElement.setAttribute('lang', lang);
+}
+
+// Cerrar menú de idioma al hacer clic fuera
+document.addEventListener('click', function(event) {
+    const langBtn = document.getElementById('langBtn');
+    const langMenu = document.getElementById('languageMenu');
+    
+    if (langBtn && langMenu && !langBtn.contains(event.target) && !langMenu.contains(event.target)) {
+        langMenu.classList.remove('language-menu--open');
+    }
+});
+
 // Log para debugging (remover en producción)
 console.log('CM Ventor V2 - Script inicializado correctamente');
 console.log('Versión: 2.0');
 console.log('Diseño basado en: Rheab con colores CM Ventor');
+console.log('Idioma actual:', currentLanguage);
 

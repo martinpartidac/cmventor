@@ -308,6 +308,13 @@ a:hover {
     color: var(--cm-blue);
 }
 
+.header__nav-cta {
+    display: flex !important;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
 @media (max-width: 1024px) {
     .header__nav-link {
         font-size: 1.25rem;
@@ -315,6 +322,9 @@ a:hover {
     
     .header__nav-cta {
         margin-top: 1.5rem;
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
     }
 }
 
@@ -353,6 +363,103 @@ a:hover {
 
 .header__mobile-toggle--open span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+    margin-right: 1rem;
+    display: block !important;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.language-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-white) !important;
+    border: 2px solid var(--cm-blue) !important;
+    border-radius: 0.5rem;
+    color: var(--cm-blue) !important;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-width: auto;
+    width: auto;
+    height: auto;
+}
+
+.language-btn:hover {
+    background: var(--cm-blue);
+    color: var(--bg-white);
+}
+
+.language-btn i:last-child {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background: var(--bg-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1040;
+    overflow: hidden;
+}
+
+.language-menu--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    font-size: 0.875rem;
+    color: var(--text-dark);
+}
+
+.language-option:hover {
+    background: var(--bg-light);
+}
+
+.language-option span {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+    .language-selector {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .language-menu {
+        right: auto;
+        left: 0;
+    }
 }
 
 /* ===================================
