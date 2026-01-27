@@ -807,6 +807,86 @@ a:hover {
     border-radius: 0.5rem;
 }
 
+.instalaciones-gallery {
+    width: 100%;
+}
+
+.instalaciones-gallery-main {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light);
+    padding: 0.5rem;
+}
+
+.instalaciones-gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.instalaciones-gallery-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.instalaciones-thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.instalaciones-thumb:hover {
+    opacity: 1;
+    border-color: var(--cm-blue);
+    transform: translateY(-2px);
+}
+
+.instalaciones-thumb.active {
+    opacity: 1;
+    border-color: var(--cm-yellow);
+    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+}
+
+@media (min-width: 1024px) {
+    .instalaciones-gallery-main {
+        height: 450px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .instalaciones-gallery-main {
+        height: 300px;
+    }
+    
+    .instalaciones-gallery-thumbs {
+        gap: 0.4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .instalaciones-gallery-main {
+        height: 250px;
+    }
+    
+    .instalaciones-gallery-thumbs {
+        gap: 0.3rem;
+    }
+}
+
 .profile__instalaciones-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
