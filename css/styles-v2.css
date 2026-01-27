@@ -2383,6 +2383,10 @@ a:hover {
     margin-bottom: 3rem;
 }
 
+.clients__grid--featured {
+    margin-bottom: 4rem;
+}
+
 @media (min-width: 640px) {
     .clients__grid {
         grid-template-columns: repeat(2, 1fr);
