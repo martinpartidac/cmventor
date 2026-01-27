@@ -176,6 +176,7 @@ const translations = {
         clientesTitle: "Nuestros Clientes",
         clientesSubtitle: "Empresas líderes que confían en nuestros servicios y productos de calidad",
         clientesGalleryTitle: "Más Clientes que Confían en Nosotros",
+        clientesGalleryTitle: "Más Clientes que Confían en Nosotros",
         terniumDesc: "Contratos de mantenimiento preventivo y correctivo en múltiples plantas: Nuevo León, Monclova, Guerrero Acerex, Juventud, Guerrero y CIT Pesquería.",
         metalsaDesc: "Contrato integral de mantenimiento preventivo y correctivo a torres de enfriamiento, extractores, manejadoras de aire, sistema de bombeo y tableros de control eléctrico en planta Apodaca.",
         casahumosDesc: "Contrato de operación y mantenimiento en Planta Largos Norte, garantizando el funcionamiento óptimo de los sistemas.",
