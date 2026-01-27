@@ -2092,7 +2092,302 @@ a:hover {
 }
 
 /* ===================================
-   PRODUCTO GALLERY (Opción 3)
+   PRODUCTO CARDS (Nuevo Diseño)
+   =================================== */
+
+.productos-grid {
+    gap: 2rem;
+}
+
+.producto-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--cm-blue);
+    height: 100%;
+}
+
+.producto-card:hover {
+    transform: translateY(-8px);
+    border-top-color: var(--cm-yellow);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.producto-card__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--cm-blue), var(--cm-blue-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--bg-white);
+    box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.3);
+    transition: all 0.3s ease;
+}
+
+.producto-card:hover .producto-card__icon {
+    background: linear-gradient(135deg, var(--cm-yellow), var(--cm-yellow-dark));
+    transform: scale(1.1);
+    box-shadow: 0 15px 20px -3px rgba(245, 158, 11, 0.4);
+}
+
+.producto-card__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cm-blue-dark);
+    margin-bottom: 1.5rem;
+}
+
+.producto-card__image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.producto-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.producto-card__image-container:hover .producto-card__image {
+    transform: scale(1.05);
+}
+
+.producto-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 64, 175, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.producto-card__image-container:hover .producto-card__overlay {
+    opacity: 1;
+}
+
+.producto-card__btn {
+    background: var(--cm-yellow);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.producto-card__btn:hover {
+    background: var(--cm-yellow-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.producto-card__description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.producto-card__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.producto-card__feature {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--bg-light);
+    color: var(--cm-blue);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+/* ===================================
+   PRODUCT MODAL
+   =================================== */
+
+.product-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.product-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.product-modal__content {
+    position: relative;
+    background: var(--bg-white);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 2001;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.product-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--cm-blue);
+    color: var(--bg-white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2002;
+}
+
+.product-modal__close:hover {
+    background: var(--cm-blue-dark);
+    transform: rotate(90deg);
+}
+
+.product-modal__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cm-blue-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.product-modal__gallery {
+    margin-bottom: 2rem;
+}
+
+.product-modal__main {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light);
+    padding: 1rem;
+}
+
+.product-modal__main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.product-modal__thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.75rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.product-modal__thumbs img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.product-modal__thumbs img:hover {
+    opacity: 1;
+    border-color: var(--cm-blue);
+}
+
+.product-modal__thumbs img.active {
+    opacity: 1;
+    border-color: var(--cm-yellow);
+    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+}
+
+.product-modal__description {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .product-modal__content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    
+    .product-modal__main {
+        height: 300px;
+    }
+    
+    .product-modal__title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===================================
+   PRODUCTO GALLERY (Opción 3) - Legacy
    =================================== */
 
 .producto-gallery-card {

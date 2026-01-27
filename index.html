@@ -572,224 +572,127 @@
         </p>
       </div>
       
-      <div class="grid grid-2">
-        <div class="card producto-gallery-card">
-          <h3 class="services__card-title" data-translate="torresTitle">Torres de Enfriamiento</h3>
-          
-          <div class="producto-gallery">
-            <div class="producto-gallery-main">
-              <img id="producto-main-image" src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torre de Enfriamiento" class="producto-main-img">
-            </div>
-            <div class="producto-gallery-thumbs">
-              <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torre 1" class="producto-thumb active" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-1.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-2.webp" alt="Torre 2" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-2.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-3.webp" alt="Torre 3" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-3.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-4.webp" alt="Torre 4" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-4.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-5.webp" alt="Torre 5" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-5.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-6.webp" alt="Torre 6" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-6.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-7.webp" alt="Torre 7" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-7.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-8.webp" alt="Torre 8" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-8.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-10.webp" alt="Torre 10" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-10.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-11.webp" alt="Torre 11" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-11.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-12.webp" alt="Torre 12" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-12.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-13.webp" alt="Torre 13" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-13.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-14.webp" alt="Torre 14" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-14.webp')">
-              <img src="images/torres enfriamiento/1-2torre de enfriamiento-14.webp" alt="Torre 14-2" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/1-2torre de enfriamiento-14.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-15.webp" alt="Torre 15" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-15.webp')">
-              <img src="images/torres enfriamiento/torre de enfriamiento-16.webp" alt="Torre 16" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/torre de enfriamiento-16.webp')">
-              <img src="images/torres enfriamiento/3-1.webp" alt="Torre 3-1" class="producto-thumb" onclick="changeProductImage(this, 'images/torres enfriamiento/3-1.webp')">
+      <div class="grid grid-3 productos-grid">
+        <div class="card producto-card">
+          <div class="producto-card__icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h3 class="producto-card__title" data-translate="torresTitle">Torres de Enfriamiento</h3>
+          <div class="producto-card__image-container">
+            <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torre de Enfriamiento" class="producto-card__image" onclick="openProductModal('torres')">
+            <div class="producto-card__overlay">
+              <button class="producto-card__btn" onclick="openProductModal('torres')" data-translate="verGalería">Ver Galería</button>
             </div>
           </div>
-          
-          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="torresVariedad">
+          <p class="producto-card__description" data-translate="torresVariedad">
             Amplia variedad de modelos de acuerdo a los requerimientos y necesidades de nuestros clientes.
           </p>
-          
-          <div class="producto-materials">
-            <p style="font-weight: 600; color: var(--cm-blue); margin-bottom: 0.75rem;" data-translate="torresFabricadas">Fabricadas en:</p>
-            <ul class="materials-list">
-              <li><i class="fas fa-check-circle"></i> <span data-translate="torresFibra">Fibra de vidrio</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="torresAcero">Acero galvanizado</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="torresInox">Acero inoxidable</span></li>
-            </ul>
-          </div>
-          
-          <div class="producto-features" style="margin-top: 1.5rem;">
-            <span class="feature" data-translate="torresCapacidad">Capacidad: 50-2000 TR</span>
-            <span class="feature" data-translate="torresCTI">Certificado CTI</span>
+          <div class="producto-card__features">
+            <span class="producto-card__feature" data-translate="torresCapacidad">Capacidad: 50-2000 TR</span>
+            <span class="producto-card__feature" data-translate="torresCTI">Certificado CTI</span>
           </div>
         </div>
         
-        <div class="card">
-          <h3 class="services__card-title" data-translate="motoresTitle">Motores</h3>
-          
-          <div class="producto-gallery">
-            <div class="producto-gallery-main">
-              <img src="images/motor/Motor-PU00e1gina.webp" alt="Motor CM Ventor" class="producto-main-img">
-            </div>
+        <div class="card producto-card">
+          <div class="producto-card__icon">
+            <i class="fas fa-cog"></i>
           </div>
-          
-          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="motoresDesc">
+          <h3 class="producto-card__title" data-translate="motoresTitle">Motores</h3>
+          <div class="producto-card__image-container">
+            <img src="images/motor/Motor-PU00e1gina.webp" alt="Motor CM Ventor" class="producto-card__image">
+          </div>
+          <p class="producto-card__description" data-translate="motoresDesc">
             Diseños exclusivos para Torre de Enfriamiento, con las siguientes características:
           </p>
-          <ul class="materials-list" style="margin-top: 1rem;">
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature1">Recubrimiento epóxico en interior y exterior de equipo</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature2">Sello de flecha en bronce alta eficiencia inpro/seal</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature3">Sellado de caja de conexiones a prueba de goteo</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature4">Carcaza fabricada en hierro fundido</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature5">Baleros y rodamientos sellados</span></li>
-          </ul>
-          <div class="producto-features" style="margin-top: 1.5rem;">
-            <span class="feature" data-translate="motoresIE3">Eficiencia IE3</span>
-            <span class="feature" data-translate="motoresMantenimiento">Bajo mantenimiento</span>
-            <span class="feature" data-translate="motoresGarantia">Garantía extendida</span>
+          <div class="producto-card__features">
+            <span class="producto-card__feature" data-translate="motoresIE3">Eficiencia IE3</span>
+            <span class="producto-card__feature" data-translate="motoresMantenimiento">Bajo mantenimiento</span>
+            <span class="producto-card__feature" data-translate="motoresGarantia">Garantía extendida</span>
           </div>
         </div>
         
-        <div class="card producto-gallery-card">
-          <h3 class="services__card-title" data-translate="ventiladoresTitle">Ventiladores</h3>
-          
-          <div class="producto-gallery">
-            <div class="producto-gallery-main">
-              <img id="ventilador-main-image" src="images/ventilador/Imagen1.webp" alt="Ventilador CM Ventor" class="producto-main-img">
-            </div>
-            <div class="producto-gallery-thumbs">
-              <img src="images/ventilador/Imagen1.webp" alt="Ventilador 1" class="producto-thumb active" onclick="changeProductImage(this, 'images/ventilador/Imagen1.webp', 'ventilador-main-image')">
-              <img src="images/ventilador/Imagen2.webp" alt="Ventilador 2" class="producto-thumb" onclick="changeProductImage(this, 'images/ventilador/Imagen2.webp', 'ventilador-main-image')">
-              <img src="images/ventilador/Imagen3.webp" alt="Ventilador 3" class="producto-thumb" onclick="changeProductImage(this, 'images/ventilador/Imagen3.webp', 'ventilador-main-image')">
-              <img src="images/ventilador/Imagen4.webp" alt="Ventilador 4" class="producto-thumb" onclick="changeProductImage(this, 'images/ventilador/Imagen4.webp', 'ventilador-main-image')">
-              <img src="images/ventilador/Imagen5.webp" alt="Ventilador 5" class="producto-thumb" onclick="changeProductImage(this, 'images/ventilador/Imagen5.webp', 'ventilador-main-image')">
-              <img src="images/ventilador/Imagen6.webp" alt="Ventilador 6" class="producto-thumb" onclick="changeProductImage(this, 'images/ventilador/Imagen6.webp', 'ventilador-main-image')">
-              <img src="images/ventilador/17.webp" alt="Ventilador 17" class="producto-thumb" onclick="changeProductImage(this, 'images/ventilador/17.webp', 'ventilador-main-image')">
-              <img src="images/ventilador/18.webp" alt="Ventilador 18" class="producto-thumb" onclick="changeProductImage(this, 'images/ventilador/18.webp', 'ventilador-main-image')">
+        <div class="card producto-card">
+          <div class="producto-card__icon">
+            <i class="fas fa-fan"></i>
+          </div>
+          <h3 class="producto-card__title" data-translate="ventiladoresTitle">Ventiladores</h3>
+          <div class="producto-card__image-container">
+            <img src="images/ventilador/Imagen1.webp" alt="Ventilador CM Ventor" class="producto-card__image" onclick="openProductModal('ventiladores')">
+            <div class="producto-card__overlay">
+              <button class="producto-card__btn" onclick="openProductModal('ventiladores')" data-translate="verGalería">Ver Galería</button>
             </div>
           </div>
-          
-          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="ventiladoresDesc">
+          <p class="producto-card__description" data-translate="ventiladoresDesc">
             Diseños personalizados para su aplicación, fabricados en poliamida reforzada con fibra de vidrio (PAG), 
-            centro en aluminio inyectado, alta eficiencia, resistencia mecánica, bajo ruido sonoro, 
-            consumo de energía inferior, resistente a la corrosión y ligero.
+            centro en aluminio inyectado, alta eficiencia, resistencia mecánica, bajo ruido sonoro.
           </p>
         </div>
         
-        <div class="card producto-gallery-card">
-          <h3 class="services__card-title" data-translate="rellenosTitle">Rellenos Enfriadores</h3>
-          
-          <div class="producto-gallery">
-            <div class="producto-gallery-main">
-              <img id="relleno-main-image" src="images/relleno/Relleno-Splash-Film.webp" alt="Relleno Enfriador" class="producto-main-img">
-            </div>
-            <div class="producto-gallery-thumbs">
-              <img src="images/relleno/Relleno-Splash-Film.webp" alt="Relleno 1" class="producto-thumb active" onclick="changeProductImage(this, 'images/relleno/Relleno-Splash-Film.webp', 'relleno-main-image')">
-              <img src="images/relleno/CF1900-Cross-Fluted-Film-Fill-Media-For.webp" alt="Relleno 2" class="producto-thumb" onclick="changeProductImage(this, 'images/relleno/CF1900-Cross-Fluted-Film-Fill-Media-For.webp', 'relleno-main-image')">
-              <img src="images/relleno/610mm.webp" alt="Relleno 3" class="producto-thumb" onclick="changeProductImage(this, 'images/relleno/610mm.webp', 'relleno-main-image')">
-              <img src="images/relleno/610mm-width1.webp" alt="Relleno 4" class="producto-thumb" onclick="changeProductImage(this, 'images/relleno/610mm-width1.webp', 'relleno-main-image')">
-              <img src="images/relleno/Louver.webp" alt="Relleno 5" class="producto-thumb" onclick="changeProductImage(this, 'images/relleno/Louver.webp', 'relleno-main-image')">
+        <div class="card producto-card">
+          <div class="producto-card__icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3 class="producto-card__title" data-translate="rellenosTitle">Rellenos Enfriadores</h3>
+          <div class="producto-card__image-container">
+            <img src="images/relleno/Relleno-Splash-Film.webp" alt="Relleno Enfriador" class="producto-card__image" onclick="openProductModal('rellenos')">
+            <div class="producto-card__overlay">
+              <button class="producto-card__btn" onclick="openProductModal('rellenos')" data-translate="verGalería">Ver Galería</button>
             </div>
           </div>
-          
-          <div class="producto-materials" style="margin-top: 1.5rem;">
-            <p style="font-weight: 600; color: var(--cm-blue); margin-bottom: 1rem;" data-translate="rellenosTipos">Tipos:</p>
-            
-            <div style="margin-bottom: 1.5rem;">
-              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
-                <span data-translate="rellenosSplash">Splash Fill</span>
-              </p>
-              <p class="services__card-description" style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;" data-translate="rellenosSplashDesc">
-                Logra un alto rendimiento térmico en torres de enfriamiento de contraflujo y flujo cruzado, 
-                su diseño abierto y resistente al ensuciamiento hacen que sea una de las mejores opciones 
-                para éstas. Lo convierte en una opción ideal para aplicaciones de agua sucia, como en 
-                industrias de energía, químicas, acero y muchas más. Su instalación es sencilla y hacen 
-                fácil y económico su embarque, almacenamiento e instalación.
-              </p>
-            </div>
-            
-            <div style="margin-bottom: 1.5rem;">
-              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
-                <span data-translate="rellenosFilm">Film Fill</span>
-              </p>
-              <p class="services__card-description" style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.6;" data-translate="rellenosFilmDesc">
-                Cuenta con una entrada/salida vertical que promueve el flujo libre de escombros, mientras 
-                que las ondulaciones transversales maximizan el área de la superficie y crean turbulencia 
-                para asegurar una transferencia de calor eficiente.
-              </p>
-            </div>
-            
-            <div>
-              <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">
-                <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
-                <span data-translate="rellenosMadera">Madera tratada</span>
-              </p>
-            </div>
-          </div>
+          <p class="producto-card__description" data-translate="rellenosTipos">
+            Tipos: Splash Fill, Film Fill y Madera tratada. Alto rendimiento térmico y resistencia.
+          </p>
         </div>
         
-        <div class="card producto-gallery-card">
-          <h3 class="services__card-title" data-translate="espreasTitle">Espreas</h3>
-          
-          <div class="producto-gallery">
-            <div class="producto-gallery-main">
-              <img id="esprea-main-image" src="images/espreas/Espera-tipo-1.webp" alt="Esprea CM Ventor" class="producto-main-img">
-            </div>
-            <div class="producto-gallery-thumbs">
-              <img src="images/espreas/Espera-tipo-1.webp" alt="Esprea 1" class="producto-thumb active" onclick="changeProductImage(this, 'images/espreas/Espera-tipo-1.webp', 'esprea-main-image')">
-              <img src="images/espreas/Espreas-tipo-2.webp" alt="Esprea 2" class="producto-thumb" onclick="changeProductImage(this, 'images/espreas/Espreas-tipo-2.webp', 'esprea-main-image')">
-              <img src="images/espreas/esprera-tipo-3.webp" alt="Esprea 3" class="producto-thumb" onclick="changeProductImage(this, 'images/espreas/esprera-tipo-3.webp', 'esprea-main-image')">
+        <div class="card producto-card">
+          <div class="producto-card__icon">
+            <i class="fas fa-tint"></i>
+          </div>
+          <h3 class="producto-card__title" data-translate="espreasTitle">Espreas</h3>
+          <div class="producto-card__image-container">
+            <img src="images/espreas/Espera-tipo-1.webp" alt="Esprea CM Ventor" class="producto-card__image" onclick="openProductModal('espreas')">
+            <div class="producto-card__overlay">
+              <button class="producto-card__btn" onclick="openProductModal('espreas')" data-translate="verGalería">Ver Galería</button>
             </div>
           </div>
-          
-          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="espreasDesc">
+          <p class="producto-card__description" data-translate="espreasDesc">
             Diseño único que provee la dispersión de agua de forma uniforme en todas las direcciones, 
-            previniendo fugas y asegurando un amplio contacto con el relleno, para conseguir el mejor 
-            funcionamiento de las Torres de Enfriamiento.
+            previniendo fugas y asegurando un amplio contacto con el relleno.
           </p>
         </div>
         
-        <div class="card">
-          <i class="fas fa-shield-alt services__icon"></i>
-          <h3 class="services__card-title" data-translate="vibroswitchTitle">Vibroswitch</h3>
-          
-          <div class="producto-gallery">
-            <div class="producto-gallery-main">
-              <img id="vibroswitch-main-image" src="images/Vibroswitch/Vibroswitch.png" alt="Vibroswitch CM Ventor" class="producto-main-img">
-            </div>
+        <div class="card producto-card">
+          <div class="producto-card__icon">
+            <i class="fas fa-shield-alt"></i>
           </div>
-          
-          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="vibroswitchDesc">
+          <h3 class="producto-card__title" data-translate="vibroswitchTitle">Vibroswitch</h3>
+          <div class="producto-card__image-container">
+            <img src="images/Vibroswitch/Vibroswitch.png" alt="Vibroswitch CM Ventor" class="producto-card__image">
+          </div>
+          <p class="producto-card__description" data-translate="vibroswitchDesc">
             Equipo de seguridad que detecta vibraciones en el ventilador, proporcionando protección 
             y prevención de daños en los equipos de enfriamiento.
           </p>
-          <div class="producto-features">
-            <span class="feature" data-translate="vibroswitchFeature1">Detección de vibraciones</span>
-            <span class="feature" data-translate="vibroswitchFeature2">Equipo de seguridad</span>
-            <span class="feature" data-translate="vibroswitchFeature3">Protección de equipos</span>
+          <div class="producto-card__features">
+            <span class="producto-card__feature" data-translate="vibroswitchFeature1">Detección de vibraciones</span>
+            <span class="producto-card__feature" data-translate="vibroswitchFeature2">Equipo de seguridad</span>
           </div>
         </div>
         
-        <div class="card">
-          <i class="fas fa-window-maximize services__icon"></i>
-          <h3 class="services__card-title" data-translate="louversTitle">Louvers</h3>
-          
-          <div class="producto-gallery">
-            <div class="producto-gallery-main">
-              <img id="louvers-main-image" src="images/Louvers/Louvers.png" alt="Louvers CM Ventor" class="producto-main-img">
-            </div>
-            <div class="producto-gallery-thumbs">
-              <img src="images/Louvers/Louvers.png" alt="Louvers 1" class="producto-thumb active" onclick="changeProductImage(this, 'images/Louvers/Louvers.png', 'louvers-main-image')">
-              <img src="images/Louvers/Louvers1.png" alt="Louvers 2" class="producto-thumb" onclick="changeProductImage(this, 'images/Louvers/Louvers1.png', 'louvers-main-image')">
+        <div class="card producto-card">
+          <div class="producto-card__icon">
+            <i class="fas fa-window-maximize"></i>
+          </div>
+          <h3 class="producto-card__title" data-translate="louversTitle">Louvers</h3>
+          <div class="producto-card__image-container">
+            <img src="images/Louvers/Louvers.png" alt="Louvers CM Ventor" class="producto-card__image" onclick="openProductModal('louvers')">
+            <div class="producto-card__overlay">
+              <button class="producto-card__btn" onclick="openProductModal('louvers')" data-translate="verGalería">Ver Galería</button>
             </div>
           </div>
-          
-          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="louversDesc">
+          <p class="producto-card__description" data-translate="louversDesc">
             Louvers en PVC de alta eficiencia para ventanas de Torre de Enfriamiento.
           </p>
-          <ul class="materials-list" style="margin-top: 1rem;">
-            <li><i class="fas fa-check-circle"></i> <span data-translate="louversFeature1">Fabricado en PVC rígido contra rayos UV</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="louversFeature2">Reduce el salpiqueo minimizando la reposición de agua</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="louversFeature3">Reduce el ruido y mantiene baja la caída de presión</span></li>
-          </ul>
         </div>
       </div>
     </div>
@@ -1192,6 +1095,22 @@
        title="Contáctanos por WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
+  </div>
+
+  <!-- Product Modal -->
+  <div id="productModal" class="product-modal">
+    <div class="product-modal__overlay" onclick="closeProductModal()"></div>
+    <div class="product-modal__content">
+      <button class="product-modal__close" onclick="closeProductModal()">&times;</button>
+      <h3 class="product-modal__title" id="modalTitle"></h3>
+      <div class="product-modal__gallery">
+        <div class="product-modal__main">
+          <img id="modalMainImage" src="" alt="" class="product-modal__main-img">
+        </div>
+        <div class="product-modal__thumbs" id="modalThumbs"></div>
+      </div>
+      <div class="product-modal__description" id="modalDescription"></div>
+    </div>
   </div>
 
   <script src="js/script-v2.js"></script>

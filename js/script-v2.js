@@ -424,6 +424,158 @@ document.addEventListener('click', function(event) {
 });
 
 // Log para debugging (remover en producción)
+// ===================================
+// PRODUCT MODAL
+// ===================================
+
+// Galerías de productos
+const productGalleries = {
+    torres: {
+        title: 'Torres de Enfriamiento',
+        images: [
+            'images/torres enfriamiento/torre de enfriamiento-1.webp',
+            'images/torres enfriamiento/torre de enfriamiento-2.webp',
+            'images/torres enfriamiento/torre de enfriamiento-3.webp',
+            'images/torres enfriamiento/torre de enfriamiento-4.webp',
+            'images/torres enfriamiento/torre de enfriamiento-5.webp',
+            'images/torres enfriamiento/torre de enfriamiento-6.webp',
+            'images/torres enfriamiento/torre de enfriamiento-7.webp',
+            'images/torres enfriamiento/torre de enfriamiento-8.webp',
+            'images/torres enfriamiento/torre de enfriamiento-10.webp',
+            'images/torres enfriamiento/torre de enfriamiento-11.webp',
+            'images/torres enfriamiento/torre de enfriamiento-12.webp',
+            'images/torres enfriamiento/torre de enfriamiento-13.webp',
+            'images/torres enfriamiento/torre de enfriamiento-14.webp',
+            'images/torres enfriamiento/1-2torre de enfriamiento-14.webp',
+            'images/torres enfriamiento/torre de enfriamiento-15.webp',
+            'images/torres enfriamiento/torre de enfriamiento-16.webp',
+            'images/torres enfriamiento/3-1.webp'
+        ],
+        description: 'Amplia variedad de modelos de acuerdo a los requerimientos y necesidades de nuestros clientes. Fabricadas en: Fibra de vidrio, Acero galvanizado, Acero inoxidable. Capacidad: 50-2000 TR. Certificado CTI.'
+    },
+    ventiladores: {
+        title: 'Ventiladores',
+        images: [
+            'images/ventilador/Imagen1.webp',
+            'images/ventilador/Imagen2.webp',
+            'images/ventilador/Imagen3.webp',
+            'images/ventilador/Imagen4.webp',
+            'images/ventilador/Imagen5.webp',
+            'images/ventilador/Imagen6.webp',
+            'images/ventilador/17.webp',
+            'images/ventilador/18.webp'
+        ],
+        description: 'Diseños personalizados para su aplicación, fabricados en poliamida reforzada con fibra de vidrio (PAG), centro en aluminio inyectado, alta eficiencia, resistencia mecánica, bajo ruido sonoro, consumo de energía inferior, resistente a la corrosión y ligero.'
+    },
+    rellenos: {
+        title: 'Rellenos Enfriadores',
+        images: [
+            'images/relleno/Relleno-Splash-Film.webp',
+            'images/relleno/CF1900-Cross-Fluted-Film-Fill-Media-For.webp',
+            'images/relleno/610mm.webp',
+            'images/relleno/610mm-width1.webp',
+            'images/relleno/Louver.webp'
+        ],
+        description: 'Tipos: Splash Fill que logra un alto rendimiento térmico en torres de enfriamiento de contraflujo y flujo cruzado. Film Fill que cuenta con una entrada/salida vertical que promueve el flujo libre de escombros. Madera tratada.'
+    },
+    espreas: {
+        title: 'Espreas',
+        images: [
+            'images/espreas/Espera-tipo-1.webp',
+            'images/espreas/Espreas-tipo-2.webp',
+            'images/espreas/esprera-tipo-3.webp'
+        ],
+        description: 'Diseño único que provee la dispersión de agua de forma uniforme en todas las direcciones, previniendo fugas y asegurando un amplio contacto con el relleno, para conseguir el mejor funcionamiento de las Torres de Enfriamiento.'
+    },
+    louvers: {
+        title: 'Louvers',
+        images: [
+            'images/Louvers/Louvers.png',
+            'images/Louvers/Louvers1.png'
+        ],
+        description: 'Louvers en PVC de alta eficiencia para ventanas de Torre de Enfriamiento. Fabricado en PVC rígido contra rayos UV. Reduce el salpiqueo minimizando la reposición de agua. Reduce el ruido y mantiene baja la caída de presión.'
+    }
+};
+
+function openProductModal(productId) {
+    const gallery = productGalleries[productId];
+    if (!gallery) return;
+    
+    const modal = document.getElementById('productModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMainImage = document.getElementById('modalMainImage');
+    const modalThumbs = document.getElementById('modalThumbs');
+    const modalDescription = document.getElementById('modalDescription');
+    
+    // Traducir título
+    const t = translations[currentLanguage];
+    const titleKey = productId === 'torres' ? 'torresTitle' : 
+                     productId === 'ventiladores' ? 'ventiladoresTitle' :
+                     productId === 'rellenos' ? 'rellenosTitle' :
+                     productId === 'espreas' ? 'espreasTitle' : 'louversTitle';
+    modalTitle.textContent = t ? t[titleKey] : gallery.title;
+    
+    // Establecer primera imagen
+    modalMainImage.src = gallery.images[0];
+    modalMainImage.alt = gallery.title;
+    
+    // Crear thumbnails
+    modalThumbs.innerHTML = '';
+    gallery.images.forEach((imgSrc, index) => {
+        const thumb = document.createElement('img');
+        thumb.src = imgSrc;
+        thumb.alt = `${gallery.title} ${index + 1}`;
+        thumb.className = index === 0 ? 'active' : '';
+        thumb.onclick = () => changeModalImage(imgSrc, index);
+        modalThumbs.appendChild(thumb);
+    });
+    
+    // Traducir descripción
+    const descKey = productId === 'torres' ? 'torresVariedad' :
+                    productId === 'ventiladores' ? 'ventiladoresDesc' :
+                    productId === 'rellenos' ? 'rellenosTipos' :
+                    productId === 'espreas' ? 'espreasDesc' : 'louversDesc';
+    modalDescription.textContent = t ? t[descKey] : gallery.description;
+    
+    // Mostrar modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProductModal() {
+    const modal = document.getElementById('productModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function changeModalImage(imgSrc, index) {
+    const modalMainImage = document.getElementById('modalMainImage');
+    const thumbs = document.querySelectorAll('.product-modal__thumbs img');
+    
+    // Cambiar imagen principal
+    modalMainImage.style.opacity = '0';
+    setTimeout(() => {
+        modalMainImage.src = imgSrc;
+        modalMainImage.style.opacity = '1';
+    }, 150);
+    
+    // Actualizar thumbnails activos
+    thumbs.forEach((thumb, i) => {
+        if (i === index) {
+            thumb.classList.add('active');
+        } else {
+            thumb.classList.remove('active');
+        }
+    });
+}
+
+// Cerrar modal con ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeProductModal();
+    }
+});
+
 console.log('CM Ventor V2 - Script inicializado correctamente');
 console.log('Versión: 2.0');
 console.log('Diseño basado en: Rheab con colores CM Ventor');

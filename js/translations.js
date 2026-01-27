@@ -154,6 +154,7 @@ const translations = {
         louversFeature1: "Fabricado en PVC rígido contra rayos UV",
         louversFeature2: "Reduce el salpiqueo minimizando la reposición de agua",
         louversFeature3: "Reduce el ruido y mantiene baja la caída de presión",
+        verGalería: "Ver Galería",
         
         // Proyectos
         proyectosTitle: "Proyectos Destacados",
@@ -378,6 +379,7 @@ const translations = {
         louversFeature1: "Made of rigid PVC against UV rays",
         louversFeature2: "Reduces splashing minimizing water replenishment",
         louversFeature3: "Reduces noise and maintains low pressure drop",
+        verGalería: "View Gallery",
         
         // Proyectos
         proyectosTitle: "Featured Projects",
