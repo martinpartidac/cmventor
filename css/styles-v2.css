@@ -1887,7 +1887,6 @@ a:hover {
 
 .reconocimientos__item--highlight {
     border-top-color: var(--cm-yellow);
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(245, 158, 11, 0.02));
 }
 
 .reconocimientos__icon {
