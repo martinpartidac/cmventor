@@ -129,6 +129,22 @@ const translations = {
         statsProyectos: "Proyectos Completados",
         statsSatisfaccion: "Satisfacción del Cliente",
         
+        // Clientes
+        clientesTitle: "Nuestros Clientes",
+        clientesSubtitle: "Empresas líderes que confían en nuestros servicios y productos de calidad",
+        terniumDesc: "Contratos de mantenimiento preventivo y correctivo en múltiples plantas: Nuevo León, Monclova, Guerrero Acerex, Juventud, Guerrero y CIT Pesquería.",
+        metalsaDesc: "Contrato integral de mantenimiento preventivo y correctivo a torres de enfriamiento, extractores, manejadoras de aire, sistema de bombeo y tableros de control eléctrico en planta Apodaca.",
+        casahumosDesc: "Contrato de operación y mantenimiento en Planta Largos Norte, garantizando el funcionamiento óptimo de los sistemas.",
+        teksidDesc: "Nuestro primer cliente importante. Fabricamos nuestra primera torre de enfriamiento en 1996, marcando el inicio de nuestra trayectoria de éxito.",
+        clientesNote: "Trabajamos con empresas líderes en diversos sectores industriales, proporcionando soluciones confiables y de alta calidad.",
+        servicioMantenimiento: "Mantenimiento",
+        servicioLimpieza: "Limpieza",
+        servicioOperacion: "Operación",
+        servicioInstalacion: "Instalación",
+        servicioElectrico: "Eléctrico",
+        primerCliente: "Primer Cliente",
+        servicioFabricacion: "Fabricación",
+        
         // Contacto
         contactoTitle: "Contáctanos",
         contactoSubtitle: "Estamos aquí para resolver tus necesidades de enfriamiento industrial",
@@ -291,6 +307,22 @@ const translations = {
         statsAnos: "Years of Experience",
         statsProyectos: "Completed Projects",
         statsSatisfaccion: "Client Satisfaction",
+        
+        // Clientes
+        clientesTitle: "Our Clients",
+        clientesSubtitle: "Leading companies that trust our quality services and products",
+        terniumDesc: "Preventive and corrective maintenance contracts in multiple plants: Nuevo León, Monclova, Guerrero Acerex, Juventud, Guerrero and CIT Pesquería.",
+        metalsaDesc: "Comprehensive preventive and corrective maintenance contract for cooling towers, extractors, air handlers, pumping system and electrical control panels at Apodaca plant.",
+        casahumosDesc: "Operation and maintenance contract at Largos Norte Plant, ensuring optimal system performance.",
+        teksidDesc: "Our first important client. We manufactured our first cooling tower in 1996, marking the beginning of our success story.",
+        clientesNote: "We work with leading companies in various industrial sectors, providing reliable and high-quality solutions.",
+        servicioMantenimiento: "Maintenance",
+        servicioLimpieza: "Cleaning",
+        servicioOperacion: "Operation",
+        servicioInstalacion: "Installation",
+        servicioElectrico: "Electrical",
+        primerCliente: "First Client",
+        servicioFabricacion: "Manufacturing",
         
         // Contacto
         contactoTitle: "Contact Us",
