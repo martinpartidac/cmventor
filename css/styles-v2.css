@@ -1110,6 +1110,22 @@ a:hover {
     color: var(--bg-white);
 }
 
+.proyecto-icon--logo {
+    background: var(--bg-white);
+    border: 3px solid var(--cm-blue);
+    border-radius: 1rem;
+    padding: 0.75rem;
+    width: 120px;
+    height: 120px;
+}
+
+.proyecto-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
 .proyecto-location {
     color: var(--cm-blue);
     font-weight: 500;
