@@ -2232,6 +2232,74 @@ a:hover {
     border: 1px solid var(--border-color);
 }
 
+.producto-card__materials {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: 0.5rem;
+}
+
+.producto-card__materials-title {
+    font-weight: 600;
+    color: var(--cm-blue);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.producto-card__materials-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.producto-card__materials-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.producto-card__materials-list li:last-child {
+    margin-bottom: 0;
+}
+
+.producto-card__materials-list i {
+    color: var(--cm-blue);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.producto-card__characteristics {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.producto-card__characteristics li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.producto-card__characteristics li:last-child {
+    margin-bottom: 0;
+}
+
+.producto-card__characteristics i {
+    color: var(--cm-blue);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
 /* ===================================
    PRODUCT MODAL
    =================================== */
