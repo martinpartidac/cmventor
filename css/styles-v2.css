@@ -813,15 +813,15 @@ a:hover {
 
 .instalaciones-gallery-main {
     width: 100%;
-    height: 400px;
-    margin-bottom: 1rem;
+    height: 500px;
+    margin-bottom: 1.5rem;
     border-radius: 0.75rem;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--bg-light);
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .instalaciones-gallery-main img {
@@ -834,7 +834,7 @@ a:hover {
 .instalaciones-gallery-thumbs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+    gap: 0.75rem;
 }
 
 .instalaciones-thumb {
@@ -862,28 +862,34 @@ a:hover {
 
 @media (min-width: 1024px) {
     .instalaciones-gallery-main {
-        height: 450px;
-        padding: 1rem;
+        height: 600px;
+        padding: 1.5rem;
+    }
+    
+    .instalaciones-gallery-thumbs {
+        gap: 1rem;
     }
 }
 
 @media (max-width: 768px) {
     .instalaciones-gallery-main {
-        height: 300px;
+        height: 400px;
+        padding: 0.75rem;
     }
     
     .instalaciones-gallery-thumbs {
-        gap: 0.4rem;
+        gap: 0.6rem;
     }
 }
 
 @media (max-width: 640px) {
     .instalaciones-gallery-main {
-        height: 250px;
+        height: 350px;
+        padding: 0.5rem;
     }
     
     .instalaciones-gallery-thumbs {
-        gap: 0.3rem;
+        gap: 0.5rem;
     }
 }
 
