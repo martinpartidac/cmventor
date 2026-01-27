@@ -750,7 +750,14 @@
         <div class="card">
           <i class="fas fa-shield-alt services__icon"></i>
           <h3 class="services__card-title" data-translate="vibroswitchTitle">Vibroswitch</h3>
-          <p class="services__card-description" data-translate="vibroswitchDesc">
+          
+          <div class="producto-gallery">
+            <div class="producto-gallery-main">
+              <img id="vibroswitch-main-image" src="images/vibroswitch/Vibroswitch.png" alt="Vibroswitch CM Ventor" class="producto-main-img">
+            </div>
+          </div>
+          
+          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="vibroswitchDesc">
             Equipo de seguridad que detecta vibraciones en el ventilador, proporcionando protección 
             y prevención de daños en los equipos de enfriamiento.
           </p>
@@ -764,7 +771,18 @@
         <div class="card">
           <i class="fas fa-window-maximize services__icon"></i>
           <h3 class="services__card-title" data-translate="louversTitle">Louvers</h3>
-          <p class="services__card-description" data-translate="louversDesc">
+          
+          <div class="producto-gallery">
+            <div class="producto-gallery-main">
+              <img id="louvers-main-image" src="images/louvers/Louvers.png" alt="Louvers CM Ventor" class="producto-main-img">
+            </div>
+            <div class="producto-gallery-thumbs">
+              <img src="images/louvers/Louvers.png" alt="Louvers 1" class="producto-thumb active" onclick="changeProductImage(this, 'images/louvers/Louvers.png', 'louvers-main-image')">
+              <img src="images/louvers/Louvers1.png" alt="Louvers 2" class="producto-thumb" onclick="changeProductImage(this, 'images/louvers/Louvers1.png', 'louvers-main-image')">
+            </div>
+          </div>
+          
+          <p class="services__card-description" style="margin-top: 1.5rem;" data-translate="louversDesc">
             Louvers en PVC de alta eficiencia para ventanas de Torre de Enfriamiento.
           </p>
           <ul class="materials-list" style="margin-top: 1rem;">
