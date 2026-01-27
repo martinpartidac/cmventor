@@ -1126,6 +1126,38 @@ a:hover {
     margin-top: 1.5rem;
 }
 
+.proyecto-contratos {
+    margin-top: 1rem;
+}
+
+.contratos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.contratos-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.contratos-list li:last-child {
+    margin-bottom: 0;
+}
+
+.contratos-list i {
+    color: var(--cm-blue);
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+    font-size: 0.875rem;
+}
+
 .stat-badge {
     background: var(--cm-blue);
     color: var(--bg-white);
