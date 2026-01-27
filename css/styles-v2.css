@@ -1911,6 +1911,26 @@ a:hover {
     background: linear-gradient(135deg, #10b981, #059669);
 }
 
+.reconocimientos__icon--image {
+    background: var(--bg-white);
+    border: 3px solid var(--cm-blue);
+    padding: 0.75rem;
+    border-radius: 1rem;
+    width: 120px;
+    height: 120px;
+}
+
+.reconocimientos__icon--zero.reconocimientos__icon--image {
+    border-color: var(--cm-yellow);
+}
+
+.reconocimientos__logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
 .reconocimientos__item-title {
     font-size: 1.5rem;
     font-weight: 600;
