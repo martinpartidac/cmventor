@@ -2358,6 +2358,20 @@ a:hover {
     color: var(--bg-white);
 }
 
+.clients__logo-placeholder--image {
+    background: var(--bg-white);
+    border: 3px solid var(--cm-blue);
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+.clients__logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
 .clients__name {
     font-size: 1.5rem;
     font-weight: 600;
