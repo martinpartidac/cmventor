@@ -547,6 +547,8 @@ a:hover {
     grid-template-columns: 1fr;
     gap: 4rem;
     align-items: center;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 @media (min-width: 1024px) {
@@ -559,6 +561,8 @@ a:hover {
 .hero__text {
     position: relative;
     z-index: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .hero__title {
@@ -3264,7 +3268,29 @@ textarea:focus {
    FADE-IN ANIMATIONS ON SCROLL
    =================================== */
 
-.fade-in-up {
+/* Asegurar que todo el contenido crítico sea visible por defecto */
+.hero,
+.hero__content,
+.hero__text,
+.hero__title,
+.hero__subtitle,
+.hero__features,
+.hero__cta,
+.profile,
+.profile__header,
+.profile__content,
+.services,
+.services__header,
+.services__grid,
+.productos,
+.section-header {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Solo aplicar fade-in-up a elementos que explícitamente tienen la clase Y están fuera del viewport inicial */
+.fade-in-up:not(.visible) {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -3273,6 +3299,17 @@ textarea:focus {
 .fade-in-up.visible {
     opacity: 1 !important;
     transform: translateY(0);
+}
+
+/* Asegurar que elementos sin clase fade-in-up sean siempre visibles */
+.card:not(.fade-in-up),
+.producto-card:not(.fade-in-up),
+.service-card:not(.fade-in-up),
+.testimonial-card:not(.fade-in-up),
+section:not(.fade-in-up) {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
 }
 
 /* Prevenir que elementos visibles se oculten */

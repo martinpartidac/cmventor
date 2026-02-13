@@ -107,52 +107,57 @@ function initScrollAnimations() {
     // Verificar si el usuario prefiere animaciones reducidas
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
+    // NO aplicar animaciones a elementos críticos del viewport inicial
+    // Solo animar elementos que están fuera del viewport inicial
+    
     if (prefersReducedMotion) {
         // Si el usuario prefiere animaciones reducidas, mostrar todo inmediatamente
-        const animatedElements = document.querySelectorAll('.card, .producto-card, .service-card, .testimonial-card');
+        const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in');
         animatedElements.forEach(el => {
             el.classList.add('visible');
         });
         return;
     }
     
+    // Asegurar que contenido crítico sea visible inmediatamente
+    const criticalElements = document.querySelectorAll('.hero, .hero__content, .hero__text, .profile__header, .services__header, .section-header');
+    criticalElements.forEach(el => {
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
+    });
+    
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // No hacer unobserve para mantener visibilidad
-            } else {
-                // Solo ocultar si realmente sale del viewport hacia arriba
-                // Pero mantener visible si ya fue visto
-                if (entry.boundingClientRect.top < 0) {
-                    // El elemento ya pasó, mantenerlo visible
-                    entry.target.classList.add('visible');
-                }
             }
         });
     }, observerOptions);
     
-    // Agregar animación a elementos con clase fade-in-up
-    const animatedElements = document.querySelectorAll('.card, .producto-card, .service-card, .testimonial-card');
+    // Solo agregar animación a elementos específicos que NO están en el viewport inicial
+    // Excluir hero, header y contenido crítico del viewport inicial
+    const animatedElements = document.querySelectorAll('.producto-card, .service-card, .testimonial-card');
     
-    // Verificar qué elementos ya están visibles al cargar
     animatedElements.forEach((el, index) => {
         const rect = el.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        const viewportHeight = window.innerHeight;
+        const isInInitialViewport = rect.top < viewportHeight && rect.top > -100;
         
-        if (isVisible) {
-            // Si ya está visible, mostrar inmediatamente
-            el.classList.add('fade-in-up', 'visible');
-        } else {
-            // Si no está visible, agregar clase y observar
+        if (!isInInitialViewport) {
+            // Solo animar elementos fuera del viewport inicial
             el.classList.add('fade-in-up');
-            el.style.transitionDelay = `${Math.min(index * 0.05, 0.5)}s`;
+            el.style.transitionDelay = `${Math.min(index * 0.05, 0.3)}s`;
             observer.observe(el);
+        } else {
+            // Elementos en viewport inicial: mostrar inmediatamente sin animación
+            el.style.opacity = '1';
+            el.style.visibility = 'visible';
+            el.classList.add('visible');
         }
     });
 }
