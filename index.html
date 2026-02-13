@@ -1043,7 +1043,7 @@
             
             <div class="appointment__map-container">
               <iframe 
-                src="https://www.google.com/maps?q=Puerto+Vallarta+413,+La+Fe,+66477+San+Nicolás+de+los+Garza,+N.L.,+México&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.5!2d-100.3!3d25.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQyJzAwLjAiTiAxMDDCsDE4JzAwLjAiVw!5e0!3m2!1ses!2smx!4v1234567890!5m2!1ses!2smx&q=Puerto+Vallarta+413,+La+Fe,+66477+San+Nicolás+de+los+Garza,+N.L.,+México"
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
@@ -1051,8 +1051,22 @@
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
                 class="appointment__map"
-                title="Ubicación CM Ventor - Puerto Vallarta 413, La Fe, 66477 San Nicolás de los Garza, N.L.">
+                title="Ubicación CM Ventor - Puerto Vallarta 413, La Fe, 66477 San Nicolás de los Garza, N.L."
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
               </iframe>
+              <div class="appointment__map-fallback" style="display: none;">
+                <div class="appointment__map-placeholder">
+                  <i class="fas fa-map-marker-alt appointment__map-icon"></i>
+                  <p style="margin-bottom: 1rem; font-weight: 600;" data-translate="contactoMapaNoDisponible">Mapa no disponible</p>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Puerto+Vallarta+413,+La+Fe,+66477+San+Nicolás+de+los+Garza,+N.L.,+México" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     class="btn btn-primary"
+                     data-translate="contactoVerEnGoogleMaps">
+                    Ver en Google Maps
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           

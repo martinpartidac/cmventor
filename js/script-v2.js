@@ -789,6 +789,39 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// Detectar si el mapa de Google Maps falla al cargar
+function initMapFallback() {
+    const mapIframe = document.querySelector('.appointment__map');
+    const mapFallback = document.querySelector('.appointment__map-fallback');
+    
+    if (!mapIframe || !mapFallback) return;
+    
+    // Verificar si el iframe carga correctamente después de un tiempo
+    setTimeout(function() {
+        try {
+            // Intentar acceder al contenido del iframe (puede fallar por CORS)
+            const iframeDoc = mapIframe.contentDocument || mapIframe.contentWindow.document;
+            // Si llegamos aquí, el iframe cargó correctamente
+            mapFallback.style.display = 'none';
+        } catch (e) {
+            // Si hay error de CORS, verificar si el iframe tiene contenido visible
+            // Esto es una aproximación ya que no podemos acceder al contenido por CORS
+            // El onerror del iframe debería manejar esto
+        }
+    }, 3000);
+    
+    // También escuchar errores de red
+    mapIframe.addEventListener('error', function() {
+        mapIframe.style.display = 'none';
+        mapFallback.style.display = 'flex';
+    });
+}
+
+// Inicializar fallback del mapa
+document.addEventListener('DOMContentLoaded', function() {
+    initMapFallback();
+});
+
 console.log('CM Ventor V2 - Script inicializado correctamente');
 console.log('Versión: 2.0');
 console.log('Diseño basado en: Rheab con colores CM Ventor');
