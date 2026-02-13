@@ -38,6 +38,9 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -47,6 +50,14 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,10 +68,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #0f172a;
 }
 
-h1 { font-size: clamp(1.875rem, 5vw, 3rem); }
-h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
-h3 { font-size: clamp(1.25rem, 3vw, 1.875rem); }
-h4 { font-size: 1.25rem; }
+h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h2 { font-size: clamp(1.375rem, 3.5vw, 2rem); }
+h3 { font-size: clamp(1.125rem, 2.5vw, 1.625rem); }
+h4 { font-size: clamp(1.125rem, 2vw, 1.25rem); }
 
 p {
     margin-bottom: 1rem;
@@ -80,12 +91,18 @@ a:hover {
 /* Container */
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
 }
 
 @media (min-width: 768px) {
+    .container {
+        padding: 0 1.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
     .container {
         padding: 0 2rem;
     }
@@ -472,16 +489,16 @@ a:hover {
 
 .hero {
     position: relative;
-    padding-top: calc(6rem + 80px);
-    padding-bottom: 6rem;
+    padding-top: calc(5rem + 80px);
+    padding-bottom: 5rem;
     overflow: hidden;
     background: linear-gradient(135deg, #dbeafe, var(--bg-white));
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: calc(4rem + 80px);
-        padding-bottom: 4rem;
+        padding-top: calc(3.5rem + 80px);
+        padding-bottom: 3.5rem;
     }
 }
 
@@ -737,17 +754,23 @@ a:hover {
 
 .profile {
     background: var(--bg-white);
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 @media (min-width: 768px) {
     .profile {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 }
 
 .profile__header {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .profile__header {
+        margin-bottom: 5rem;
+    }
 }
 
 .profile__title {
@@ -937,17 +960,23 @@ a:hover {
 
 .services {
     background: var(--bg-light);
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 @media (min-width: 768px) {
     .services {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 }
 
 .services__header {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .services__header {
+        margin-bottom: 5rem;
+    }
 }
 
 .services__title {
@@ -1024,21 +1053,27 @@ a:hover {
    =================================== */
 
 .productos {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 @media (min-width: 768px) {
     .productos {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 }
 
 .section-header {
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    .section-header {
+        margin-bottom: 4rem;
+    }
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-dark);
@@ -1073,12 +1108,12 @@ a:hover {
 
 .testimonials {
     background: linear-gradient(135deg, #dbeafe, var(--bg-white), rgba(251, 191, 36, 0.1));
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 @media (min-width: 768px) {
     .testimonials {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 }
 
@@ -1229,12 +1264,12 @@ a:hover {
 
 .appointment {
     background: var(--bg-white);
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 @media (min-width: 768px) {
     .appointment {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 }
 
@@ -1880,21 +1915,27 @@ a:hover {
 
 .reconocimientos {
     background: linear-gradient(135deg, #dbeafe, var(--bg-white));
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 @media (min-width: 768px) {
     .reconocimientos {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 }
 
 .reconocimientos__header {
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    .reconocimientos__header {
+        margin-bottom: 4rem;
+    }
 }
 
 .reconocimientos__title {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
     font-weight: 700;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
@@ -1998,21 +2039,27 @@ a:hover {
 
 .valores {
     background: var(--bg-white);
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 @media (min-width: 768px) {
     .valores {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 }
 
 .valores__header {
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    .valores__header {
+        margin-bottom: 4rem;
+    }
 }
 
 .valores__title {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
     font-weight: 700;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
@@ -2655,7 +2702,7 @@ a:hover {
 }
 
 .features-highlight__title {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
     font-weight: 700;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
@@ -2740,12 +2787,12 @@ a:hover {
 
 .clients {
     background: var(--bg-white);
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 @media (min-width: 768px) {
     .clients {
-        padding: 6rem 0;
+        padding: 5rem 0;
     }
 }
 
@@ -2754,7 +2801,7 @@ a:hover {
 }
 
 .clients__title {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
     font-weight: 700;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
