@@ -104,26 +104,56 @@ function initActiveSectionIndicator() {
 // SCROLL ANIMATIONS (FADE-IN)
 // ===================================
 function initScrollAnimations() {
+    // Verificar si el usuario prefiere animaciones reducidas
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+        // Si el usuario prefiere animaciones reducidas, mostrar todo inmediatamente
+        const animatedElements = document.querySelectorAll('.card, .producto-card, .service-card, .testimonial-card');
+        animatedElements.forEach(el => {
+            el.classList.add('visible');
+        });
+        return;
+    }
+    
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -100px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                // No hacer unobserve para mantener visibilidad
+            } else {
+                // Solo ocultar si realmente sale del viewport hacia arriba
+                // Pero mantener visible si ya fue visto
+                if (entry.boundingClientRect.top < 0) {
+                    // El elemento ya pasó, mantenerlo visible
+                    entry.target.classList.add('visible');
+                }
             }
         });
     }, observerOptions);
     
     // Agregar animación a elementos con clase fade-in-up
     const animatedElements = document.querySelectorAll('.card, .producto-card, .service-card, .testimonial-card');
+    
+    // Verificar qué elementos ya están visibles al cargar
     animatedElements.forEach((el, index) => {
-        el.classList.add('fade-in-up');
-        el.style.transitionDelay = `${index * 0.1}s`;
-        observer.observe(el);
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+            // Si ya está visible, mostrar inmediatamente
+            el.classList.add('fade-in-up', 'visible');
+        } else {
+            // Si no está visible, agregar clase y observar
+            el.classList.add('fade-in-up');
+            el.style.transitionDelay = `${Math.min(index * 0.05, 0.5)}s`;
+            observer.observe(el);
+        }
     });
 }
 

@@ -3246,8 +3246,15 @@ textarea:focus {
 }
 
 .fade-in-up.visible {
-    opacity: 1;
+    opacity: 1 !important;
     transform: translateY(0);
+}
+
+/* Prevenir que elementos visibles se oculten */
+@media (prefers-reduced-motion: no-preference) {
+    .fade-in-up.visible {
+        opacity: 1 !important;
+    }
 }
 
 .fade-in {
