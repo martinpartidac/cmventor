@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initContactForm();
     initLanguage();
+    initScrollToTop();
+    initActiveSectionIndicator();
+    initScrollAnimations();
+    initFormValidation();
 });
 
 // ===================================
@@ -35,6 +39,160 @@ function initScrollHeader() {
             }
         }
     });
+}
+
+// ===================================
+// SCROLL TO TOP BUTTON
+// ===================================
+function initScrollToTop() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    if (!scrollToTopBtn) return;
+    
+    // Mostrar/ocultar botón según scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    // Scroll suave al hacer clic
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// ===================================
+// ACTIVE SECTION INDICATOR
+// ===================================
+function initActiveSectionIndicator() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.header__nav-link[data-section]');
+    
+    if (sections.length === 0 || navLinks.length === 0) return;
+    
+    function updateActiveSection() {
+        let current = '';
+        const scrollPosition = window.scrollY + 150;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-section') === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', updateActiveSection);
+    updateActiveSection(); // Llamar al cargar la página
+}
+
+// ===================================
+// SCROLL ANIMATIONS (FADE-IN)
+// ===================================
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Agregar animación a elementos con clase fade-in-up
+    const animatedElements = document.querySelectorAll('.card, .producto-card, .service-card, .testimonial-card');
+    animatedElements.forEach((el, index) => {
+        el.classList.add('fade-in-up');
+        el.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(el);
+    });
+}
+
+// ===================================
+// FORM VALIDATION (REAL-TIME)
+// ===================================
+function initFormValidation() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    
+    const inputs = form.querySelectorAll('.form-input-floating');
+    
+    inputs.forEach(input => {
+        // Validación en tiempo real al perder el foco
+        input.addEventListener('blur', function() {
+            validateField(input);
+        });
+        
+        // Limpiar error al escribir
+        input.addEventListener('input', function() {
+            if (input.classList.contains('error')) {
+                clearFieldError(input);
+            }
+        });
+    });
+}
+
+function validateField(input) {
+    const fieldName = input.name;
+    const value = input.value.trim();
+    const errorElement = document.getElementById(`${fieldName}-error`);
+    
+    // Limpiar error previo
+    clearFieldError(input);
+    
+    // Validar campo requerido
+    if (input.hasAttribute('required') && !value) {
+        showFieldError(input, errorElement, 'Este campo es obligatorio');
+        return false;
+    }
+    
+    // Validar email
+    if (fieldName === 'email' && value && !isValidEmail(value)) {
+        showFieldError(input, errorElement, 'Por favor ingresa un email válido');
+        return false;
+    }
+    
+    // Validar teléfono (básico)
+    if (fieldName === 'telefono' && value && value.length < 10) {
+        showFieldError(input, errorElement, 'Por favor ingresa un teléfono válido');
+        return false;
+    }
+    
+    return true;
+}
+
+function showFieldError(input, errorElement, message) {
+    input.classList.add('error');
+    if (errorElement) {
+        errorElement.textContent = message;
+    }
+}
+
+function clearFieldError(input) {
+    input.classList.remove('error');
+    const errorElement = document.getElementById(`${input.name}-error`);
+    if (errorElement) {
+        errorElement.textContent = '';
+    }
 }
 
 // ===================================
@@ -135,23 +293,36 @@ function initContactForm() {
             mensaje: document.getElementById('mensaje').value
         };
         
-        // Validar campos requeridos
-        if (!formData.nombre || !formData.email || !formData.telefono || !formData.mensaje) {
-            showNotification('Por favor, completa todos los campos requeridos.', 'error');
+        // Validar todos los campos
+        let isValid = true;
+        const inputs = form.querySelectorAll('.form-input-floating[required]');
+        
+        inputs.forEach(input => {
+            if (!validateField(input)) {
+                isValid = false;
+            }
+        });
+        
+        if (!isValid) {
+            showNotification('Por favor, completa correctamente todos los campos requeridos.', 'error');
             return;
         }
         
         // Validar email
         if (!isValidEmail(formData.email)) {
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            showFieldError(emailInput, emailError, 'Por favor ingresa un email válido');
             showNotification('Por favor, ingresa un email válido.', 'error');
             return;
         }
         
-        // Deshabilitar botón de envío
+        // Deshabilitar botón de envío y mostrar loading
         const submitButton = form.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
         submitButton.disabled = true;
-        submitButton.textContent = 'Enviando...';
+        submitButton.classList.add('loading');
+        submitButton.setAttribute('aria-busy', 'true');
         
         // Simular envío (aquí deberías integrar con tu backend)
         setTimeout(function() {
@@ -164,8 +335,20 @@ function initContactForm() {
             // Resetear formulario
             form.reset();
             
+            // Resetear labels flotantes y errores
+            const inputs = form.querySelectorAll('.form-input-floating');
+            inputs.forEach(input => {
+                input.classList.remove('error');
+                const errorElement = document.getElementById(`${input.name}-error`);
+                if (errorElement) {
+                    errorElement.textContent = '';
+                }
+            });
+            
             // Restaurar botón
             submitButton.disabled = false;
+            submitButton.classList.remove('loading');
+            submitButton.removeAttribute('aria-busy');
             submitButton.textContent = originalText;
         }, 1500);
     });

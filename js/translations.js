@@ -178,6 +178,7 @@ const translations = {
         louversProteccion: "Protección:",
         louversUV: "UV resistente",
         verGalería: "Ver Galería",
+        skipToContent: "Saltar al contenido principal",
         
         // Proyectos
         proyectosTitle: "Proyectos Destacados",
@@ -426,6 +427,7 @@ const translations = {
         louversProteccion: "Protection:",
         louversUV: "UV resistant",
         verGalería: "View Gallery",
+        skipToContent: "Skip to main content",
         
         // Proyectos
         proyectosTitle: "Featured Projects",

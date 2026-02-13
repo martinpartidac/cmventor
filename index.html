@@ -6,6 +6,20 @@
   <meta name="description" content="CM Ventor - Más de 30 años fabricando y manteniendo torres de enfriamiento. Certificados por CTI, instalación, reparación y mantenimiento en toda la República Mexicana.">
   <meta name="keywords" content="torres de enfriamiento, enfriadores, mantenimiento industrial, CTI, México">
   <title>CM Ventor S.A. de C.V. | Especialistas en Torres de Enfriamiento</title>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cmventor.github.io/">
+  <meta property="og:title" content="CM Ventor S.A. de C.V. | Especialistas en Torres de Enfriamiento">
+  <meta property="og:description" content="Más de 30 años fabricando y manteniendo torres de enfriamiento certificadas por CTI en toda la República Mexicana.">
+  <meta property="og:image" content="https://cmventor.github.io/images/logotipo.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://cmventor.github.io/">
+  <meta property="twitter:title" content="CM Ventor S.A. de C.V. | Especialistas en Torres de Enfriamiento">
+  <meta property="twitter:description" content="Más de 30 años fabricando y manteniendo torres de enfriamiento certificadas por CTI en toda la República Mexicana.">
+  <meta property="twitter:image" content="https://cmventor.github.io/images/logotipo.jpg">
   <link rel="icon" type="image/jpeg" href="images/logotipo.jpg">
   <link rel="shortcut icon" type="image/jpeg" href="images/logotipo.jpg">
   <link rel="apple-touch-icon" href="images/logotipo.jpg">
@@ -17,6 +31,14 @@
   <script src="js/translations.js"></script>
 </head>
 <body>
+  <!-- Skip to content link for accessibility -->
+  <a href="#inicio" class="skip-to-content" data-translate="skipToContent">Saltar al contenido principal</a>
+  
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba" title="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
@@ -31,11 +53,11 @@
         
         <nav class="header__nav" id="navMenu">
           <ul class="header__nav-list">
-            <li><a class="header__nav-link" onclick="scrollToSection('inicio')" data-translate="navInicio">Inicio</a></li>
-            <li><a class="header__nav-link" onclick="scrollToSection('empresa')" data-translate="navEmpresa">Empresa</a></li>
-            <li><a class="header__nav-link" onclick="scrollToSection('servicios')" data-translate="navServicios">Servicios</a></li>
-            <li><a class="header__nav-link" onclick="scrollToSection('productos')" data-translate="navProductos">Productos</a></li>
-            <li><a class="header__nav-link" onclick="scrollToSection('proyectos')" data-translate="navProyectos">Proyectos</a></li>
+            <li><a class="header__nav-link" href="#inicio" onclick="scrollToSection('inicio'); return false;" data-translate="navInicio" data-section="inicio">Inicio</a></li>
+            <li><a class="header__nav-link" href="#empresa" onclick="scrollToSection('empresa'); return false;" data-translate="navEmpresa" data-section="empresa">Empresa</a></li>
+            <li><a class="header__nav-link" href="#servicios" onclick="scrollToSection('servicios'); return false;" data-translate="navServicios" data-section="servicios">Servicios</a></li>
+            <li><a class="header__nav-link" href="#productos" onclick="scrollToSection('productos'); return false;" data-translate="navProductos" data-section="productos">Productos</a></li>
+            <li><a class="header__nav-link" href="#proyectos" onclick="scrollToSection('proyectos'); return false;" data-translate="navProyectos" data-section="proyectos">Proyectos</a></li>
           </ul>
           <div class="header__nav-cta">
             <div class="language-selector" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
@@ -160,7 +182,7 @@
         <div class="profile__main">
           <div class="profile__image-container">
             <div class="profile__image-placeholder">
-              <img src="images/torre de enfriamiento-9.webp" alt="Instalaciones CM Ventor" class="profile__image-img">
+              <img src="images/torre de enfriamiento-9.webp" alt="Instalaciones CM Ventor" class="profile__image-img" loading="lazy">
             </div>
             <div class="profile__instalaciones-stats">
               <div class="instalaciones-stat">
@@ -579,7 +601,7 @@
           </div>
           <h3 class="producto-card__title" data-translate="torresTitle">Torres de Enfriamiento</h3>
           <div class="producto-card__image-container">
-            <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torre de Enfriamiento" class="producto-card__image" onclick="openProductModal('torres')">
+            <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torre de Enfriamiento" class="producto-card__image" loading="lazy" onclick="openProductModal('torres')">
             <div class="producto-card__overlay">
               <button class="producto-card__btn" onclick="openProductModal('torres')" data-translate="verGalería">Ver Galería</button>
             </div>
@@ -621,7 +643,7 @@
           </div>
           <h3 class="producto-card__title" data-translate="motoresTitle">Motores</h3>
           <div class="producto-card__image-container">
-            <img src="images/motor/Motor-PU00e1gina.webp" alt="Motor CM Ventor" class="producto-card__image">
+            <img src="images/motor/Motor-PU00e1gina.webp" alt="Motor CM Ventor" class="producto-card__image" loading="lazy">
           </div>
           <p class="producto-card__description" data-translate="motoresDesc">
             Diseños exclusivos para Torre de Enfriamiento, con las siguientes características:
@@ -660,7 +682,7 @@
           </div>
           <h3 class="producto-card__title" data-translate="ventiladoresTitle">Ventiladores</h3>
           <div class="producto-card__image-container">
-            <img src="images/ventilador/Imagen1.webp" alt="Ventilador CM Ventor" class="producto-card__image" onclick="openProductModal('ventiladores')">
+            <img src="images/ventilador/Imagen1.webp" alt="Ventilador CM Ventor" class="producto-card__image" loading="lazy" onclick="openProductModal('ventiladores')">
             <div class="producto-card__overlay">
               <button class="producto-card__btn" onclick="openProductModal('ventiladores')" data-translate="verGalería">Ver Galería</button>
             </div>
@@ -685,7 +707,7 @@
           </div>
           <h3 class="producto-card__title" data-translate="rellenosTitle">Rellenos Enfriadores</h3>
           <div class="producto-card__image-container">
-            <img src="images/relleno/Relleno-Splash-Film.webp" alt="Relleno Enfriador" class="producto-card__image" onclick="openProductModal('rellenos')">
+            <img src="images/relleno/Relleno-Splash-Film.webp" alt="Relleno Enfriador" class="producto-card__image" loading="lazy" onclick="openProductModal('rellenos')">
             <div class="producto-card__overlay">
               <button class="producto-card__btn" onclick="openProductModal('rellenos')" data-translate="verGalería">Ver Galería</button>
             </div>
@@ -733,7 +755,7 @@
           </div>
           <h3 class="producto-card__title" data-translate="espreasTitle">Espreas</h3>
           <div class="producto-card__image-container">
-            <img src="images/espreas/Espera-tipo-1.webp" alt="Esprea CM Ventor" class="producto-card__image" onclick="openProductModal('espreas')">
+            <img src="images/espreas/Espera-tipo-1.webp" alt="Esprea CM Ventor" class="producto-card__image" loading="lazy" onclick="openProductModal('espreas')">
             <div class="producto-card__overlay">
               <button class="producto-card__btn" onclick="openProductModal('espreas')" data-translate="verGalería">Ver Galería</button>
             </div>
@@ -765,7 +787,7 @@
           </div>
           <h3 class="producto-card__title" data-translate="vibroswitchTitle">Vibroswitch</h3>
           <div class="producto-card__image-container">
-            <img src="images/Vibroswitch/Vibroswitch.png" alt="Vibroswitch CM Ventor" class="producto-card__image">
+            <img src="images/Vibroswitch/Vibroswitch.png" alt="Vibroswitch CM Ventor" class="producto-card__image" loading="lazy">
           </div>
           <p class="producto-card__description" data-translate="vibroswitchDesc">
             Equipo de seguridad que detecta vibraciones en el ventilador, proporcionando protección 
@@ -784,7 +806,7 @@
           </div>
           <h3 class="producto-card__title" data-translate="louversTitle">Louvers</h3>
           <div class="producto-card__image-container">
-            <img src="images/Louvers/Louvers.png" alt="Louvers CM Ventor" class="producto-card__image" onclick="openProductModal('louvers')">
+            <img src="images/Louvers/Louvers.png" alt="Louvers CM Ventor" class="producto-card__image" loading="lazy" onclick="openProductModal('louvers')">
             <div class="producto-card__overlay">
               <button class="producto-card__btn" onclick="openProductModal('louvers')" data-translate="verGalería">Ver Galería</button>
             </div>
@@ -825,7 +847,7 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="proyecto-icon proyecto-icon--logo">
-            <img src="images/logos/ternium.png" alt="Ternium Logo" class="proyecto-logo">
+            <img src="images/logos/ternium.png" alt="Ternium Logo" class="proyecto-logo" loading="lazy">
           </div>
           <h3 class="services__card-title">Ternium México</h3>
           <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Múltiples Plantas</p>
@@ -842,7 +864,7 @@
         
         <div class="card">
           <div class="proyecto-icon proyecto-icon--logo">
-            <img src="images/logos/Logo-Metalsa.png" alt="METALSA Logo" class="proyecto-logo">
+            <img src="images/logos/Logo-Metalsa.png" alt="METALSA Logo" class="proyecto-logo" loading="lazy">
           </div>
           <h3 class="services__card-title">METALSA</h3>
           <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Planta Apodaca</p>
@@ -858,7 +880,7 @@
         
         <div class="card">
           <div class="proyecto-icon proyecto-icon--logo">
-            <img src="images/logos/teksid-seeklogo.png" alt="TEKSID Logo" class="proyecto-logo">
+            <img src="images/logos/teksid-seeklogo.png" alt="TEKSID Logo" class="proyecto-logo" loading="lazy">
           </div>
           <h3 class="services__card-title">TEKSID Hierro de México</h3>
           <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Primer Cliente</p>
@@ -905,59 +927,59 @@
         <h3 class="clients__gallery-title" data-translate="clientesGalleryTitle">Más Clientes que Confían en Nosotros</h3>
         <div class="clients__logos-grid">
           <div class="clients__logo-item">
-            <img src="images/logos/ternium.png" alt="Ternium" class="clients__gallery-logo">
+            <img src="images/logos/ternium.png" alt="Ternium" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">Ternium</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/Logo-Metalsa.png" alt="METALSA" class="clients__gallery-logo">
+            <img src="images/logos/Logo-Metalsa.png" alt="METALSA" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">METALSA</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/teksid-seeklogo.png" alt="TEKSID" class="clients__gallery-logo">
+            <img src="images/logos/teksid-seeklogo.png" alt="TEKSID" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">TEKSID</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/casos-exito-nemak-logo.jpg" alt="NEMAK" class="clients__gallery-logo">
+            <img src="images/logos/casos-exito-nemak-logo.jpg" alt="NEMAK" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">NEMAK</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/DeAcero.svg" alt="DeAcero" class="clients__gallery-logo">
+            <img src="images/logos/DeAcero.svg" alt="DeAcero" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">DeAcero</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/infra.png" alt="Infra" class="clients__gallery-logo">
+            <img src="images/logos/infra.png" alt="Infra" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">Infra</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/karcher.png" alt="Kärcher" class="clients__gallery-logo">
+            <img src="images/logos/karcher.png" alt="Kärcher" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">Kärcher</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/logotipo-quality-tube.png" alt="Quality Tube" class="clients__gallery-logo">
+            <img src="images/logos/logotipo-quality-tube.png" alt="Quality Tube" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">Quality Tube</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/regiopytsa.png" alt="Regio Pytsa" class="clients__gallery-logo">
+            <img src="images/logos/regiopytsa.png" alt="Regio Pytsa" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">Regio Pytsa</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/schneider.png" alt="Schneider Electric" class="clients__gallery-logo">
+            <img src="images/logos/schneider.png" alt="Schneider Electric" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">Schneider</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/side.jpeg" alt="SIDE" class="clients__gallery-logo">
+            <img src="images/logos/side.jpeg" alt="SIDE" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">SIDE</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/viakon.png" alt="Viakon" class="clients__gallery-logo">
+            <img src="images/logos/viakon.png" alt="Viakon" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">Viakon</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/Vitromex-logo1-min_opt.jpg" alt="Vitromex" class="clients__gallery-logo">
+            <img src="images/logos/Vitromex-logo1-min_opt.jpg" alt="Vitromex" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">Vitromex</span>
           </div>
           <div class="clients__logo-item">
-            <img src="images/logos/tuk.avif" alt="TUK" class="clients__gallery-logo">
+            <img src="images/logos/tuk.avif" alt="TUK" class="clients__gallery-logo" loading="lazy">
             <span class="clients__gallery-name">TUK</span>
           </div>
         </div>
@@ -1058,43 +1080,49 @@
             <h3 class="appointment__form-title" data-translate="contactoFormTitle">Solicita una Cotización</h3>
             
             <div class="appointment__form-row">
-              <div class="appointment__form-group">
-                <label for="nombre" data-translate="contactoNombre">Nombre *</label>
-                <input type="text" id="nombre" name="nombre" required>
+              <div class="appointment__form-group form-group-floating">
+                <input type="text" id="nombre" name="nombre" class="form-input-floating" placeholder=" " required aria-required="true">
+                <label for="nombre" class="form-label-floating" data-translate="contactoNombre">Nombre *</label>
+                <span class="form-error" id="nombre-error"></span>
               </div>
               
-              <div class="appointment__form-group">
-                <label for="empresa" data-translate="contactoEmpresa">Empresa</label>
-                <input type="text" id="empresa" name="empresa">
+              <div class="appointment__form-group form-group-floating">
+                <input type="text" id="empresa" name="empresa" class="form-input-floating" placeholder=" ">
+                <label for="empresa" class="form-label-floating" data-translate="contactoEmpresa">Empresa</label>
+                <span class="form-error" id="empresa-error"></span>
               </div>
             </div>
             
             <div class="appointment__form-row">
-              <div class="appointment__form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+              <div class="appointment__form-group form-group-floating">
+                <input type="email" id="email" name="email" class="form-input-floating" placeholder=" " required aria-required="true">
+                <label for="email" class="form-label-floating">Email *</label>
+                <span class="form-error" id="email-error"></span>
               </div>
               
-              <div class="appointment__form-group">
-                <label for="telefono" data-translate="contactoTelefonoField">Teléfono *</label>
-                <input type="tel" id="telefono" name="telefono" required>
+              <div class="appointment__form-group form-group-floating">
+                <input type="tel" id="telefono" name="telefono" class="form-input-floating" placeholder=" " required aria-required="true">
+                <label for="telefono" class="form-label-floating" data-translate="contactoTelefonoField">Teléfono *</label>
+                <span class="form-error" id="telefono-error"></span>
               </div>
             </div>
             
-            <div class="appointment__form-group">
-              <label for="servicio" data-translate="contactoServicio">Servicio de Interés</label>
-              <select id="servicio" name="servicio">
+            <div class="appointment__form-group form-group-floating">
+              <select id="servicio" name="servicio" class="form-input-floating">
                 <option value="" data-translate="contactoServicioSelect">Seleccionar servicio</option>
                 <option value="instalacion" data-translate="contactoServicio1">Instalación</option>
                 <option value="mantenimiento" data-translate="contactoServicio2">Mantenimiento</option>
                 <option value="reparacion" data-translate="contactoServicio3">Reparación</option>
                 <option value="cotizacion" data-translate="contactoServicio4">Cotización de Productos</option>
               </select>
+              <label for="servicio" class="form-label-floating" data-translate="contactoServicio">Servicio de Interés</label>
+              <span class="form-error" id="servicio-error"></span>
             </div>
             
-            <div class="appointment__form-group">
-              <label for="mensaje" data-translate="contactoMensaje">Mensaje *</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <div class="appointment__form-group form-group-floating">
+              <textarea id="mensaje" name="mensaje" class="form-input-floating" rows="5" placeholder=" " required aria-required="true"></textarea>
+              <label for="mensaje" class="form-label-floating" data-translate="contactoMensaje">Mensaje *</label>
+              <span class="form-error" id="mensaje-error"></span>
             </div>
             
             <button type="submit" class="btn btn-primary btn-large" style="width: 100%;" data-translate="contactoEnviar">

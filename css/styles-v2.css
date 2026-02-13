@@ -3048,3 +3048,262 @@ textarea:focus {
     outline-offset: 2px;
 }
 
+/* ===================================
+   SKIP TO CONTENT (ACCESSIBILITY)
+   =================================== */
+
+.skip-to-content {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--cm-blue);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    z-index: 10000;
+    font-weight: 600;
+    border-radius: 0 0 0.5rem 0;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+    outline: 3px solid var(--cm-yellow);
+    outline-offset: 2px;
+}
+
+/* ===================================
+   SCROLL TO TOP BUTTON
+   =================================== */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--cm-blue);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: var(--cm-blue-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:focus {
+    outline: 3px solid var(--cm-yellow);
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+/* ===================================
+   FLOATING LABELS FORM
+   =================================== */
+
+.form-group-floating {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-input-floating {
+    width: 100%;
+    padding: 1.25rem 1rem 0.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--bg-white);
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+}
+
+.form-input-floating:focus {
+    outline: none;
+    border-color: var(--cm-blue);
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.form-input-floating:focus + .form-label-floating,
+.form-input-floating:not(:placeholder-shown) + .form-label-floating {
+    transform: translateY(-0.75rem) scale(0.85);
+    color: var(--cm-blue);
+}
+
+.form-input-floating::placeholder {
+    color: transparent;
+}
+
+.form-label-floating {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 1rem;
+    color: var(--text-light);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: var(--bg-white);
+    padding: 0 0.25rem;
+    transform-origin: left top;
+}
+
+.form-group-floating select.form-input-floating {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231e40af' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.form-group-floating select.form-input-floating:focus + .form-label-floating,
+.form-group-floating select.form-input-floating:not([value=""]) + .form-label-floating {
+    transform: translateY(-0.75rem) scale(0.85);
+    color: var(--cm-blue);
+}
+
+.form-group-floating textarea.form-input-floating {
+    padding-top: 1.5rem;
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-error {
+    display: block;
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    min-height: 1.25rem;
+}
+
+.form-input-floating.error {
+    border-color: #ef4444;
+}
+
+.form-input-floating.error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* ===================================
+   ACTIVE NAVIGATION INDICATOR
+   =================================== */
+
+.header__nav-link.active {
+    color: var(--cm-blue);
+    font-weight: 600;
+    position: relative;
+}
+
+.header__nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--cm-yellow);
+    border-radius: 3px 3px 0 0;
+}
+
+/* ===================================
+   FADE-IN ANIMATIONS ON SCROLL
+   =================================== */
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* ===================================
+   IMPROVED HOVER STATES
+   =================================== */
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.producto-card:hover {
+    transform: translateY(-6px);
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   LOADING STATES
+   =================================== */
+
+.btn.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
