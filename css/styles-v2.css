@@ -118,11 +118,11 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
     font-weight: 600;
     border: none;
-    border-radius: 0.75rem;
+    border-radius: 0.625rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
@@ -158,8 +158,8 @@ a:hover {
 }
 
 .btn-large {
-    padding: 1.5rem 3rem;
-    font-size: 1.125rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
 }
 
 /* Grid */
@@ -489,16 +489,16 @@ a:hover {
 
 .hero {
     position: relative;
-    padding-top: calc(5rem + 80px);
-    padding-bottom: 5rem;
+    padding-top: calc(4rem + 80px);
+    padding-bottom: 4rem;
     overflow: hidden;
     background: linear-gradient(135deg, #dbeafe, var(--bg-white));
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: calc(3.5rem + 80px);
-        padding-bottom: 3.5rem;
+        padding-top: calc(3rem + 80px);
+        padding-bottom: 3rem;
     }
 }
 
@@ -566,9 +566,9 @@ a:hover {
 }
 
 .hero__title {
-    font-size: clamp(1.875rem, 5vw, 3rem);
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
 }
 
 .hero__title-highlight {
@@ -577,17 +577,17 @@ a:hover {
 }
 
 .hero__subtitle {
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-size: clamp(0.9375rem, 1.75vw, 1.0625rem);
     color: var(--text-light);
-    margin-bottom: 3rem;
-    line-height: 1.7;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .hero__features {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 .hero__feature {
@@ -667,9 +667,16 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 400px;
+    min-height: 350px;
     text-align: center;
     overflow: hidden;
+    position: relative;
+}
+
+.hero__image-placeholder img {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .hero__image-icon {
@@ -760,22 +767,22 @@ a:hover {
 
 .profile {
     background: var(--bg-white);
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
     .profile {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
 }
 
 .profile__header {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
     .profile__header {
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -966,22 +973,22 @@ a:hover {
 
 .services {
     background: var(--bg-light);
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
     .services {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
 }
 
 .services__header {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
     .services__header {
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -1059,22 +1066,22 @@ a:hover {
    =================================== */
 
 .productos {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
     .productos {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
 }
 
 .section-header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
     .section-header {
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -1114,12 +1121,12 @@ a:hover {
 
 .testimonials {
     background: linear-gradient(135deg, #dbeafe, var(--bg-white), rgba(251, 191, 36, 0.1));
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
     .testimonials {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
 }
 
@@ -1270,12 +1277,12 @@ a:hover {
 
 .appointment {
     background: var(--bg-white);
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
     .appointment {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
 }
 
@@ -1438,7 +1445,7 @@ a:hover {
 }
 
 .appointment__hours {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .appointment__hours:hover {
@@ -1488,7 +1495,7 @@ a:hover {
 }
 
 .appointment__form {
-    padding: 4rem;
+    padding: 2rem;
 }
 
 .appointment__form:hover {
@@ -1497,19 +1504,19 @@ a:hover {
 
 @media (max-width: 768px) {
     .appointment__form {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 }
 
 .appointment__form-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     color: var(--cm-blue-dark);
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
 .appointment__form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .appointment__form-group label {
@@ -1546,7 +1553,7 @@ a:hover {
 
 .appointment__form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 100px;
 }
 
 .appointment__form-row {
@@ -1946,22 +1953,22 @@ a:hover {
 
 .reconocimientos {
     background: linear-gradient(135deg, #dbeafe, var(--bg-white));
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
     .reconocimientos {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
 }
 
 .reconocimientos__header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
     .reconocimientos__header {
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -2070,22 +2077,22 @@ a:hover {
 
 .valores {
     background: var(--bg-white);
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
     .valores {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
 }
 
 .valores__header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
     .valores__header {
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -2818,12 +2825,12 @@ a:hover {
 
 .clients {
     background: var(--bg-white);
-    padding: 3.5rem 0;
+    padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
     .clients {
-        padding: 5rem 0;
+        padding: 4rem 0;
     }
 }
 
