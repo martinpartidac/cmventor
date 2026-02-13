@@ -614,7 +614,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .hero__contact-quick {
