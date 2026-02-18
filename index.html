@@ -60,8 +60,8 @@
             <li><a class="header__nav-link" href="#proyectos" onclick="scrollToSection('proyectos'); return false;" data-translate="navProyectos" data-section="proyectos">Proyectos</a></li>
           </ul>
           <div class="header__nav-cta">
-            <div class="language-selector" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
-              <button class="language-btn" id="langBtn" onclick="toggleLanguageMenu()" style="display: flex !important; visibility: visible !important; opacity: 1 !important; background: white !important; border: 2px solid #1e40af !important; color: #1e40af !important; padding: 0.625rem 1.25rem !important; min-width: 80px !important;">
+            <div class="language-selector">
+              <button class="language-btn" id="langBtn" onclick="toggleLanguageMenu()">
                 <i class="fas fa-globe"></i>
                 <span id="currentLang">ES</span>
                 <i class="fas fa-chevron-down"></i>
@@ -713,23 +713,23 @@
             </div>
           </div>
           <div class="producto-card__description">
-            <p style="font-weight: 600; color: var(--cm-blue); margin-bottom: 0.75rem;" data-translate="rellenosTipos">Tipos:</p>
-            <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
-              <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
+            <p class="producto-card__materials-heading" data-translate="rellenosTipos">Tipos:</p>
+            <p class="producto-card__materials-item">
+              <i class="fas fa-check-circle producto-card__materials-check"></i>
               <span data-translate="rellenosSplash">Splash Fill</span>
             </p>
-            <p style="font-size: 0.85rem; margin-bottom: 0.75rem; line-height: 1.5;" data-translate="rellenosSplashDesc">
+            <p class="producto-card__materials-note" data-translate="rellenosSplashDesc">
               Alto rendimiento térmico en torres de contraflujo y flujo cruzado, diseño abierto y resistente al ensuciamiento. Ideal para aplicaciones de agua sucia.
             </p>
-            <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
-              <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
+            <p class="producto-card__materials-item">
+              <i class="fas fa-check-circle producto-card__materials-check"></i>
               <span data-translate="rellenosFilm">Film Fill</span>
             </p>
-            <p style="font-size: 0.85rem; margin-bottom: 0.75rem; line-height: 1.5;" data-translate="rellenosFilmDesc">
+            <p class="producto-card__materials-note" data-translate="rellenosFilmDesc">
               Entrada/salida vertical que promueve el flujo libre de escombros, ondulaciones transversales maximizan el área de superficie y crean turbulencia.
             </p>
-            <p style="font-weight: 600; font-size: 0.9rem;">
-              <i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>
+            <p class="producto-card__materials-item">
+              <i class="fas fa-check-circle producto-card__materials-check"></i>
               <span data-translate="rellenosMadera">Madera tratada</span>
             </p>
           </div>
@@ -1057,7 +1057,7 @@
               <div class="appointment__map-fallback" style="display: none;">
                 <div class="appointment__map-placeholder">
                   <i class="fas fa-map-marker-alt appointment__map-icon"></i>
-                  <p style="margin-bottom: 1rem; font-weight: 600;" data-translate="contactoMapaNoDisponible">Mapa no disponible</p>
+                  <p class="appointment__map-fallback-note" data-translate="contactoMapaNoDisponible">Mapa no disponible</p>
                   <a href="https://www.google.com/maps/search/?api=1&query=Puerto+Vallarta+413,+La+Fe,+66477+San+Nicolás+de+los+Garza,+N.L.,+México" 
                      target="_blank" 
                      rel="noopener noreferrer"
@@ -1139,7 +1139,7 @@
               <span class="form-error" id="mensaje-error"></span>
             </div>
             
-            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;" data-translate="contactoEnviar">
+            <button type="submit" class="btn btn-primary btn-large appointment__submit" data-translate="contactoEnviar">
               Enviar Mensaje
             </button>
             
