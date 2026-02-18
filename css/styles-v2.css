@@ -2416,7 +2416,7 @@ a:hover {
 .producto-card {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     padding: 1.25rem;
     transition: all 0.3s ease;
     border-top: 4px solid var(--cm-blue);
@@ -2458,6 +2458,7 @@ a:hover {
     font-weight: 600;
     color: var(--cm-blue-dark);
     margin-bottom: 0.75rem;
+    text-align: center;
 }
 
 .producto-card__image-container {
@@ -2527,14 +2528,15 @@ a:hover {
     color: var(--text-light);
     line-height: 1.5;
     margin-bottom: 0.875rem;
-    flex-grow: 1;
+    flex-grow: 0;
+    text-align: left;
 }
 
 .producto-card__features {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: auto;
 }
 
@@ -2551,9 +2553,10 @@ a:hover {
 
 .producto-card__materials {
     margin: 1rem 0;
-    padding: 1rem;
+    padding: 0.875rem;
     background: var(--bg-light);
     border-radius: 0.5rem;
+    border: 1px solid #e4ecf5;
 }
 
 .producto-card__materials-title {
@@ -2616,9 +2619,12 @@ a:hover {
 
 .producto-card__characteristics {
     list-style: none;
-    padding: 0;
+    padding: 0.875rem;
     margin: 1rem 0;
     text-align: left;
+    background: var(--bg-light);
+    border: 1px solid #e4ecf5;
+    border-radius: 0.5rem;
 }
 
 .producto-card__characteristics li {
@@ -2644,18 +2650,20 @@ a:hover {
 
 .producto-card__specs {
     margin: 1rem 0;
-    padding: 0.75rem;
+    padding: 0.875rem;
     background: var(--bg-light);
     border-radius: 0.5rem;
+    border: 1px solid #e4ecf5;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
 .producto-card__spec-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 0.5rem;
     font-size: 0.875rem;
     padding: 0.25rem 0;
 }
@@ -2668,6 +2676,14 @@ a:hover {
 .producto-card__spec-value {
     color: var(--cm-blue-dark);
     font-weight: 600;
+    text-align: right;
+}
+
+.producto-card__section-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--cm-blue-dark);
+    margin: 0.25rem 0 0.5rem;
 }
 
 /* ===================================
