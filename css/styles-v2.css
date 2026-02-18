@@ -216,6 +216,29 @@ a:hover {
     border-color: #d8e3f0;
 }
 
+/* Unified cards for key business sections */
+.profile__credential-section,
+.services__card,
+.producto-card,
+.testimonials__project-card {
+    border-radius: 0.875rem;
+    border: 1px solid #e8eef5;
+    border-top: 3px solid #c9d9ed;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.profile__credential-section:hover,
+.services__card:hover,
+.producto-card:hover,
+.testimonials__project-card:hover {
+    transform: translateY(-2px);
+    border-top-color: #e8a435;
+    border-color: #d9e6f5;
+    box-shadow: var(--shadow-hover);
+}
+
 /* ===================================
    HEADER
    =================================== */
@@ -936,9 +959,9 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #dbeafe;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e3ecf6;
 }
 
 .profile__credential-icon {
@@ -1158,6 +1181,25 @@ a:hover {
     margin: 0 auto;
 }
 
+.testimonials__project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonials__card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--cm-blue-dark);
+    margin-bottom: 0.625rem;
+}
+
+.testimonials__card-description {
+    font-size: 0.9375rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 .proyecto-icon {
     width: 80px;
     height: 80px;
@@ -1174,11 +1216,11 @@ a:hover {
 
 .proyecto-icon--logo {
     background: var(--bg-white);
-    border: 3px solid var(--cm-blue);
+    border: 2px solid #c7dcff;
     border-radius: 1rem;
-    padding: 0.75rem;
-    width: 120px;
-    height: 120px;
+    padding: 0.625rem;
+    width: 104px;
+    height: 104px;
 }
 
 .proyecto-logo {
@@ -1220,7 +1262,7 @@ a:hover {
     align-items: flex-start;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     color: var(--text-light);
     line-height: 1.6;
 }
@@ -2382,7 +2424,7 @@ a:hover {
 }
 
 .producto-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     border-top-color: var(--cm-yellow);
     box-shadow: var(--shadow-hover);
 }
@@ -3577,7 +3619,7 @@ section:not(.fade-in-up) {
 }
 
 .producto-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .btn:hover:not(:disabled) {
