@@ -2684,6 +2684,8 @@ a:hover {
     font-weight: 600;
     color: var(--cm-blue-dark);
     margin: 0.25rem 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 /* ===================================
