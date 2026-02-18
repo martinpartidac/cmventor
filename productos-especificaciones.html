@@ -11,32 +11,32 @@
         .specs-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 120px 20px 80px;
+            padding: 108px 20px 64px;
         }
         
         .specs-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.25rem;
         }
         
         .specs-grid {
             display: grid;
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2.25rem;
         }
         
         .spec-card {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             border-left: 4px solid var(--cm-yellow);
         }
         
         .spec-card h3 {
             color: var(--cm-yellow);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
         }
         
         .spec-table {
@@ -47,7 +47,7 @@
         
         .spec-table th,
         .spec-table td {
-            padding: 12px;
+            padding: 10px;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
         }
@@ -76,13 +76,13 @@
         
         .feature-list i {
             color: var(--secondary-color);
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         
         .cta-section {
             background: linear-gradient(135deg, var(--cm-blue), var(--cm-blue-dark));
             color: white;
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 12px;
             text-align: center;
         }
@@ -96,7 +96,59 @@
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .specs-container {
+                padding: 96px 16px 48px;
+            }
+
+            .spec-card {
+                padding: 1.125rem;
+            }
+
+            .spec-card h3 {
+                font-size: 1.125rem;
+            }
+
+            .spec-table th,
+            .spec-table td {
+                padding: 8px;
+                font-size: 0.875rem;
+            }
+
+            .cta-section {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .specs-container {
+                padding: 88px 12px 40px;
+            }
+
+            .specs-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .specs-header p {
+                font-size: 0.9rem;
+            }
+
+            .spec-card {
+                padding: 1rem;
+            }
+
+            .spec-card h3 {
+                font-size: 1rem;
+            }
+
+            .spec-table th,
+            .spec-table td {
+                padding: 6px;
+                font-size: 0.8125rem;
+            }
         }
     </style>
 </head>
