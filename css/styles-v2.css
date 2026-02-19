@@ -29,6 +29,13 @@
     --surface-elevated: #f8fafc;
     --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.06);
     --shadow-hover: 0 12px 28px rgba(15, 23, 42, 0.1);
+    --card-radius: 0.875rem;
+    --card-radius-lg: 1rem;
+    --card-border: rgba(15, 23, 42, 0.08);
+    --card-border-hover: rgba(30, 64, 175, 0.2);
+    --card-bg: #ffffff;
+    --card-bg-soft: linear-gradient(135deg, #ffffff 0%, #fafbfd 100%);
+    --transition-premium: 240ms cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 /* Reset básico */
@@ -214,30 +221,30 @@ a:hover {
 
 /* Card */
 .card {
-    background: var(--bg-white);
-    border-radius: 0.875rem;
-    padding: 1.375rem;
-    border: 1px solid #e8eef5;
-    box-shadow: var(--shadow-soft);
-    transition: all 0.3s ease-in-out;
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    padding: 1.25rem;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform var(--transition-premium), box-shadow var(--transition-premium), border-color var(--transition-premium);
 }
 
 @media (min-width: 1024px) {
     .card {
-        padding: 1.625rem;
+        padding: 1.5rem;
     }
 }
 
 @media (min-width: 1400px) {
     .card {
-        padding: 1.875rem;
+        padding: 1.75rem;
     }
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
-    border-color: #d8e3f0;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+    border-color: var(--card-border-hover);
 }
 
 /* Unified cards for key business sections */
@@ -245,47 +252,20 @@ a:hover {
 .services__card,
 .producto-card,
 .testimonials__project-card {
-    border-radius: 1rem;
-    border: 1px solid rgba(30, 64, 175, 0.1);
-    border-top: 4px solid rgba(30, 64, 175, 0.2);
-    background: linear-gradient(135deg, #ffffff 0%, #fafbfd 100%);
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.profile__credential-section::before,
-.services__card::before,
-.producto-card::before,
-.testimonials__project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--cm-blue), rgba(30, 64, 175, 0.6));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    border-radius: var(--card-radius-lg);
+    border: 1px solid var(--card-border);
+    background: var(--card-bg-soft);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform var(--transition-premium), box-shadow var(--transition-premium), border-color var(--transition-premium);
 }
 
 .profile__credential-section:hover,
 .services__card:hover,
 .producto-card:hover,
 .testimonials__project-card:hover {
-    transform: translateY(-4px);
-    border-top-color: var(--cm-blue);
-    border-color: rgba(30, 64, 175, 0.2);
-    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.08);
-}
-
-.profile__credential-section:hover::before,
-.services__card:hover::before,
-.producto-card:hover::before,
-.testimonials__project-card:hover::before {
-    transform: scaleX(1);
+    transform: translateY(-2px);
+    border-color: var(--card-border-hover);
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.1);
 }
 
 /* ===================================
@@ -333,8 +313,8 @@ a:hover {
 }
 
 .header__logo-icon {
-    width: 84px;
-    height: 84px;
+    width: 76px;
+    height: 76px;
     object-fit: contain;
     display: block;
     flex-shrink: 0;
@@ -639,7 +619,7 @@ a:hover {
 .hero__shape {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.05;
+    opacity: 0.035;
 }
 
 .hero__shape--1 {
@@ -669,7 +649,7 @@ a:hover {
 .hero__content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3.5rem;
     align-items: center;
     opacity: 1 !important;
     visibility: visible !important;
@@ -678,7 +658,7 @@ a:hover {
 @media (min-width: 1024px) {
     .hero__content {
         grid-template-columns: 1.2fr 1fr;
-        gap: 6rem;
+        gap: 4.5rem;
     }
 }
 
@@ -828,7 +808,7 @@ a:hover {
     border-radius: 0.75rem;
     padding: 0.875rem 1.25rem;
     border: 1px solid #e6edf5;
-    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
     text-align: center;
     animation: float 3s ease-in-out infinite;
 }
@@ -846,7 +826,7 @@ a:hover {
 }
 
 .hero__badge--2 {
-    bottom: 40px;
+    bottom: 30px;
     right: -20px;
     animation-delay: 1.5s;
 }
@@ -1097,26 +1077,26 @@ a:hover {
 .profile__instalaciones-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.875rem;
-    margin-top: 1.75rem;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 1024px) {
     .profile__instalaciones-stats {
-        gap: 1rem;
-        margin-top: 2rem;
+        gap: 0.875rem;
+        margin-top: 1.75rem;
     }
 }
 
 .instalaciones-stat {
     display: flex;
     align-items: center;
-    gap: 0.875rem;
-    padding: 0.9375rem 0.875rem;
+    gap: 0.75rem;
+    padding: 0.8125rem 0.75rem;
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     border-radius: 0.625rem;
-    border-left: 2px solid var(--cm-blue);
-    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+    border-left: 1.5px solid var(--cm-blue);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.02);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -1127,7 +1107,7 @@ a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 2px;
+    width: 1.5px;
     height: 100%;
     background: linear-gradient(180deg, var(--cm-blue), rgba(30, 64, 175, 0.6));
     transition: width 0.3s ease;
@@ -1140,18 +1120,18 @@ a:hover {
 }
 
 .instalaciones-stat:hover::before {
-    width: 3px;
+    width: 2px;
 }
 
 @media (min-width: 1024px) {
     .instalaciones-stat {
-        padding: 1.125rem 1rem;
-        gap: 1rem;
+        padding: 0.9375rem 0.875rem;
+        gap: 0.8125rem;
     }
 }
 
 .instalaciones-stat i {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--cm-blue);
     opacity: 0.85;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -1167,7 +1147,7 @@ a:hover {
 }
 
 .instalaciones-stat-number {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     color: var(--cm-blue-dark);
     margin: 0;
@@ -1180,13 +1160,13 @@ a:hover {
 
 @media (min-width: 1024px) {
     .instalaciones-stat-number {
-        font-size: 1.125rem;
+        font-size: 1rem;
         font-weight: 800;
     }
 }
 
 .instalaciones-stat-label {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     color: #64748b;
     margin: 0;
     line-height: 1.4;
@@ -1197,7 +1177,7 @@ a:hover {
 
 @media (min-width: 1024px) {
     .instalaciones-stat-label {
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
     }
 }
 
@@ -1339,46 +1319,22 @@ a:hover {
 }
 
 .profile__credential-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.375rem;
+    height: 2.375rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--cm-blue);
     background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(30, 64, 175, 0.06));
     border-radius: 0.5rem;
     flex-shrink: 0;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 10;
-}
-
-.profile__credential-icon.fas,
-.profile__credential-icon.fa {
-    position: relative;
-    z-index: 11;
-}
-
-.profile__credential-icon::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 0.5rem;
-    background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(30, 64, 175, 0.05));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 9;
-    pointer-events: none;
+    transition: transform var(--transition-premium), background var(--transition-premium), color var(--transition-premium);
 }
 
 .profile__credential-section:hover .profile__credential-icon {
-    transform: scale(1.05);
+    transform: scale(1.03);
     background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(30, 64, 175, 0.08));
-}
-
-.profile__credential-section:hover .profile__credential-icon::before {
-    opacity: 1;
 }
 
 .profile__credential-title {
@@ -1490,7 +1446,7 @@ a:hover {
 }
 
 .services__subtitle {
-    font-size: 1.1875rem;
+    font-size: 1.0625rem;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto;
@@ -1503,19 +1459,19 @@ a:hover {
 }
 
 .services__icon {
-    font-size: 40px;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--cm-blue);
 }
 
 .services__card-title {
-    font-size: 1.125rem;
+    font-size: 1.1875rem;
     margin-bottom: 0.75rem;
     color: var(--cm-blue);
 }
 
 .services__card-description {
-    font-size: 0.9375rem;
+    font-size: 0.95rem;
     color: var(--text-light);
     margin-bottom: 1rem;
     flex-grow: 1;
@@ -1532,7 +1488,7 @@ a:hover {
     align-items: flex-start;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     color: var(--text-light);
 }
 
@@ -1544,8 +1500,8 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background: #10b981;
     color: var(--bg-white);
     border-radius: 50%;
@@ -1593,7 +1549,7 @@ a:hover {
 }
 
 .section-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
@@ -1669,7 +1625,7 @@ a:hover {
 }
 
 .testimonials__card-title {
-    font-size: 1.25rem;
+    font-size: 1.1875rem;
     font-weight: 600;
     color: var(--cm-blue-dark);
     margin-bottom: 0.75rem;
@@ -1682,8 +1638,8 @@ a:hover {
 }
 
 .proyecto-icon {
-    width: 80px;
-    height: 80px;
+    width: 68px;
+    height: 68px;
     background: #eff6ff;
     border: 1px solid #c7dcff;
     border-radius: 50%;
@@ -1691,7 +1647,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.625rem;
     color: var(--cm-blue);
 }
 
@@ -1700,8 +1656,8 @@ a:hover {
     border: 2px solid #c7dcff;
     border-radius: 1rem;
     padding: 0.625rem;
-    width: 104px;
-    height: 104px;
+    width: 92px;
+    height: 92px;
 }
 
 .proyecto-logo {
@@ -1795,7 +1751,7 @@ a:hover {
 }
 
 .testimonials__stat-number {
-    font-size: 1.875rem;
+    font-size: 1.625rem;
     font-weight: 700;
     color: var(--cm-blue);
     margin-bottom: 0.375rem;
@@ -1803,7 +1759,7 @@ a:hover {
 }
 
 .testimonials__stat-label {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     color: var(--text-light);
     font-weight: 500;
 }
@@ -2895,9 +2851,9 @@ a:hover {
     }
     
     .profile__credential-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.125rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1rem;
     }
     
     .profile__credential-title {
@@ -3063,7 +3019,7 @@ a:hover {
 }
 
 .reconocimientos__subtitle {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto;
@@ -3092,9 +3048,9 @@ a:hover {
 
 .reconocimientos__item {
     text-align: center;
-    padding: 1.5rem 1.25rem;
-    transition: all 0.3s ease;
-    border-top: 4px solid var(--cm-blue);
+    padding: 1.375rem 1.25rem;
+    transition: transform var(--transition-premium), box-shadow var(--transition-premium), border-color var(--transition-premium);
+    border-top: 2px solid rgba(30, 64, 175, 0.45);
 }
 
 @media (min-width: 1024px) {
@@ -3104,7 +3060,7 @@ a:hover {
 }
 
 .reconocimientos__item:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -3113,14 +3069,14 @@ a:hover {
 }
 
 .reconocimientos__icon {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     margin: 0 auto 1rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--bg-white);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
@@ -3138,8 +3094,8 @@ a:hover {
     border: 2px solid var(--cm-blue);
     padding: 0.5rem;
     border-radius: 0.75rem;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 }
 
 .reconocimientos__icon--zero.reconocimientos__icon--image {
@@ -3207,7 +3163,7 @@ a:hover {
 }
 
 .valores__subtitle {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto;
@@ -3233,27 +3189,26 @@ a:hover {
 
 .valores__item {
     text-align: center;
-    padding: 1.5rem 1.25rem;
-    transition: all 0.3s ease;
+    padding: 1.375rem 1.25rem;
+    transition: transform var(--transition-premium), box-shadow var(--transition-premium), border-color var(--transition-premium);
+    border-top: 2px solid rgba(30, 64, 175, 0.45);
 }
 
 @media (min-width: 1024px) {
     .valores__item {
-        padding: 1.75rem 1.5rem;
+        padding: 1.625rem 1.375rem;
     }
-}
-    border-top: 4px solid var(--cm-blue);
 }
 
 .valores__item:hover {
-    transform: translateY(-3px);
-    border-top-color: var(--cm-yellow);
+    transform: translateY(-2px);
+    border-top-color: rgba(30, 64, 175, 0.8);
     box-shadow: var(--shadow-hover);
 }
 
 .valores__icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     margin: 0 auto 1rem;
     background: #eff6ff;
     border: 1px solid #c7dcff;
@@ -3261,7 +3216,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--cm-blue);
     box-shadow: none;
     transition: all 0.3s ease;
@@ -3276,7 +3231,7 @@ a:hover {
 }
 
 .valores__item-title {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     color: var(--cm-blue-dark);
     margin-bottom: 0.75rem;
@@ -3329,7 +3284,7 @@ a:hover {
 }
 
 .resources__subtitle {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto;
@@ -3354,7 +3309,7 @@ a:hover {
 }
 
 .resources__card {
-    padding: 2rem 1.5rem;
+    padding: 1.625rem 1.375rem;
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
@@ -3363,7 +3318,7 @@ a:hover {
 }
 
 .resources__card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -3373,20 +3328,20 @@ a:hover {
 }
 
 .resources__icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 0.75rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.625rem;
     background: linear-gradient(135deg, var(--cm-blue), var(--cm-blue-light));
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .resources__card-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 0.75rem;
@@ -3394,7 +3349,7 @@ a:hover {
 }
 
 .resources__card-description {
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 1.25rem;
@@ -3411,7 +3366,7 @@ a:hover {
 }
 
 .resources__meta-item {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: var(--text-light);
     display: flex;
     align-items: center;
@@ -3447,9 +3402,9 @@ a:hover {
     right: 1rem;
     background: var(--cm-yellow);
     color: white;
-    padding: 0.375rem 0.75rem;
+    padding: 0.3125rem 0.625rem;
     border-radius: 1rem;
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -3506,8 +3461,8 @@ a:hover {
     flex-direction: column;
     text-align: left;
     padding: 1.25rem;
-    transition: all 0.3s ease;
-    border-top: 4px solid var(--cm-blue);
+    transition: transform var(--transition-premium), box-shadow var(--transition-premium), border-color var(--transition-premium);
+    border-top: 2px solid rgba(30, 64, 175, 0.45);
     height: 100%;
 }
 
@@ -3525,13 +3480,13 @@ a:hover {
 
 .producto-card:hover {
     transform: translateY(-2px);
-    border-top-color: var(--cm-yellow);
+    border-top-color: rgba(30, 64, 175, 0.8);
     box-shadow: var(--shadow-hover);
 }
 
 .producto-card__icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     margin: 0 auto 1rem;
     background: #eff6ff;
     border: 1px solid #c7dcff;
@@ -3539,7 +3494,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.0625rem;
     color: var(--cm-blue);
     box-shadow: none;
     transition: all 0.3s ease;
@@ -3554,7 +3509,7 @@ a:hover {
 }
 
 .producto-card__title {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     color: var(--cm-blue-dark);
     margin-bottom: 0.75rem;
@@ -4135,7 +4090,7 @@ a:hover {
 }
 
 .features-highlight__subtitle {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
@@ -4173,20 +4128,20 @@ a:hover {
 
 .features-highlight__item {
     text-align: center;
-    padding: 1.75rem 1.5rem;
-    transition: all 0.3s ease;
-    border-top: 4px solid var(--cm-blue);
+    padding: 1.5rem 1.375rem;
+    transition: transform var(--transition-premium), box-shadow var(--transition-premium), border-color var(--transition-premium);
+    border-top: 2px solid rgba(30, 64, 175, 0.45);
 }
 
 .features-highlight__item:hover {
-    transform: translateY(-3px);
-    border-top-color: var(--cm-yellow);
+    transform: translateY(-2px);
+    border-top-color: rgba(30, 64, 175, 0.8);
     box-shadow: var(--shadow-hover);
 }
 
 .features-highlight__icon {
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     margin: 0 auto 1rem;
     background: #eff6ff;
     border: 1px solid #c7dcff;
@@ -4194,7 +4149,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--cm-blue);
     box-shadow: none;
     transition: all 0.3s ease;
@@ -4209,7 +4164,7 @@ a:hover {
 }
 
 .features-highlight__item-title {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     color: var(--cm-blue-dark);
     margin-bottom: 0.75rem;
@@ -4256,7 +4211,7 @@ a:hover {
 }
 
 .clients__subtitle {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto;
@@ -4299,20 +4254,20 @@ a:hover {
 
 .clients__card {
     text-align: center;
-    padding: 1.75rem 1.5rem;
-    transition: all 0.3s ease;
-    border-top: 4px solid var(--cm-blue);
+    padding: 1.5rem 1.375rem;
+    transition: transform var(--transition-premium), box-shadow var(--transition-premium), border-color var(--transition-premium);
+    border-top: 2px solid rgba(30, 64, 175, 0.45);
 }
 
 .clients__card:hover {
-    transform: translateY(-3px);
-    border-top-color: var(--cm-yellow);
+    transform: translateY(-2px);
+    border-top-color: rgba(30, 64, 175, 0.8);
     box-shadow: var(--shadow-hover);
 }
 
 .clients__logo-placeholder {
-    width: 78px;
-    height: 78px;
+    width: 68px;
+    height: 68px;
     margin: 0 auto 1rem;
     background: #eff6ff;
     border: 1px solid #c7dcff;
@@ -4324,7 +4279,7 @@ a:hover {
 }
 
 .clients__logo-icon {
-    font-size: 2rem;
+    font-size: 1.625rem;
     color: var(--cm-blue);
 }
 
@@ -4343,14 +4298,14 @@ a:hover {
 }
 
 .clients__name {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     color: var(--cm-blue-dark);
     margin-bottom: 0.75rem;
 }
 
 .clients__description {
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -4452,7 +4407,7 @@ a:hover {
 }
 
 .clients__logo-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     border-color: var(--cm-blue);
     box-shadow: var(--shadow-hover);
 }
