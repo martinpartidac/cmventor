@@ -1985,6 +1985,17 @@ a:hover {
     animation: whatsappPulse 2s infinite;
 }
 
+/* Ajustar scroll-to-top cuando WhatsApp está visible */
+.whatsapp-float ~ .scroll-to-top {
+    bottom: 100px;
+}
+
+@media (min-width: 768px) {
+    .whatsapp-float ~ .scroll-to-top {
+        bottom: 110px;
+    }
+}
+
 .whatsapp-btn {
     display: flex;
     align-items: center;
@@ -3793,8 +3804,8 @@ textarea:focus {
 
 .scroll-to-top {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 100px;
+    right: 20px;
     width: 50px;
     height: 50px;
     background: var(--cm-blue);
@@ -3811,7 +3822,7 @@ textarea:focus {
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .scroll-to-top.visible {
@@ -3833,11 +3844,29 @@ textarea:focus {
 
 @media (max-width: 768px) {
     .scroll-to-top {
-        bottom: 1.5rem;
-        right: 1.5rem;
+        bottom: 90px;
+        right: 15px;
         width: 45px;
         height: 45px;
         font-size: 1.1rem;
+    }
+    
+    .whatsapp-float ~ .scroll-to-top {
+        bottom: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        bottom: 80px;
+        right: 10px;
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+    
+    .whatsapp-float ~ .scroll-to-top {
+        bottom: 80px;
     }
 }
 
