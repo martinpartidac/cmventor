@@ -94,20 +94,26 @@ a:hover {
 /* Container */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1.25rem;
 }
 
 @media (min-width: 768px) {
     .container {
-        padding: 0 1.75rem;
+        padding: 0 2rem;
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        padding: 0 2rem;
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        padding: 0 4rem;
     }
 }
 
@@ -264,7 +270,13 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2.5rem;
+    gap: 4rem;
+}
+
+@media (min-width: 1400px) {
+    .header__content {
+        gap: 5rem;
+    }
 }
 
 .header__logo {
@@ -273,6 +285,8 @@ a:hover {
     gap: 1rem;
     cursor: pointer;
     z-index: 1030;
+    flex-shrink: 0;
+    margin-right: auto;
 }
 
 .header__logo-icon {
@@ -306,10 +320,24 @@ a:hover {
 .header__nav {
     display: flex;
     align-items: center;
-    gap: 3.5rem;
+    gap: 4rem;
+    flex: 1;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+@media (min-width: 1400px) {
+    .header__nav {
+        gap: 4.5rem;
+        margin: 0 3rem;
+    }
 }
 
 @media (max-width: 1024px) {
+    .header__content {
+        gap: 1.5rem;
+    }
+    
     .header__nav {
         position: fixed;
         top: 0;
@@ -321,19 +349,36 @@ a:hover {
         justify-content: center;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
+        flex: none;
+        margin: 0;
+        gap: 0;
     }
     
     .header__nav--open {
         transform: translateX(0);
+    }
+    
+    .header__logo {
+        margin-right: 0;
+    }
+    
+    .header__nav-cta {
+        margin-left: 0;
     }
 }
 
 .header__nav-list {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 3rem;
     margin: 0;
     padding: 0;
+}
+
+@media (min-width: 1400px) {
+    .header__nav-list {
+        gap: 3.5rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -361,10 +406,11 @@ a:hover {
 .header__nav-cta {
     display: flex !important;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.5rem;
     flex-shrink: 0;
     visibility: visible !important;
     opacity: 1 !important;
+    margin-left: auto;
 }
 
 @media (max-width: 1024px) {
