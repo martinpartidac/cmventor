@@ -64,11 +64,12 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
     color: #0f172a;
+    letter-spacing: -0.02em;
 }
 
 h1 { font-size: clamp(2rem, 4vw, 3rem); }
@@ -316,10 +317,11 @@ a:hover {
 
 .header__logo-title {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--cm-blue);
     margin: 0;
     line-height: 1.2;
+    letter-spacing: -0.01em;
 }
 
 .header__logo-subtitle {
@@ -661,6 +663,8 @@ a:hover {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 1.25rem;
     line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.03em;
 }
 
 .hero__title-highlight {
@@ -889,6 +893,8 @@ a:hover {
 .profile__title {
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .profile__subtitle {
@@ -1106,6 +1112,8 @@ a:hover {
 
 .services__title {
     margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .services__subtitle {
@@ -1205,9 +1213,10 @@ a:hover {
 
 .section-title {
     font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
+    letter-spacing: -0.02em;
 }
 
 .section-subtitle {
@@ -1262,6 +1271,8 @@ a:hover {
 
 .testimonials__title {
     margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .testimonials__subtitle {
@@ -1414,7 +1425,7 @@ a:hover {
     font-weight: 700;
     color: var(--cm-blue);
     margin-bottom: 0.375rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .testimonials__stat-label {
@@ -1450,6 +1461,8 @@ a:hover {
 
 .appointment__title {
     margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .appointment__subtitle {
@@ -1856,7 +1869,7 @@ a:hover {
     font-weight: 600;
     color: var(--bg-white);
     margin-bottom: 1.5rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer__links {
@@ -2326,9 +2339,10 @@ a:hover {
 
 .reconocimientos__title {
     font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
 }
 
 .reconocimientos__subtitle {
@@ -2469,9 +2483,10 @@ a:hover {
 
 .valores__title {
     font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
 }
 
 .valores__subtitle {
@@ -2590,9 +2605,10 @@ a:hover {
 
 .resources__title {
     font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
 }
 
 .resources__subtitle {
@@ -3395,9 +3411,10 @@ a:hover {
 
 .features-highlight__title {
     font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
 }
 
 .features-highlight__subtitle {
@@ -3515,9 +3532,10 @@ a:hover {
 
 .clients__title {
     font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--cm-blue-dark);
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
 }
 
 .clients__subtitle {
