@@ -940,23 +940,23 @@ a:hover {
 
 .profile__title {
     color: var(--cm-blue-dark);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.125rem;
     font-weight: 800;
     letter-spacing: -0.025em;
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 1.875rem;
+    line-height: 1.25;
 }
 
 @media (min-width: 768px) {
     .profile__title {
-        font-size: 2.375rem;
-        margin-bottom: 1.5rem;
+        font-size: 2.125rem;
+        margin-bottom: 1.375rem;
     }
 }
 
 @media (min-width: 1024px) {
     .profile__title {
-        font-size: 2.625rem;
+        font-size: 2.375rem;
     }
 }
 
@@ -1003,32 +1003,32 @@ a:hover {
 .profile__content {
     display: flex;
     flex-direction: column;
-    gap: 4.5rem;
+    gap: 4rem;
 }
 
 @media (min-width: 1024px) {
     .profile__content {
-        gap: 6rem;
+        gap: 5rem;
     }
 }
 
 .profile__main {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3.5rem;
+    gap: 3rem;
     align-items: start;
 }
 
 @media (min-width: 1024px) {
     .profile__main {
-        grid-template-columns: 420px 1fr;
-        gap: 4.5rem;
+        grid-template-columns: 400px 1fr;
+        gap: 4rem;
     }
 }
 
 @media (min-width: 1400px) {
     .profile__main {
-        gap: 5rem;
+        gap: 4.5rem;
     }
 }
 
@@ -1038,17 +1038,17 @@ a:hover {
 
 .profile__image-placeholder {
     background: linear-gradient(145deg, #f0f7ff 0%, #ffffff 50%, #f8fafc 100%);
-    border-radius: 1.125rem;
-    padding: 2.25rem;
+    border-radius: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 480px;
+    min-height: 450px;
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.04);
-    border: 1px solid rgba(30, 64, 175, 0.1);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08), 0 3px 10px rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(30, 64, 175, 0.08);
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1060,19 +1060,19 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(30, 64, 175, 0.03), transparent 70%);
+    background: radial-gradient(circle at 30% 30%, rgba(30, 64, 175, 0.02), transparent 70%);
     pointer-events: none;
 }
 
 @media (min-width: 1024px) {
     .profile__image-placeholder {
-        padding: 2.75rem;
-        min-height: 520px;
+        padding: 2.5rem;
+        min-height: 480px;
     }
     
     .profile__image-placeholder:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12), 0 6px 16px rgba(15, 23, 42, 0.06);
+        transform: translateY(-1px);
+        box-shadow: 0 10px 32px rgba(15, 23, 42, 0.1), 0 4px 12px rgba(15, 23, 42, 0.05);
     }
 }
 
@@ -1097,25 +1097,25 @@ a:hover {
 .profile__instalaciones-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-    margin-top: 2.25rem;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 @media (min-width: 1024px) {
     .profile__instalaciones-stats {
-        gap: 1.5rem;
-        margin-top: 2.5rem;
+        gap: 1.25rem;
+        margin-top: 2.25rem;
     }
 }
 
 .instalaciones-stat {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
+    gap: 1rem;
+    padding: 1.25rem 1rem;
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     border-radius: 0.75rem;
-    border-left: 4px solid var(--cm-blue);
+    border-left: 3px solid var(--cm-blue);
     box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
     transition: all 0.3s ease;
     position: relative;
@@ -1127,62 +1127,65 @@ a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px;
+    width: 3px;
     height: 100%;
     background: linear-gradient(180deg, var(--cm-blue), rgba(30, 64, 175, 0.6));
     transition: width 0.3s ease;
 }
 
 .instalaciones-stat:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1), 0 2px 6px rgba(15, 23, 42, 0.06);
     border-left-color: rgba(30, 64, 175, 0.9);
 }
 
 .instalaciones-stat:hover::before {
-    width: 5px;
+    width: 4px;
 }
 
 @media (min-width: 1024px) {
     .instalaciones-stat {
-        padding: 1.75rem 1.5rem;
+        padding: 1.5rem 1.25rem;
+        gap: 1.125rem;
     }
 }
 
 .instalaciones-stat i {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     color: var(--cm-blue);
-    opacity: 1;
+    opacity: 0.9;
     transition: transform 0.3s ease, color 0.3s ease;
     position: relative;
     z-index: 1;
+    flex-shrink: 0;
 }
 
 .instalaciones-stat:hover i {
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: rgba(30, 64, 175, 0.9);
 }
 
 .instalaciones-stat-number {
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--cm-blue-dark);
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.3;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
     position: relative;
     z-index: 1;
 }
 
 @media (min-width: 1024px) {
     .instalaciones-stat-number {
-        font-size: 1.625rem;
+        font-size: 1.375rem;
+        font-weight: 800;
     }
 }
 
 .instalaciones-stat-label {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     color: #64748b;
     margin: 0;
     line-height: 1.5;
@@ -1193,18 +1196,19 @@ a:hover {
 
 @media (min-width: 1024px) {
     .instalaciones-stat-label {
-        font-size: 1rem;
+        font-size: 0.9375rem;
     }
 }
 
 .profile__bio {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-    padding: 2.25rem;
-    border-radius: 1.125rem;
-    border-left: 5px solid var(--cm-blue);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid var(--cm-blue);
     box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
 }
 
 .profile__bio::before {
@@ -1212,31 +1216,32 @@ a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 5px;
+    width: 4px;
     height: 100%;
     background: linear-gradient(180deg, var(--cm-blue), rgba(30, 64, 175, 0.7));
-    border-radius: 1.125rem 0 0 1.125rem;
+    border-radius: 1rem 0 0 1rem;
 }
 
 @media (min-width: 1024px) {
     .profile__bio {
-        padding: 3rem;
+        padding: 2.5rem;
+        max-width: 680px;
     }
     
     .profile__bio:hover {
-        transform: translateY(-2px);
+        transform: translateY(-1px);
         box-shadow: 0 6px 24px rgba(15, 23, 42, 0.12), 0 3px 8px rgba(15, 23, 42, 0.06);
     }
 }
 
 .profile__bio-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     font-weight: 800;
     color: var(--cm-blue-dark);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.375rem;
     letter-spacing: -0.025em;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 0.875rem;
 }
 
 .profile__bio-title::after {
@@ -1244,24 +1249,30 @@ a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50px;
-    height: 3px;
+    width: 45px;
+    height: 2.5px;
     background: linear-gradient(90deg, var(--cm-blue), rgba(30, 64, 175, 0.3));
     border-radius: 2px;
 }
 
 @media (min-width: 1024px) {
     .profile__bio-title {
-        font-size: 1.625rem;
-        margin-bottom: 1.75rem;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    .profile__bio-title::after {
+        width: 50px;
+        height: 3px;
     }
 }
 
 .profile__bio-text {
-    font-size: 1.0625rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.75;
     color: #475569;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.125rem;
     font-weight: 400;
     letter-spacing: 0.01em;
 }
@@ -1272,9 +1283,9 @@ a:hover {
 
 @media (min-width: 1024px) {
     .profile__bio-text {
-        font-size: 1.125rem;
-        line-height: 1.85;
-        margin-bottom: 1.375rem;
+        font-size: 1.0625rem;
+        line-height: 1.8;
+        margin-bottom: 1.25rem;
     }
 }
 
@@ -1307,9 +1318,9 @@ a:hover {
 .profile__credential-header {
     display: flex;
     align-items: center;
-    gap: 1.375rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.25rem;
+    gap: 1.125rem;
+    margin-bottom: 1.375rem;
+    padding-bottom: 1.125rem;
     border-bottom: 2px solid rgba(30, 64, 175, 0.1);
     transition: border-color 0.3s ease;
 }
@@ -1319,15 +1330,15 @@ a:hover {
 }
 
 .profile__credential-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.625rem;
+    font-size: 1.375rem;
     color: var(--cm-blue);
     background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(30, 64, 175, 0.06));
-    border-radius: 0.75rem;
+    border-radius: 0.625rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
     position: relative;
@@ -1337,14 +1348,14 @@ a:hover {
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 0.75rem;
+    border-radius: 0.625rem;
     background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(30, 64, 175, 0.05));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .profile__credential-section:hover .profile__credential-icon {
-    transform: scale(1.05) rotate(2deg);
+    transform: scale(1.03);
     background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(30, 64, 175, 0.08));
 }
 
@@ -1353,7 +1364,7 @@ a:hover {
 }
 
 .profile__credential-title {
-    font-size: 1.3125rem;
+    font-size: 1.25rem;
     font-weight: 800;
     color: var(--cm-blue-dark);
     margin: 0;
@@ -2619,35 +2630,36 @@ a:hover {
     }
     
     .instalaciones-stat {
-        padding: 1.25rem 1rem;
-        gap: 1rem;
+        padding: 1.125rem 0.875rem;
+        gap: 0.875rem;
     }
     
     .instalaciones-stat i {
-        font-size: 1.5rem;
+        font-size: 1.375rem;
     }
     
     .instalaciones-stat-number {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
     
     .instalaciones-stat-label {
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
     }
     
     .profile__bio {
-        padding: 1.75rem;
+        padding: 1.5rem;
     }
     
     .profile__bio-title {
-        font-size: 1.25rem;
-        margin-bottom: 1.125rem;
+        font-size: 1.1875rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
     }
     
     .profile__bio-text {
-        font-size: 0.96875rem;
+        font-size: 0.9375rem;
         line-height: 1.7;
-        margin-bottom: 1rem;
+        margin-bottom: 0.9375rem;
     }
     
     .profile__credentials {
@@ -2655,25 +2667,25 @@ a:hover {
     }
     
     .profile__credential-header {
-        gap: 1rem;
-        margin-bottom: 1.125rem;
+        gap: 0.9375rem;
+        margin-bottom: 1rem;
         padding-bottom: 1rem;
     }
     
     .profile__credential-icon {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.375rem;
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.25rem;
     }
     
     .profile__credential-title {
-        font-size: 1.1875rem;
+        font-size: 1.125rem;
     }
     
     .profile__credential-item {
         font-size: 0.9375rem;
         gap: 0.625rem;
-        margin-bottom: 0.9375rem;
+        margin-bottom: 0.875rem;
     }
     
     .whatsapp-float {
