@@ -15,8 +15,21 @@
   <link rel="stylesheet" crossorigin href="css/styles-v2.css">
   <style>
     .presentation {
-      padding: 2rem 0;
+      padding: calc(3.5rem + 84px) 0 2rem 0;
       background: var(--bg-white);
+      margin-top: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .presentation {
+        padding: calc(2.75rem + 68px) 0 2rem 0;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .presentation {
+        padding: calc(2.5rem + 60px) 0 2rem 0;
+      }
     }
     
     .presentation__header {
