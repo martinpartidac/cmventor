@@ -68,8 +68,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: #0f172a;
+    color: var(--cm-blue-dark);
     letter-spacing: -0.02em;
+}
+
+/* Hero title usa color especial (negro con highlight amarillo) */
+.hero__title {
+    color: #0f172a;
 }
 
 h1 { font-size: clamp(2rem, 4vw, 3rem); }
@@ -1114,6 +1119,7 @@ a:hover {
     margin-bottom: 1rem;
     font-weight: 800;
     letter-spacing: -0.02em;
+    color: var(--cm-blue-dark);
 }
 
 .services__subtitle {
@@ -1215,7 +1221,7 @@ a:hover {
     font-size: clamp(1.5rem, 3.5vw, 2.25rem);
     font-weight: 800;
     margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    color: var(--cm-blue-dark);
     letter-spacing: -0.02em;
 }
 
@@ -1273,6 +1279,7 @@ a:hover {
     margin-bottom: 1rem;
     font-weight: 800;
     letter-spacing: -0.02em;
+    color: var(--cm-blue-dark);
 }
 
 .testimonials__subtitle {
@@ -1463,6 +1470,7 @@ a:hover {
     margin-bottom: 1rem;
     font-weight: 800;
     letter-spacing: -0.02em;
+    color: var(--cm-blue-dark);
 }
 
 .appointment__subtitle {
