@@ -216,7 +216,7 @@ a:hover {
 .card {
     background: var(--bg-white);
     border-radius: 0.875rem;
-    padding: 1.5rem;
+    padding: 1.375rem;
     border: 1px solid #e8eef5;
     box-shadow: var(--shadow-soft);
     transition: all 0.3s ease-in-out;
@@ -224,13 +224,13 @@ a:hover {
 
 @media (min-width: 1024px) {
     .card {
-        padding: 1.75rem;
+        padding: 1.625rem;
     }
 }
 
 @media (min-width: 1400px) {
     .card {
-        padding: 2rem;
+        padding: 1.875rem;
     }
 }
 
@@ -1151,7 +1151,7 @@ a:hover {
 }
 
 .instalaciones-stat i {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     color: var(--cm-blue);
     opacity: 0.9;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -1161,12 +1161,12 @@ a:hover {
 }
 
 .instalaciones-stat:hover i {
-    transform: scale(1.05);
+    transform: scale(1.03);
     color: rgba(30, 64, 175, 0.9);
 }
 
 .instalaciones-stat-number {
-    font-size: 1.25rem;
+    font-size: 1.1875rem;
     font-weight: 700;
     color: var(--cm-blue-dark);
     margin: 0;
@@ -1179,7 +1179,7 @@ a:hover {
 
 @media (min-width: 1024px) {
     .instalaciones-stat-number {
-        font-size: 1.375rem;
+        font-size: 1.3125rem;
         font-weight: 800;
     }
 }
@@ -1318,11 +1318,19 @@ a:hover {
 .profile__credential-header {
     display: flex;
     align-items: center;
-    gap: 1.125rem;
-    margin-bottom: 1.375rem;
-    padding-bottom: 1.125rem;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid rgba(30, 64, 175, 0.1);
     transition: border-color 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .profile__credential-header {
+        gap: 1.125rem;
+        margin-bottom: 1.375rem;
+        padding-bottom: 1.125rem;
+    }
 }
 
 .profile__credential-section:hover .profile__credential-header {
@@ -1330,18 +1338,19 @@ a:hover {
 }
 
 .profile__credential-icon {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
+    width: 2.75rem;
+    height: 2.75rem;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     color: var(--cm-blue);
     background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(30, 64, 175, 0.06));
     border-radius: 0.625rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
     position: relative;
+    z-index: 2;
 }
 
 .profile__credential-icon::before {
@@ -1352,6 +1361,8 @@ a:hover {
     background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(30, 64, 175, 0.05));
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .profile__credential-section:hover .profile__credential-icon {
@@ -1364,12 +1375,18 @@ a:hover {
 }
 
 .profile__credential-title {
-    font-size: 1.25rem;
+    font-size: 1.1875rem;
     font-weight: 800;
     color: var(--cm-blue-dark);
     margin: 0;
     letter-spacing: -0.025em;
     transition: color 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .profile__credential-title {
+        font-size: 1.25rem;
+    }
 }
 
 .profile__credential-section:hover .profile__credential-title {
@@ -1385,10 +1402,10 @@ a:hover {
 
 .profile__credential-item {
     display: flex;
-    gap: 0.75rem;
-    margin-bottom: 1.125rem;
-    font-size: 0.96875rem;
-    line-height: 1.7;
+    gap: 0.625rem;
+    margin-bottom: 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.65;
     color: #475569;
     font-weight: 400;
     transition: color 0.3s ease, transform 0.2s ease;
@@ -1397,7 +1414,7 @@ a:hover {
 
 .profile__credential-item:hover {
     color: var(--cm-blue-dark);
-    transform: translateX(4px);
+    transform: translateX(3px);
 }
 
 .profile__credential-item:last-child {
@@ -1406,9 +1423,9 @@ a:hover {
 
 @media (min-width: 1024px) {
     .profile__credential-item {
-        font-size: 1.0625rem;
-        line-height: 1.75;
-        margin-bottom: 1.25rem;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.125rem;
     }
 }
 
@@ -2673,9 +2690,9 @@ a:hover {
     }
     
     .profile__credential-icon {
-        width: 2.75rem;
-        height: 2.75rem;
-        font-size: 1.25rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.125rem;
     }
     
     .profile__credential-title {
