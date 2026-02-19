@@ -10,6 +10,7 @@ const translations = {
         navEmpresa: "Empresa",
         navServicios: "Servicios",
         navProductos: "Productos",
+        navRecursos: "Recursos",
         navProyectos: "Proyectos",
         navContacto: "Contacto",
         btnContacto: "Contacto",
@@ -95,6 +96,19 @@ const translations = {
         valor4Desc: "Actuamos con integridad y transparencia en todas nuestras relaciones comerciales y profesionales.",
         valor5Title: "Servicio",
         valor5Desc: "Brindamos un servicio excepcional, poniendo las necesidades de nuestros clientes en el centro de todo lo que hacemos.",
+        
+        // Recursos
+        recursosTitle: "Biblioteca de Recursos",
+        recursosSubtitle: "Descarga información corporativa, catálogos y recursos técnicos",
+        recurso1Title: "Presentación Corporativa",
+        recurso1Desc: "Conoce nuestra historia, valores, servicios y productos en esta presentación completa de CM Ventor.",
+        recurso2Title: "Catálogo de Productos",
+        recurso2Desc: "Especificaciones técnicas detalladas de todos nuestros productos y servicios.",
+        recurso3Title: "Guías de Mantenimiento",
+        recurso3Desc: "Manuales y guías prácticas para el mantenimiento de torres de enfriamiento.",
+        recursoVerWeb: "Ver en Web",
+        recursoDescargar: "Descargar PDF",
+        recursoPronto: "Próximamente",
         
         // Características
         featuresTitle: "Características Destacadas",
@@ -261,6 +275,7 @@ const translations = {
         navEmpresa: "Company",
         navServicios: "Services",
         navProductos: "Products",
+        navRecursos: "Resources",
         navProyectos: "Projects",
         navContacto: "Contact",
         btnContacto: "Contact",
@@ -347,7 +362,20 @@ const translations = {
         valor5Title: "Service",
         valor5Desc: "We provide exceptional service, putting our clients' needs at the center of everything we do.",
         
-        // Características
+        // Resources
+        recursosTitle: "Resource Library",
+        recursosSubtitle: "Download corporate information, catalogs and technical resources",
+        recurso1Title: "Corporate Presentation",
+        recurso1Desc: "Learn about our history, values, services and products in this complete CM Ventor presentation.",
+        recurso2Title: "Product Catalog",
+        recurso2Desc: "Detailed technical specifications of all our products and services.",
+        recurso3Title: "Maintenance Guides",
+        recurso3Desc: "Manuals and practical guides for cooling tower maintenance.",
+        recursoVerWeb: "View on Web",
+        recursoDescargar: "Download PDF",
+        recursoPronto: "Coming Soon",
+        
+        // Features
         featuresTitle: "Outstanding Features",
         featuresSubtitle: "What sets us apart in the market",
         feature1Title: "Extended Life Expectancy",

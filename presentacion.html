@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlLang">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Presentación Corporativa CM Ventor - Más de 30 años fabricando y manteniendo torres de enfriamiento certificadas por CTI.">
+  <meta name="keywords" content="CM Ventor, presentación corporativa, torres de enfriamiento, CTI, México">
+  <title>Presentación Corporativa | CM Ventor S.A. de C.V.</title>
+  
+  <link rel="icon" type="image/jpeg" href="images/logotipo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" crossorigin href="css/styles-v2.css">
+  <style>
+    .presentation {
+      padding: 2rem 0;
+      background: var(--bg-white);
+    }
+    
+    .presentation__header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem 0;
+      background: linear-gradient(135deg, var(--cm-blue-dark), var(--cm-blue));
+      color: white;
+      border-radius: 0.75rem;
+      margin-bottom: 3rem;
+    }
+    
+    .presentation__header h1 {
+      color: white;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin-bottom: 0.5rem;
+    }
+    
+    .presentation__header p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.125rem;
+    }
+    
+    .presentation__download {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .presentation__section {
+      margin-bottom: 3rem;
+    }
+    
+    .presentation__section-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--cm-blue-dark);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--cm-yellow);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .presentation__section-title i {
+      color: var(--cm-yellow);
+    }
+    
+    .presentation__content {
+      background: var(--bg-white);
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 2rem;
+    }
+    
+    .presentation__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .presentation__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .presentation__card {
+      padding: 1.5rem;
+      background: var(--bg-light);
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--cm-blue);
+    }
+    
+    .presentation__card h3 {
+      font-size: 1.25rem;
+      color: var(--cm-blue-dark);
+      margin-bottom: 0.75rem;
+    }
+    
+    .presentation__card ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .presentation__card li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--text-light);
+    }
+    
+    .presentation__card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--cm-blue);
+      font-weight: bold;
+    }
+    
+    .presentation__stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .presentation__stat {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--bg-light);
+      border-radius: 0.5rem;
+    }
+    
+    .presentation__stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--cm-blue);
+      display: block;
+    }
+    
+    .presentation__stat-label {
+      font-size: 0.9375rem;
+      color: var(--text-light);
+      margin-top: 0.5rem;
+    }
+    
+    .presentation__back {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__logo" onclick="window.location.href='index.html'">
+          <img src="images/logotipo.jpg" alt="CM Ventor Logo" class="header__logo-icon">
+          <div class="header__logo-text">
+            <h1 class="header__logo-title">CM Ventor</h1>
+            <p class="header__logo-subtitle">Torres de Enfriamiento</p>
+          </div>
+        </div>
+        
+        <nav class="header__nav" id="navMenu">
+          <ul class="header__nav-list">
+            <li><a class="header__nav-link" href="index.html#inicio">Inicio</a></li>
+            <li><a class="header__nav-link" href="index.html#empresa">Empresa</a></li>
+            <li><a class="header__nav-link" href="index.html#servicios">Servicios</a></li>
+            <li><a class="header__nav-link" href="index.html#productos">Productos</a></li>
+            <li><a class="header__nav-link" href="index.html#recursos">Recursos</a></li>
+            <li><a class="header__nav-link" href="index.html#proyectos">Proyectos</a></li>
+          </ul>
+          <div class="header__nav-cta">
+            <button class="btn btn-primary" onclick="window.location.href='index.html#contacto'">Contacto</button>
+          </div>
+        </nav>
+        
+        <button class="header__mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Presentation Content -->
+  <section class="presentation">
+    <div class="container">
+      <div class="presentation__header">
+        <h1>CM Ventor, S.A. de C.V.</h1>
+        <p>Empresa dedicada a la Fabricación y Mantenimiento de Torres de Enfriamiento</p>
+      </div>
+      
+      <div class="presentation__download">
+        <a href="resources/presentacion-corporativa.pdf" download class="btn btn-primary btn-large">
+          <i class="fas fa-download"></i> Descargar PDF Completo
+        </a>
+      </div>
+
+      <!-- Historia -->
+      <div class="presentation__section">
+        <h2 class="presentation__section-title">
+          <i class="fas fa-history"></i>
+          Historia
+        </h2>
+        <div class="presentation__content">
+          <p>Empresa fundada en el año 1990, iniciando actividades como persona física con actividad empresarial.</p>
+          <p>En el año 1998 se ingresa como Sociedad Anónima bajo el Nombre de CM Ventor, S.A. de C.V.</p>
+          <p>Dedicados al diseño, desarrollo de ingeniería y fabricación de Torres de Enfriamiento de la más alta calidad, cumpliendo con los estándares internacionales del CTI (Cooling Technology Institute).</p>
+        </div>
+      </div>
+
+      <!-- Misión, Visión y Valores -->
+      <div class="presentation__section">
+        <h2 class="presentation__section-title">
+          <i class="fas fa-bullseye"></i>
+          Misión, Visión y Valores
+        </h2>
+        <div class="presentation__grid">
+          <div class="presentation__card">
+            <h3>Misión</h3>
+            <p>Innovar siempre con la tecnología, ofreciendo a nuestros clientes el máximo desempeño con nuestras soluciones en Torres de Enfriamiento.</p>
+          </div>
+          <div class="presentation__card">
+            <h3>Visión</h3>
+            <p>Ser el integrador líder nacional en el mercado volviéndonos un aliado comercial con nuestros clientes.</p>
+          </div>
+        </div>
+        <div class="presentation__content">
+          <h3 style="margin-bottom: 1rem; color: var(--cm-blue-dark);">Valores</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue);"></i>
+              <strong>Profesionalismo</strong>
+            </li>
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue);"></i>
+              <strong>Compromiso</strong>
+            </li>
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue);"></i>
+              <strong>Responsabilidad</strong>
+            </li>
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue);"></i>
+              <strong>Honradez</strong>
+            </li>
+            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue);"></i>
+              <strong>Servicio</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Instalaciones -->
+      <div class="presentation__section">
+        <h2 class="presentation__section-title">
+          <i class="fas fa-warehouse"></i>
+          Instalaciones
+        </h2>
+        <div class="presentation__stats">
+          <div class="presentation__stat">
+            <span class="presentation__stat-number">1500 m²</span>
+            <span class="presentation__stat-label">Bodega de Fabricación</span>
+          </div>
+          <div class="presentation__stat">
+            <span class="presentation__stat-number">150 m²</span>
+            <span class="presentation__stat-label">Oficinas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicios -->
+      <div class="presentation__section">
+        <h2 class="presentation__section-title">
+          <i class="fas fa-tools"></i>
+          Servicios
+        </h2>
+        <div class="presentation__content">
+          <p>Contamos con personal altamente capacitado para ofrecer un servicio de la más alta calidad en toda la República Mexicana.</p>
+          <div class="presentation__grid">
+            <div class="presentation__card">
+              <h3>Fabricación y Mantenimientos</h3>
+              <ul>
+                <li>Fabricación y Mantenimientos a Torres de Enfriamiento</li>
+                <li>Mantenimiento Correctivo y/o Preventivo</li>
+                <li>Mantenimiento a Intercambiadores de Calor</li>
+              </ul>
+            </div>
+            <div class="presentation__card">
+              <h3>Instalaciones</h3>
+              <ul>
+                <li>Instalaciones mecánicas y/o eléctricas</li>
+                <li>Fabricación e Instalación de tableros eléctricos</li>
+              </ul>
+            </div>
+            <div class="presentation__card">
+              <h3>Servicios Especializados</h3>
+              <ul>
+                <li>Servicio de pailería y soldadura</li>
+                <li>Limpieza de Intercambiadores de Calor</li>
+                <li>Operación y Mantenimiento</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Productos -->
+      <div class="presentation__section">
+        <h2 class="presentation__section-title">
+          <i class="fas fa-industry"></i>
+          Productos
+        </h2>
+        <div class="presentation__grid">
+          <div class="presentation__card">
+            <h3>Torres de Enfriamiento</h3>
+            <p>Fabricadas en:</p>
+            <ul>
+              <li>Fibra de vidrio</li>
+              <li>Acero galvanizado</li>
+              <li>Acero inoxidable</li>
+            </ul>
+            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light);">
+              <strong>Primer Torre de Enfriamiento fabricada en 1996 para Planta TEKSID Hierro de México, S.A. de C.V.</strong>
+            </p>
+          </div>
+          <div class="presentation__card">
+            <h3>Motores Eléctricos</h3>
+            <p>Diseños exclusivos para Torre de Enfriamiento con las siguientes características:</p>
+            <ul>
+              <li>Recubrimiento Epóxico en interior y exterior</li>
+              <li>Sello de flecha en bronce alta eficiencia</li>
+              <li>Sellado de caja de conexiones a prueba de goteo</li>
+              <li>Carcaza fabricada en hierro fundido</li>
+              <li>Baleros y rodamientos sellados</li>
+            </ul>
+          </div>
+          <div class="presentation__card">
+            <h3>Ventiladores</h3>
+            <p>Diseños personalizados para su aplicación:</p>
+            <ul>
+              <li>Fabricados en poliamida reforzada con fibra de vidrio (PAG), centro en aluminio inyectado</li>
+              <li>Alta eficiencia</li>
+              <li>Resistencia mecánica</li>
+              <li>Bajo ruido sonoro</li>
+              <li>Consumo de energía inferior</li>
+              <li>Resistente a la corrosión</li>
+              <li>Ligero</li>
+            </ul>
+            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--cm-blue);">
+              <strong>Ventiladores en Fibra de Vidrio Certificados</strong>
+            </p>
+          </div>
+          <div class="presentation__card">
+            <h3>Vibroswitch</h3>
+            <p>Equipo de seguridad que detecta vibraciones en Ventilador</p>
+          </div>
+          <div class="presentation__card">
+            <h3>Relleno Enfriador</h3>
+            <ul>
+              <li><strong>Film Fill:</strong> Promueve el flujo libre de escombros, mientras que las ondulaciones transversales maximizan el área de la superficie y crean turbulencia para asegurar una transferencia de calor eficiente.</li>
+              <li><strong>Splash Fill:</strong> Logra un alto rendimiento térmico en torres de enfriamiento de contraflujo y flujo cruzado, resistente al ensuciamiento.</li>
+              <li><strong>Madera tratada</strong></li>
+            </ul>
+          </div>
+          <div class="presentation__card">
+            <h3>Louvers</h3>
+            <p>Louvers en PVC alta eficiencia para ventanas de Torre de Enfriamiento</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+              <li>Fabricado en PVC rígido contra rayos UV</li>
+              <li>Reduce el salpiqueo lo que ayuda a minimizar la reposición de Agua</li>
+              <li>Reduce el ruido y mantiene baja la caída de presión</li>
+            </ul>
+          </div>
+          <div class="presentation__card">
+            <h3>Espreas</h3>
+            <p>Diseño único que provee la dispersión de agua uniforme asegurando un amplio contacto con el relleno, logrando un mejor desempeño térmico en las Torres de Enfriamiento.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contratos -->
+      <div class="presentation__section">
+        <h2 class="presentation__section-title">
+          <i class="fas fa-handshake"></i>
+          Contratos Destacados
+        </h2>
+        <div class="presentation__content">
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid var(--border-color);">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue); top: 0.75rem;"></i>
+              <strong>Ternium México</strong> - Mantenimiento preventivo y/o correctivo a torres de enfriamiento, plantas Nuevo León y Monclova.
+            </li>
+            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid var(--border-color);">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue); top: 0.75rem;"></i>
+              <strong>Ternium México</strong> - Mantenimiento preventivo y/o correctivo a extractores y recirculadores de Aire, Planta Guerrero Acerex.
+            </li>
+            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid var(--border-color);">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue); top: 0.75rem;"></i>
+              <strong>Ternium México</strong> - Contrato de Operación y Mantenimiento a Casa de Humos Planta Largos Norte.
+            </li>
+            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid var(--border-color);">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue); top: 0.75rem;"></i>
+              <strong>Ternium México</strong> - Limpieza de Intercambiadores de Calor, Plantas Juventud y Guerrero.
+            </li>
+            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid var(--border-color);">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue); top: 0.75rem;"></i>
+              <strong>Ternium México</strong> - Mantenimiento preventivo y/o Correctivo a Torres de Enfriamiento, Planta CIT Pesquería.
+            </li>
+            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative;">
+              <i class="fas fa-check-circle" style="position: absolute; left: 0; color: var(--cm-blue); top: 0.75rem;"></i>
+              <strong>METALSA</strong> - Mantenimiento preventivo y/o correctivo a Torres de enfriamiento, Extractores, Manejadoras de Aire, Sistema de Bombeo y tableros de control eléctrico Planta Apodaca.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Certificaciones -->
+      <div class="presentation__section">
+        <h2 class="presentation__section-title">
+          <i class="fas fa-certificate"></i>
+          Certificaciones y Reconocimientos
+        </h2>
+        <div class="presentation__grid">
+          <div class="presentation__card">
+            <h3>ISO 45001</h3>
+            <p>Sistema de Gestión de Seguridad y Salud en el Trabajo</p>
+          </div>
+          <div class="presentation__card">
+            <h3>Miembros de la CTI</h3>
+            <p>Cooling Technology Institute</p>
+          </div>
+          <div class="presentation__card">
+            <h3>Desempeño Cero Accidentes</h3>
+            <p>Comprometidos con la seguridad en el trabajo</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="presentation__back">
+        <a href="index.html#recursos" class="btn btn-secondary">
+          <i class="fas fa-arrow-left"></i> Volver a Recursos
+        </a>
+        <a href="index.html" class="btn btn-primary">
+          <i class="fas fa-home"></i> Ir al Inicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section footer__section--main">
+          <div class="footer__logo">
+            <img src="images/logotipo.jpg" alt="CM Ventor Logo" class="footer__logo-icon">
+            <div class="footer__logo-text">
+              <p class="footer__logo-title">CM Ventor</p>
+              <p class="footer__logo-subtitle">Torres de Enfriamiento</p>
+            </div>
+          </div>
+          <p class="footer__description">
+            Especialistas en torres de enfriamiento con más de 30 años de experiencia, 
+            certificados por CTI y comprometidos con la calidad y la innovación.
+          </p>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__section-title">Contacto</h4>
+          <p class="footer__text">
+            <span class="footer__contact-item">
+              <i class="fas fa-phone footer__contact-icon"></i>
+              (81) 8327-7529
+            </span>
+          </p>
+          <p class="footer__text">
+            <span class="footer__contact-item">
+              <i class="fas fa-envelope footer__contact-icon"></i>
+              cm_ventor@prodigy.net.mx
+            </span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <div class="footer__bottom-content">
+          <p class="footer__copyright">
+            &copy; 2024 CM Ventor S.A. de C.V. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script-v2.js"></script>
+</body>
+</html>

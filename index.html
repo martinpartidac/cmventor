@@ -57,6 +57,7 @@
             <li><a class="header__nav-link" href="#empresa" onclick="scrollToSection('empresa'); return false;" data-translate="navEmpresa" data-section="empresa">Empresa</a></li>
             <li><a class="header__nav-link" href="#servicios" onclick="scrollToSection('servicios'); return false;" data-translate="navServicios" data-section="servicios">Servicios</a></li>
             <li><a class="header__nav-link" href="#productos" onclick="scrollToSection('productos'); return false;" data-translate="navProductos" data-section="productos">Productos</a></li>
+            <li><a class="header__nav-link" href="#recursos" onclick="scrollToSection('recursos'); return false;" data-translate="navRecursos" data-section="recursos">Recursos</a></li>
             <li><a class="header__nav-link" href="#proyectos" onclick="scrollToSection('proyectos'); return false;" data-translate="navProyectos" data-section="proyectos">Proyectos</a></li>
           </ul>
           <div class="header__nav-cta">
@@ -579,6 +580,74 @@
             Brindamos un servicio excepcional, poniendo las necesidades 
             de nuestros clientes en el centro de todo lo que hacemos.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biblioteca de Recursos Section -->
+  <section id="recursos" class="resources">
+    <div class="container">
+      <div class="resources__header text-center">
+        <h2 class="resources__title" data-translate="recursosTitle">Biblioteca de Recursos</h2>
+        <p class="resources__subtitle" data-translate="recursosSubtitle">
+          Descarga información corporativa, catálogos y recursos técnicos
+        </p>
+      </div>
+      
+      <div class="resources__grid">
+        <div class="card resources__card">
+          <div class="resources__icon">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <h3 class="resources__card-title" data-translate="recurso1Title">Presentación Corporativa</h3>
+          <p class="resources__card-description" data-translate="recurso1Desc">
+            Conoce nuestra historia, valores, servicios y productos en esta presentación completa de CM Ventor.
+          </p>
+          <div class="resources__card-meta">
+            <span class="resources__meta-item">
+              <i class="fas fa-file-alt"></i>
+              PDF - 30 páginas
+            </span>
+            <span class="resources__meta-item">
+              <i class="fas fa-download"></i>
+              Descarga gratuita
+            </span>
+          </div>
+          <div class="resources__card-actions">
+            <a href="presentacion.html" class="btn btn-secondary" data-translate="recursoVerWeb">
+              Ver en Web
+            </a>
+            <a href="resources/presentacion-corporativa.pdf" download class="btn btn-primary" data-translate="recursoDescargar">
+              <i class="fas fa-download"></i> Descargar PDF
+            </a>
+          </div>
+        </div>
+        
+        <div class="card resources__card resources__card--coming-soon">
+          <div class="resources__icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3 class="resources__card-title" data-translate="recurso2Title">Catálogo de Productos</h3>
+          <p class="resources__card-description" data-translate="recurso2Desc">
+            Especificaciones técnicas detalladas de todos nuestros productos y servicios.
+          </p>
+          <div class="resources__badge">
+            <span data-translate="recursoPronto">Próximamente</span>
+          </div>
+        </div>
+        
+        <div class="card resources__card resources__card--coming-soon">
+          <div class="resources__icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="resources__card-title" data-translate="recurso3Title">Guías de Mantenimiento</h3>
+          <p class="resources__card-description" data-translate="recurso3Desc">
+            Manuales y guías prácticas para el mantenimiento de torres de enfriamiento.
+          </p>
+          <div class="resources__badge">
+            <span data-translate="recursoPronto">Próximamente</span>
+          </div>
         </div>
       </div>
     </div>
