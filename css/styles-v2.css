@@ -633,7 +633,7 @@ a:hover {
 .hero__shape--2 {
     width: 300px;
     height: 300px;
-    background: var(--cm-yellow);
+    background: var(--cm-blue-light);
     bottom: -190px;
     left: -100px;
 }
@@ -1468,7 +1468,7 @@ a:hover {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--cm-blue), var(--cm-yellow));
+    background: linear-gradient(90deg, var(--cm-blue), var(--cm-blue-light));
     border-radius: 2px 2px 0 0;
 }
 
@@ -1560,7 +1560,7 @@ a:hover {
     display: block;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--cm-blue), var(--cm-yellow));
+    background: linear-gradient(90deg, var(--cm-blue), var(--cm-blue-light));
     margin: 1rem auto 0;
     border-radius: 2px;
 }
@@ -1757,8 +1757,8 @@ a:hover {
 }
 
 .stat-badge-year {
-    background: var(--cm-yellow);
-    color: var(--text-dark);
+    background: var(--cm-blue);
+    color: var(--bg-white);
     padding: 0.5rem 1rem;
     border-radius: 15px;
     font-size: 0.875rem;
@@ -2452,7 +2452,7 @@ a:hover {
 }
 
 .footer__link:hover {
-    color: var(--cm-yellow);
+    color: var(--cm-blue-light);
     transform: translateX(4px);
 }
 
@@ -2536,7 +2536,7 @@ a:hover {
 }
 
 .footer__legal-link:hover {
-    color: var(--cm-yellow);
+    color: var(--cm-blue-light);
 }
 
 .footer__legal-separator {
@@ -3103,7 +3103,7 @@ a:hover {
 }
 
 .reconocimientos__item--highlight {
-    border-top-color: var(--cm-yellow);
+    border-top-color: var(--cm-blue);
 }
 
 .reconocimientos__icon {
@@ -3261,9 +3261,9 @@ a:hover {
 }
 
 .valores__item:hover .valores__icon {
-    background: #fff7e6;
-    border-color: #f7d58a;
-    color: var(--cm-yellow-dark);
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: var(--cm-blue);
     transform: scale(1.04);
     box-shadow: none;
 }
@@ -3438,7 +3438,7 @@ a:hover {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--cm-yellow);
+    background: var(--cm-blue);
     color: white;
     padding: 0.3125rem 0.625rem;
     border-radius: 1rem;
@@ -3525,7 +3525,7 @@ a:hover {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--cm-blue), var(--cm-yellow));
+    background: linear-gradient(90deg, var(--cm-blue), var(--cm-blue-light));
     border-radius: 2px 2px 0 0;
 }
 
@@ -3612,8 +3612,8 @@ a:hover {
 }
 
 .producto-card__btn {
-    background: var(--cm-yellow);
-    color: var(--text-dark);
+    background: var(--cm-blue);
+    color: var(--bg-white);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -3624,9 +3624,9 @@ a:hover {
 }
 
 .producto-card__btn:hover {
-    background: var(--cm-yellow-dark);
+    background: var(--cm-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.25);
 }
 
 .producto-card__description {
@@ -3920,8 +3920,8 @@ a:hover {
 
 .product-modal__thumbs img.active {
     opacity: 1;
-    border-color: var(--cm-yellow);
-    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+    border-color: var(--cm-blue);
+    box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.3);
 }
 
 .product-modal__description {
@@ -4047,8 +4047,8 @@ a:hover {
 
 .producto-thumb.active {
     opacity: 1;
-    border-color: var(--cm-yellow);
-    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+    border-color: var(--cm-blue);
+    box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.3);
 }
 
 .producto-materials {
