@@ -1808,7 +1808,8 @@ a { color: inherit; text-decoration: none; }
   padding: 1rem;
 }
 
-.product-modal.open { display: flex; }
+.product-modal.open,
+.product-modal.active { display: flex; }
 
 .product-modal__overlay {
   position: absolute;
