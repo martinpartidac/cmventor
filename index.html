@@ -2,1398 +2,874 @@
 <html lang="es" id="htmlLang">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <meta name="description" content="CM Ventor - Más de 30 años fabricando y manteniendo torres de enfriamiento. Certificados por CTI, instalación, reparación y mantenimiento en toda la República Mexicana.">
-  <meta name="keywords" content="torres de enfriamiento, enfriadores, mantenimiento industrial, CTI, México">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="CM Ventor - Más de 30 años fabricando y manteniendo torres de enfriamiento certificadas por CTI en toda la República Mexicana.">
   <title>CM Ventor S.A. de C.V. | Especialistas en Torres de Enfriamiento</title>
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cmventor.github.io/">
   <meta property="og:title" content="CM Ventor S.A. de C.V. | Especialistas en Torres de Enfriamiento">
   <meta property="og:description" content="Más de 30 años fabricando y manteniendo torres de enfriamiento certificadas por CTI en toda la República Mexicana.">
-  <meta property="og:image" content="https://cmventor.github.io/images/logotipo.jpg">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://cmventor.github.io/">
-  <meta property="twitter:title" content="CM Ventor S.A. de C.V. | Especialistas en Torres de Enfriamiento">
-  <meta property="twitter:description" content="Más de 30 años fabricando y manteniendo torres de enfriamiento certificadas por CTI en toda la República Mexicana.">
-  <meta property="twitter:image" content="https://cmventor.github.io/images/logotipo.jpg">
+  <meta property="og:image" content="images/logotipo.jpg">
   <link rel="icon" type="image/jpeg" href="images/logotipo.jpg">
-  <link rel="shortcut icon" type="image/jpeg" href="images/logotipo.jpg">
-  <link rel="apple-touch-icon" href="images/logotipo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" crossorigin href="css/styles-v2.css">
+  <link rel="stylesheet" href="css/styles-v3.css">
   <script src="js/translations.js"></script>
 </head>
 <body>
-  <!-- Skip to content link for accessibility -->
-  <a href="#inicio" class="skip-to-content" data-translate="skipToContent">Saltar al contenido principal</a>
-  
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba" title="Volver arriba">
+
+  <a href="#inicio" class="skip-to-content">Saltar al contenido principal</a>
+
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba">
     <i class="fas fa-arrow-up"></i>
   </button>
-  
-  <!-- Header -->
+
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container">
-      <div class="header__content">
+      <div class="header__inner">
+
         <div class="header__logo" onclick="scrollToSection('inicio')">
-          <img src="images/logotipo.jpg" alt="CM Ventor Logo" class="header__logo-icon">
-          <div class="header__logo-text">
-            <h1 class="header__logo-title">CM Ventor</h1>
-            <p class="header__logo-subtitle">Torres de Enfriamiento</p>
+          <img src="images/logotipo.jpg" alt="CM Ventor" class="header__logo-img">
+          <div>
+            <span class="header__logo-name">CM Ventor</span>
+            <span class="header__logo-sub">Torres de Enfriamiento</span>
           </div>
         </div>
-        
+
         <nav class="header__nav" id="navMenu">
-          <ul class="header__nav-list">
-            <li><a class="header__nav-link" href="#inicio" onclick="scrollToSection('inicio'); return false;" data-translate="navInicio" data-section="inicio">Inicio</a></li>
-            <li><a class="header__nav-link" href="#empresa" onclick="scrollToSection('empresa'); return false;" data-translate="navEmpresa" data-section="empresa">Empresa</a></li>
-            <li><a class="header__nav-link" href="#servicios" onclick="scrollToSection('servicios'); return false;" data-translate="navServicios" data-section="servicios">Servicios</a></li>
-            <li><a class="header__nav-link" href="#productos" onclick="scrollToSection('productos'); return false;" data-translate="navProductos" data-section="productos">Productos</a></li>
-            <li><a class="header__nav-link" href="#recursos" onclick="scrollToSection('recursos'); return false;" data-translate="navRecursos" data-section="recursos">Recursos</a></li>
-            <li><a class="header__nav-link" href="#proyectos" onclick="scrollToSection('proyectos'); return false;" data-translate="navProyectos" data-section="proyectos">Proyectos</a></li>
-          </ul>
-          <div class="header__nav-cta">
-            <div class="language-selector">
-              <button class="language-btn" id="langBtn" onclick="toggleLanguageMenu()">
-                <i class="fas fa-globe"></i>
-                <span id="currentLang">ES</span>
-                <i class="fas fa-chevron-down"></i>
-              </button>
-              <div class="language-menu" id="languageMenu">
-                <button class="language-option" onclick="changeLanguage('es')">
-                  <span>🇲🇽</span> Español
-                </button>
-                <button class="language-option" onclick="changeLanguage('en')">
-                  <span>🇺🇸</span> English
-                </button>
-              </div>
-            </div>
-            <button class="btn btn-primary" onclick="scrollToSection('contacto')" data-translate="btnContacto">Contacto</button>
-          </div>
+          <a class="header__nav-link" href="#inicio"      onclick="scrollToSection('inicio'); return false;"    data-section="inicio"    data-translate="navInicio">Inicio</a>
+          <a class="header__nav-link" href="#empresa"     onclick="scrollToSection('empresa'); return false;"   data-section="empresa"   data-translate="navEmpresa">Empresa</a>
+          <a class="header__nav-link" href="#servicios"   onclick="scrollToSection('servicios'); return false;" data-section="servicios" data-translate="navServicios">Servicios</a>
+          <a class="header__nav-link" href="#productos"   onclick="scrollToSection('productos'); return false;" data-section="productos" data-translate="navProductos">Productos</a>
+          <a class="header__nav-link" href="#recursos"    onclick="scrollToSection('recursos'); return false;"  data-section="recursos"  data-translate="navRecursos">Recursos</a>
+          <a class="header__nav-link" href="#proyectos"   onclick="scrollToSection('proyectos'); return false;" data-section="proyectos" data-translate="navProyectos">Proyectos</a>
         </nav>
-        
-        <button class="header__mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+
+        <div class="header__actions">
+          <div class="lang-wrapper">
+            <button class="lang-btn" id="langBtn" onclick="toggleLanguageMenu()">
+              <i class="fas fa-globe"></i>
+              <span id="currentLang">ES</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="lang-menu" id="languageMenu">
+              <button class="lang-option" onclick="changeLanguage('es')"><span>🇲🇽</span> Español</button>
+              <button class="lang-option" onclick="changeLanguage('en')"><span>🇺🇸</span> English</button>
+            </div>
+          </div>
+          <button class="btn-cta" onclick="scrollToSection('contacto')" data-translate="btnContacto">Contacto</button>
+        </div>
+
+        <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Menú">
+          <span></span><span></span><span></span>
         </button>
+
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section id="inicio" class="hero">
-    <div class="hero__background">
-      <div class="hero__shape hero__shape--1"></div>
-      <div class="hero__shape hero__shape--2"></div>
-      <div class="hero__shape hero__shape--3"></div>
+    <div class="hero__bg">
+      <img src="images/torre.webp" alt="" class="hero__bg-img" loading="eager">
+      <div class="hero__bg-overlay"></div>
     </div>
-    
+
     <div class="container">
       <div class="hero__content">
-        <div class="hero__text">
-          <h1 class="hero__title">
-            <span data-translate="heroTitle">Especialistas en</span> 
-            <span class="hero__title-highlight" data-translate="heroTitleHighlight">Torres de Enfriamiento</span>
-          </h1>
-          <p class="hero__subtitle" data-translate="heroSubtitle">
-            Más de 30 años de experiencia fabricando, instalando y manteniendo torres de enfriamiento 
-            certificadas por el Cooling Technology Institute (CTI) en toda la República Mexicana.
-          </p>
-          
-          <div class="hero__features">
-            <div class="hero__feature">
-              <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
-              <span data-translate="heroFeature1">Certificados CTI</span>
-            </div>
-            <div class="hero__feature">
-              <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
-              <span data-translate="heroFeature2">30+ Años de Experiencia</span>
-            </div>
-            <div class="hero__feature">
-              <span class="hero__feature-icon"><i class="fas fa-check"></i></span>
-              <span data-translate="heroFeature3">Cobertura Nacional</span>
-            </div>
+        <span class="hero__eyebrow">
+          <i class="fas fa-certificate"></i>
+          <span data-translate="heroFeature1">Certificados CTI</span>
+          &nbsp;·&nbsp; San Nicolás de los Garza, N.L.
+        </span>
+
+        <h1 class="hero__title">
+          <span data-translate="heroTitle">Especialistas en</span><br>
+          <span class="hero__title-highlight" data-translate="heroTitleHighlight">Torres de Enfriamiento</span>
+        </h1>
+
+        <p class="hero__subtitle" data-translate="heroSubtitle">
+          Más de 30 años de experiencia fabricando, instalando y manteniendo torres de
+          enfriamiento certificadas por el Cooling Technology Institute (CTI)
+          en toda la República Mexicana.
+        </p>
+
+        <div class="hero__actions">
+          <button class="btn-primary" onclick="scrollToSection('contacto')" data-translate="heroBtnCotizacion">
+            Solicitar Cotización
+          </button>
+          <button class="btn-outline" onclick="scrollToSection('productos')" data-translate="heroBtnProductos">
+            Ver Productos
+          </button>
+        </div>
+
+        <div class="hero__trust">
+          <div class="hero__trust-item">
+            <span class="hero__trust-icon"><i class="fas fa-check"></i></span>
+            <span data-translate="heroFeature1">Certificados CTI</span>
           </div>
-          
-          <div class="hero__cta">
-            <button class="btn btn-primary btn-large" onclick="scrollToSection('contacto')" data-translate="heroBtnCotizacion">
-              Solicitar Cotización
-            </button>
-            <button class="btn btn-secondary btn-large" onclick="scrollToSection('productos')" data-translate="heroBtnProductos">
-              Ver Productos
-            </button>
+          <div class="hero__trust-item">
+            <span class="hero__trust-icon"><i class="fas fa-check"></i></span>
+            <span data-translate="heroFeature2">30+ Años de Experiencia</span>
           </div>
-          
-          <div class="hero__contact-quick">
-            <div class="hero__contact-item">
-              <i class="fas fa-phone hero__contact-icon"></i>
+          <div class="hero__trust-item">
+            <span class="hero__trust-icon"><i class="fas fa-check"></i></span>
+            <span data-translate="heroFeature3">Cobertura Nacional</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__quick-contact">
+      <div class="hero__contact-pill">
+        <i class="fas fa-phone"></i>
+        <div>
+          <p class="hero__contact-label" data-translate="heroLlamanos">Llámanos</p>
+          <p class="hero__contact-value">(81) 8327-7529</p>
+        </div>
+      </div>
+      <div class="hero__contact-pill">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <p class="hero__contact-label" data-translate="heroEscribenos">Escríbenos</p>
+          <p class="hero__contact-value">cm_ventor@prodigy.net.mx</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-bar__grid">
+        <div class="stats-bar__item">
+          <span class="stats-bar__number">30+</span>
+          <span class="stats-bar__label">Años de Experiencia</span>
+        </div>
+        <div class="stats-bar__item">
+          <span class="stats-bar__number">500+</span>
+          <span class="stats-bar__label">Proyectos Completados</span>
+        </div>
+        <div class="stats-bar__item">
+          <span class="stats-bar__number">100%</span>
+          <span class="stats-bar__label">Satisfacción del Cliente</span>
+        </div>
+        <div class="stats-bar__item">
+          <span class="stats-bar__number">14+</span>
+          <span class="stats-bar__label">Clientes Industriales</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMPRESA -->
+  <section id="empresa" class="empresa">
+    <div class="container">
+      <div class="empresa__grid">
+
+        <div class="empresa__left animate-on-scroll">
+          <span class="empresa__big-number">30</span>
+          <span class="empresa__year-label">Años de liderazgo industrial</span>
+          <div class="empresa__image">
+            <img src="images/torre de enfriamiento-9.webp" alt="Instalaciones CM Ventor" loading="lazy">
+          </div>
+          <div class="empresa__instalaciones">
+            <div class="empresa__instalacion">
+              <i class="fas fa-warehouse"></i>
               <div>
-                <p class="hero__contact-label" data-translate="heroLlamanos">Llámanos</p>
-                <p class="hero__contact-value">(81) 8327-7529</p>
+                <p class="empresa__instalacion-number">1500 m²</p>
+                <p class="empresa__instalacion-label" data-translate="instalacionesBodega">Bodega de Fabricación</p>
               </div>
             </div>
-            <div class="hero__contact-item">
-              <i class="fas fa-envelope hero__contact-icon"></i>
+            <div class="empresa__instalacion">
+              <i class="fas fa-building"></i>
               <div>
-                <p class="hero__contact-label" data-translate="heroEscribenos">Escríbenos</p>
-                <p class="hero__contact-value">cm_ventor@prodigy.net.mx</p>
+                <p class="empresa__instalacion-number">150 m²</p>
+                <p class="empresa__instalacion-label" data-translate="instalacionesOficinas">Oficinas</p>
               </div>
             </div>
           </div>
         </div>
-        
-        <div class="hero__image">
-          <div class="hero__image-wrapper">
-            <div class="hero__image-placeholder">
-              <img src="images/torre.webp" alt="Torre de Enfriamiento CM Ventor" class="hero__image-img" loading="eager">
+
+        <div class="empresa__right animate-on-scroll">
+          <p class="empresa__eyebrow">Sobre CM Ventor</p>
+          <h2 class="empresa__title" data-translate="empresaTitle">Comprometidos con la excelencia desde 1990</h2>
+          <p class="empresa__text" data-translate="empresaHistoria1">
+            Empresa fundada en el año 1990, iniciando actividades como persona física con actividad empresarial.
+            En el año 1998 se ingresa como Sociedad Anónima bajo el Nombre de CM Ventor, S.A. de C.V.
+          </p>
+          <p class="empresa__text" data-translate="empresaHistoria2">
+            Dedicados al diseño, desarrollo de ingeniería y fabricación de Torres de Enfriamiento de la más alta calidad,
+            cumpliendo con los estándares internacionales del CTI (Cooling Technology Institute).
+          </p>
+
+          <div class="empresa__pillars">
+            <div class="empresa__pillar">
+              <div class="empresa__pillar-icon"><i class="fas fa-bullseye"></i></div>
+              <p class="empresa__pillar-title" data-translate="mision">Misión</p>
+              <ul class="empresa__pillar-list">
+                <li data-translate="mision1">Innovar con tecnología avanzada</li>
+                <li data-translate="mision2">Maximizar el desempeño</li>
+                <li data-translate="mision3">Soluciones integrales CTI</li>
+              </ul>
             </div>
-            
-            <div class="hero__badge hero__badge--1">
-              <img src="images/cti-logo.png" alt="CTI Logo" class="hero__badge-logo">
+            <div class="empresa__pillar">
+              <div class="empresa__pillar-icon"><i class="fas fa-eye"></i></div>
+              <p class="empresa__pillar-title" data-translate="vision">Visión</p>
+              <ul class="empresa__pillar-list">
+                <li data-translate="vision1">Líder en el mercado mexicano</li>
+                <li data-translate="vision2">Aliado comercial de preferencia</li>
+                <li data-translate="vision3">Presencia nacional</li>
+              </ul>
             </div>
-            
-            <div class="hero__badge hero__badge--2">
-              <span class="hero__badge-number">500+</span>
-              <span class="hero__badge-text">Proyectos</span>
+            <div class="empresa__pillar">
+              <div class="empresa__pillar-icon"><i class="fas fa-award"></i></div>
+              <p class="empresa__pillar-title" data-translate="certificaciones">Certificaciones</p>
+              <ul class="empresa__pillar-list">
+                <li>CTI — Cooling Technology Institute</li>
+                <li>ISO 45001 — Seguridad Laboral</li>
+                <li>Cumplimiento normativo MX</li>
+              </ul>
+            </div>
+            <div class="empresa__pillar">
+              <div class="empresa__pillar-icon"><i class="fas fa-shield-alt"></i></div>
+              <p class="empresa__pillar-title">Seguridad</p>
+              <ul class="empresa__pillar-list">
+                <li>Cero accidentes en obra</li>
+                <li>Reconocimiento Ternium</li>
+                <li>Personal certificado</li>
+              </ul>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Empresa Section -->
-  <section id="empresa" class="profile">
+  <!-- SERVICIOS -->
+  <section id="servicios" class="servicios">
     <div class="container">
-      <div class="profile__header text-center">
-        <h2 class="profile__title" data-translate="empresaTitle">Sobre CM Ventor</h2>
-        <p class="profile__subtitle" data-translate="empresaSubtitle">Comprometidos con la excelencia desde 1990</p>
-      </div>
-      
-      <div class="profile__content">
-        <div class="profile__main">
-          <div class="profile__image-container">
-            <div class="profile__image-placeholder">
-              <img src="images/torre de enfriamiento-9.webp" alt="Instalaciones CM Ventor" class="profile__image-img" loading="lazy">
-            </div>
-            <div class="profile__instalaciones-stats">
-              <div class="instalaciones-stat">
-                <i class="fas fa-warehouse"></i>
-                <div>
-                  <p class="instalaciones-stat-number">1500 m²</p>
-                  <p class="instalaciones-stat-label" data-translate="instalacionesBodega">Bodega de Fabricación</p>
-                </div>
-              </div>
-              <div class="instalaciones-stat">
-                <i class="fas fa-building"></i>
-                <div>
-                  <p class="instalaciones-stat-number">150 m²</p>
-                  <p class="instalaciones-stat-label" data-translate="instalacionesOficinas">Oficinas</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="profile__bio">
-            <h3 class="profile__bio-title" data-translate="empresaHistoria">Nuestra Historia</h3>
-            <p class="profile__bio-text" data-translate="empresaHistoria1">
-              Empresa fundada en el año 1990, iniciando actividades como persona física con actividad empresarial. 
-              En el año 1998 se ingresa como Sociedad Anónima bajo el Nombre de CM Ventor, S.A. de C.V.
-            </p>
-            <p class="profile__bio-text" data-translate="empresaHistoria2">
-              Dedicados al diseño, desarrollo de ingeniería y fabricación de Torres de Enfriamiento de la más alta calidad, 
-              cumpliendo con los estándares internacionales del CTI (Cooling Technology Institute).
-            </p>
-            <p class="profile__bio-text" data-translate="empresaHistoria3">
-              Con la constante evaluación y avance de la tecnología CM VENTOR ha ido actualizando sus procesos para ofrecer 
-              a sus clientes productos con la más alta calidad, cumpliendo con los estándares internacionales del CTI.
-            </p>
-            <p class="profile__bio-text" data-translate="empresaHistoria4">
-              Con más de tres décadas de experiencia, nos hemos consolidado como líderes en el mercado mexicano 
-              de torres de enfriamiento, ofreciendo soluciones innovadoras y confiables para la industria.
-            </p>
-          </div>
+      <div class="servicios__header">
+        <div>
+          <p class="servicios__eyebrow">Lo que hacemos</p>
+          <h2 class="servicios__title" data-translate="serviciosTitle">Nuestros Servicios</h2>
         </div>
-        
-        <div class="profile__credentials">
-          <div class="card profile__credential-section">
-            <div class="profile__credential-header">
-              <i class="fas fa-bullseye profile__credential-icon"></i>
-              <h4 class="profile__credential-title" data-translate="mision">Misión</h4>
-            </div>
-            <ul class="profile__credential-list">
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="mision1">Innovar siempre con la tecnología más avanzada</span>
-              </li>
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="mision2">Maximizar el desempeño de nuestros clientes</span>
-              </li>
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="mision3">Ofrecer soluciones integrales en Torres de Enfriamiento</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="card profile__credential-section">
-            <div class="profile__credential-header">
-              <i class="fas fa-eye profile__credential-icon"></i>
-              <h4 class="profile__credential-title" data-translate="vision">Visión</h4>
-            </div>
-            <ul class="profile__credential-list">
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="vision1">Ser el integrador líder en el mercado mexicano</span>
-              </li>
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="vision2">Convertirnos en el aliado comercial de preferencia</span>
-              </li>
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="vision3">Expandir nuestra presencia nacional</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="card profile__credential-section">
-            <div class="profile__credential-header">
-              <i class="fas fa-award profile__credential-icon"></i>
-              <h4 class="profile__credential-title" data-translate="certificaciones">Certificaciones</h4>
-            </div>
-            <ul class="profile__credential-list">
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="cert1">Cooling Technology Institute (CTI)</span>
-              </li>
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="cert2">ISO 45001 - Sistema de Gestión de Seguridad y Salud en el Trabajo</span>
-              </li>
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="cert3">Cumplimiento normativo mexicano</span>
-              </li>
-              <li class="profile__credential-item">
-                <span class="profile__credential-bullet">•</span>
-                <span data-translate="cert4">Miembros de la CTI</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios Section -->
-  <section id="servicios" class="services">
-    <div class="container">
-      <div class="services__header text-center">
-        <h2 class="services__title" data-translate="serviciosTitle">Nuestros Servicios</h2>
-        <p class="services__subtitle" data-translate="serviciosSubtitle">
-          Soluciones completas para torres de enfriamiento con la más alta calidad y profesionalismo
+        <p class="servicios__subtitle" data-translate="serviciosSubtitle">
+          Soluciones completas para torres de enfriamiento con la más alta calidad y profesionalismo.
         </p>
       </div>
-      
-      <div class="grid grid-3">
-        <div class="card services__card">
-          <i class="fas fa-tools services__icon"></i>
-          <h3 class="services__card-title" data-translate="servicio1Title">Instalación y Reparación</h3>
-          <p class="services__card-description" data-translate="servicio1Desc">
-            Instalación profesional, reparación y mantenimiento especializado de torres de enfriamiento 
-            con personal altamente capacitado y certificado.
-          </p>
-          <ul class="services__features">
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio1Feature1">Instalación completa llave en mano</span>
-            </li>
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio1Feature2">Reparaciones especializadas de componentes</span>
-            </li>
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio1Feature3">Mantenimiento preventivo y correctivo</span>
-            </li>
-          </ul>
+
+      <div class="servicios__list">
+        <div class="servicios__item animate-on-scroll">
+          <span class="servicios__number">01</span>
+          <div class="servicios__item-body">
+            <h3 class="servicios__item-title" data-translate="servicio1Title">Instalación y Reparación</h3>
+            <p class="servicios__item-desc" data-translate="servicio1Desc">
+              Instalación profesional, reparación y mantenimiento especializado de torres de enfriamiento
+              con personal altamente capacitado y certificado.
+            </p>
+            <div class="servicios__item-tags">
+              <span class="servicios__tag" data-translate="servicio1Feature1">Instalación llave en mano</span>
+              <span class="servicios__tag" data-translate="servicio1Feature2">Reparación de componentes</span>
+              <span class="servicios__tag" data-translate="servicio1Feature3">Mantenimiento preventivo</span>
+            </div>
+          </div>
+          <div class="servicios__item-icon"><i class="fas fa-tools"></i></div>
         </div>
-        
-        <div class="card services__card">
-          <i class="fas fa-bolt services__icon"></i>
-          <h3 class="services__card-title" data-translate="servicio2Title">Instalaciones Eléctricas</h3>
-          <p class="services__card-description" data-translate="servicio2Desc">
-            Instalaciones mecánicas y eléctricas especializadas, incluyendo tableros eléctricos 
-            para sistemas de enfriamiento industrial.
-          </p>
-          <ul class="services__features">
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio2Feature1">Tableros eléctricos industriales</span>
-            </li>
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio2Feature2">Instalaciones mecánicas certificadas</span>
-            </li>
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio2Feature3">Automatización de sistemas de control</span>
-            </li>
-          </ul>
+
+        <div class="servicios__item animate-on-scroll">
+          <span class="servicios__number">02</span>
+          <div class="servicios__item-body">
+            <h3 class="servicios__item-title" data-translate="servicio2Title">Instalaciones Eléctricas</h3>
+            <p class="servicios__item-desc" data-translate="servicio2Desc">
+              Instalaciones mecánicas y eléctricas especializadas, incluyendo tableros eléctricos
+              para sistemas de enfriamiento industrial.
+            </p>
+            <div class="servicios__item-tags">
+              <span class="servicios__tag" data-translate="servicio2Feature1">Tableros eléctricos industriales</span>
+              <span class="servicios__tag" data-translate="servicio2Feature2">Instalaciones certificadas</span>
+              <span class="servicios__tag" data-translate="servicio2Feature3">Automatización de control</span>
+            </div>
+          </div>
+          <div class="servicios__item-icon"><i class="fas fa-bolt"></i></div>
         </div>
-        
-        <div class="card services__card">
-          <i class="fas fa-cogs services__icon"></i>
-          <h3 class="services__card-title" data-translate="servicio3Title">Mantenimiento Especializado</h3>
-          <p class="services__card-description" data-translate="servicio3Desc">
-            Mantenimiento preventivo y correctivo profesional a intercambiadores de calor 
-            y sistemas de enfriamiento completos.
-          </p>
-          <ul class="services__features">
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio3Feature1">Programas de mantenimiento preventivo</span>
-            </li>
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio3Feature2">Servicio a intercambiadores de calor</span>
-            </li>
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio3Feature3">Diagnóstico técnico especializado</span>
-            </li>
-          </ul>
+
+        <div class="servicios__item animate-on-scroll">
+          <span class="servicios__number">03</span>
+          <div class="servicios__item-body">
+            <h3 class="servicios__item-title" data-translate="servicio3Title">Mantenimiento Especializado</h3>
+            <p class="servicios__item-desc" data-translate="servicio3Desc">
+              Mantenimiento preventivo y correctivo profesional a intercambiadores de calor
+              y sistemas de enfriamiento completos.
+            </p>
+            <div class="servicios__item-tags">
+              <span class="servicios__tag" data-translate="servicio3Feature1">Mantenimiento preventivo</span>
+              <span class="servicios__tag" data-translate="servicio3Feature2">Intercambiadores de calor</span>
+              <span class="servicios__tag" data-translate="servicio3Feature3">Diagnóstico técnico</span>
+            </div>
+          </div>
+          <div class="servicios__item-icon"><i class="fas fa-cogs"></i></div>
         </div>
-        
-        <div class="card services__card">
-          <i class="fas fa-wrench services__icon"></i>
-          <h3 class="services__card-title" data-translate="servicio4Title">Pailería y Soldadura</h3>
-          <p class="services__card-description" data-translate="servicio4Desc">
-            Servicio especializado de pailería y soldadura para fabricación, reparación y mantenimiento 
-            de componentes metálicos para sistemas de enfriamiento.
-          </p>
-          <ul class="services__features">
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio4Feature1">Fabricación de componentes metálicos</span>
-            </li>
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio4Feature2">Reparación y mantenimiento</span>
-            </li>
-            <li class="services__feature">
-              <span class="services__feature-check"><i class="fas fa-check"></i></span>
-              <span data-translate="servicio4Feature3">Soldadura especializada</span>
-            </li>
-          </ul>
+
+        <div class="servicios__item animate-on-scroll">
+          <span class="servicios__number">04</span>
+          <div class="servicios__item-body">
+            <h3 class="servicios__item-title" data-translate="servicio4Title">Pailería y Soldadura</h3>
+            <p class="servicios__item-desc" data-translate="servicio4Desc">
+              Servicio especializado de pailería y soldadura para fabricación, reparación y mantenimiento
+              de componentes metálicos para sistemas de enfriamiento.
+            </p>
+            <div class="servicios__item-tags">
+              <span class="servicios__tag" data-translate="servicio4Feature1">Fabricación de componentes</span>
+              <span class="servicios__tag" data-translate="servicio4Feature2">Reparación metálica</span>
+              <span class="servicios__tag" data-translate="servicio4Feature3">Soldadura especializada</span>
+            </div>
+          </div>
+          <div class="servicios__item-icon"><i class="fas fa-wrench"></i></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Características Destacadas Section -->
-  <section class="features-highlight">
+  <!-- CARACTERÍSTICAS -->
+  <section class="caracteristicas">
     <div class="container">
-      <div class="features-highlight__header text-center">
-        <h2 class="features-highlight__title" data-translate="featuresTitle">Características Destacadas</h2>
-        <p class="features-highlight__subtitle" data-translate="featuresSubtitle">Lo que nos distingue en el mercado</p>
+      <div class="section-header">
+        <p class="section-eyebrow" data-translate="featuresSubtitle">Lo que nos distingue</p>
+        <h2 class="section-title" data-translate="featuresTitle">Características Destacadas</h2>
+        <p class="section-subtitle">Ventajas técnicas que garantizan el mejor rendimiento y durabilidad.</p>
       </div>
-      
-      <div class="features-highlight__grid">
-        <div class="card features-highlight__item">
-          <div class="features-highlight__icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <h3 class="features-highlight__item-title" data-translate="feature1Title">Vida Útil Extendida</h3>
-          <p class="features-highlight__item-description" data-translate="feature1Desc">
-            Al menos 2 veces más vida útil que una torre de acero galvanizado, 
-            garantizando una inversión a largo plazo.
-          </p>
+
+      <div class="caract-grid">
+        <div class="caract-item animate-on-scroll">
+          <div class="caract-icon"><i class="fas fa-clock"></i></div>
+          <h3 class="caract-title" data-translate="feature1Title">Vida Útil Extendida</h3>
+          <p class="caract-desc" data-translate="feature1Desc">Al menos 2 veces más vida útil que una torre de acero galvanizado, garantizando una inversión a largo plazo.</p>
         </div>
-        
-        <div class="card features-highlight__item">
-          <div class="features-highlight__icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3 class="features-highlight__item-title" data-translate="feature2Title">Resistencia a la Corrosión</h3>
-          <p class="features-highlight__item-description" data-translate="feature2Desc">
-            No se oxida ni corroe, con alta resistencia a tratamientos químicos 
-            agresivos del agua.
-          </p>
+        <div class="caract-item animate-on-scroll">
+          <div class="caract-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="caract-title" data-translate="feature2Title">Resistencia a la Corrosión</h3>
+          <p class="caract-desc" data-translate="feature2Desc">No se oxida ni corroe, con alta resistencia a tratamientos químicos agresivos del agua.</p>
         </div>
-        
-        <div class="card features-highlight__item">
-          <div class="features-highlight__icon">
-            <i class="fas fa-tools"></i>
-          </div>
-          <h3 class="features-highlight__item-title" data-translate="feature3Title">Mantenimiento Mínimo</h3>
-          <p class="features-highlight__item-description" data-translate="feature3Desc">
-            Construcción en FRP reduce significativamente el tiempo y costos 
-            de mantenimiento de nuestros equipos.
-          </p>
+        <div class="caract-item animate-on-scroll">
+          <div class="caract-icon"><i class="fas fa-tools"></i></div>
+          <h3 class="caract-title" data-translate="feature3Title">Mantenimiento Mínimo</h3>
+          <p class="caract-desc" data-translate="feature3Desc">Construcción en FRP reduce significativamente el tiempo y costos de mantenimiento de nuestros equipos.</p>
         </div>
-        
-        <div class="card features-highlight__item">
-          <div class="features-highlight__icon">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <h3 class="features-highlight__item-title" data-translate="feature4Title">Eficiencia Energética</h3>
-          <p class="features-highlight__item-description" data-translate="feature4Desc">
-            Nuestras unidades superan los requisitos de eficiencia energética 
-            para reducir costos operativos.
-          </p>
+        <div class="caract-item animate-on-scroll">
+          <div class="caract-icon"><i class="fas fa-bolt"></i></div>
+          <h3 class="caract-title" data-translate="feature4Title">Eficiencia Energética</h3>
+          <p class="caract-desc" data-translate="feature4Desc">Nuestras unidades superan los requisitos de eficiencia energética para reducir costos operativos.</p>
         </div>
-        
-        <div class="card features-highlight__item">
-          <div class="features-highlight__icon">
-            <i class="fas fa-leaf"></i>
-          </div>
-          <h3 class="features-highlight__item-title" data-translate="feature5Title">Sostenibilidad</h3>
-          <p class="features-highlight__item-description" data-translate="feature5Desc">
-            Ahorro de agua, alta eficiencia y sin problemas de fugas, 
-            contribuyendo al cuidado del medio ambiente.
-          </p>
+        <div class="caract-item animate-on-scroll">
+          <div class="caract-icon"><i class="fas fa-leaf"></i></div>
+          <h3 class="caract-title" data-translate="feature5Title">Sostenibilidad</h3>
+          <p class="caract-desc" data-translate="feature5Desc">Ahorro de agua, alta eficiencia y sin problemas de fugas, contribuyendo al cuidado del medio ambiente.</p>
         </div>
-        
-        <div class="card features-highlight__item">
-          <div class="features-highlight__icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h3 class="features-highlight__item-title" data-translate="feature6Title">Certificación CTI</h3>
-          <p class="features-highlight__item-description" data-translate="feature6Desc">
-            Más de 30 años de experiencia con certificación del Cooling Technology 
-            Institute (CTI), garantía de calidad y confiabilidad.
-          </p>
+        <div class="caract-item animate-on-scroll">
+          <div class="caract-icon"><i class="fas fa-certificate"></i></div>
+          <h3 class="caract-title" data-translate="feature6Title">Certificación CTI</h3>
+          <p class="caract-desc" data-translate="feature6Desc">Más de 30 años de experiencia con certificación del Cooling Technology Institute, garantía de calidad.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Reconocimientos Section -->
-  <section class="reconocimientos">
-    <div class="container">
-      <div class="reconocimientos__header text-center">
-        <h2 class="reconocimientos__title" data-translate="reconocimientosTitle">Reconocimientos</h2>
-        <p class="reconocimientos__subtitle" data-translate="reconocimientosSubtitle">
-          Logros y distinciones que reflejan nuestro compromiso con la excelencia
-        </p>
-      </div>
-      
-      <div class="reconocimientos__grid">
-        <div class="card reconocimientos__item">
-          <div class="reconocimientos__icon reconocimientos__icon--cti reconocimientos__icon--image">
-            <img src="images/cti-logo.png" alt="CTI Logo" class="reconocimientos__logo-image">
-          </div>
-          <h3 class="reconocimientos__item-title" data-translate="reconocimiento1Title">Miembros de la CTI</h3>
-          <p class="reconocimientos__item-description" data-translate="reconocimiento1Desc">
-            Somos miembros activos del Cooling Technology Institute (CTI), 
-            participando en estándares internacionales de la industria.
-          </p>
-        </div>
-        
-        <div class="card reconocimientos__item reconocimientos__item--highlight">
-          <div class="reconocimientos__icon reconocimientos__icon--zero reconocimientos__icon--image">
-            <img src="images/logos/ternium.png" alt="Ternium Logo" class="reconocimientos__logo-image">
-          </div>
-          <h3 class="reconocimientos__item-title" data-translate="reconocimiento2Title">Desempeño Cero Accidentes</h3>
-          <p class="reconocimientos__item-description" data-translate="reconocimiento2Desc">
-            Comprometidos con la seguridad en el trabajo, hemos logrado 
-            mantener un desempeño de cero accidentes en nuestros proyectos.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Valores Section -->
-  <section class="valores">
-    <div class="container">
-      <div class="valores__header text-center">
-        <h2 class="valores__title" data-translate="valoresTitle">Nuestros Valores</h2>
-        <p class="valores__subtitle" data-translate="valoresSubtitle">
-          Los principios que guían nuestro trabajo y compromiso con la excelencia
-        </p>
-      </div>
-      
-      <div class="valores__grid">
-        <div class="card valores__item">
-          <div class="valores__icon">
-            <i class="fas fa-user-tie"></i>
-          </div>
-          <h3 class="valores__item-title" data-translate="valor1Title">Profesionalismo</h3>
-          <p class="valores__item-description" data-translate="valor1Desc">
-            Mantenemos los más altos estándares profesionales en cada proyecto, 
-            garantizando calidad y excelencia en nuestros servicios.
-          </p>
-        </div>
-        
-        <div class="card valores__item">
-          <div class="valores__icon">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3 class="valores__item-title" data-translate="valor2Title">Compromiso</h3>
-          <p class="valores__item-description" data-translate="valor2Desc">
-            Nos comprometemos con nuestros clientes para cumplir y superar 
-            sus expectativas en cada proyecto.
-          </p>
-        </div>
-        
-        <div class="card valores__item">
-          <div class="valores__icon">
-            <i class="fas fa-balance-scale"></i>
-          </div>
-          <h3 class="valores__item-title" data-translate="valor3Title">Responsabilidad</h3>
-          <p class="valores__item-description" data-translate="valor3Desc">
-            Asumimos la responsabilidad total de nuestros proyectos, desde 
-            la planificación hasta la entrega final.
-          </p>
-        </div>
-        
-        <div class="card valores__item">
-          <div class="valores__icon">
-            <i class="fas fa-gem"></i>
-          </div>
-          <h3 class="valores__item-title" data-translate="valor4Title">Honradez</h3>
-          <p class="valores__item-description" data-translate="valor4Desc">
-            Actuamos con integridad y transparencia en todas nuestras 
-            relaciones comerciales y profesionales.
-          </p>
-        </div>
-        
-        <div class="card valores__item">
-          <div class="valores__icon">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h3 class="valores__item-title" data-translate="valor5Title">Servicio</h3>
-          <p class="valores__item-description" data-translate="valor5Desc">
-            Brindamos un servicio excepcional, poniendo las necesidades 
-            de nuestros clientes en el centro de todo lo que hacemos.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Biblioteca de Recursos Section -->
-  <section id="recursos" class="resources">
-    <div class="container">
-      <div class="resources__header text-center">
-        <h2 class="resources__title" data-translate="recursosTitle">Biblioteca de Recursos</h2>
-        <p class="resources__subtitle" data-translate="recursosSubtitle">
-          Descarga información corporativa, catálogos y recursos técnicos
-        </p>
-      </div>
-      
-      <div class="resources__grid">
-        <div class="card resources__card">
-          <div class="resources__icon">
-            <i class="fas fa-file-pdf"></i>
-          </div>
-          <h3 class="resources__card-title" data-translate="recurso1Title">Presentación Corporativa</h3>
-          <p class="resources__card-description" data-translate="recurso1Desc">
-            Conoce nuestra historia, valores, servicios y productos en esta presentación completa de CM Ventor.
-          </p>
-          <div class="resources__card-meta">
-            <span class="resources__meta-item">
-              <i class="fas fa-file-alt"></i>
-              PDF - 30 páginas
-            </span>
-            <span class="resources__meta-item">
-              <i class="fas fa-download"></i>
-              Descarga gratuita
-            </span>
-          </div>
-          <div class="resources__card-actions">
-            <a href="presentacion.html" class="btn btn-secondary" data-translate="recursoVerWeb">
-              Ver en Web
-            </a>
-            <a href="resources/presentacion-corporativa.pdf" download class="btn btn-primary" data-translate="recursoDescargar">
-              <i class="fas fa-download"></i> Descargar PDF
-            </a>
-          </div>
-        </div>
-        
-        <div class="card resources__card resources__card--coming-soon">
-          <div class="resources__icon">
-            <i class="fas fa-book"></i>
-          </div>
-          <h3 class="resources__card-title" data-translate="recurso2Title">Catálogo de Productos</h3>
-          <p class="resources__card-description" data-translate="recurso2Desc">
-            Especificaciones técnicas detalladas de todos nuestros productos y servicios.
-          </p>
-          <div class="resources__badge">
-            <span data-translate="recursoPronto">Próximamente</span>
-          </div>
-        </div>
-        
-        <div class="card resources__card resources__card--coming-soon">
-          <div class="resources__icon">
-            <i class="fas fa-tools"></i>
-          </div>
-          <h3 class="resources__card-title" data-translate="recurso3Title">Guías de Mantenimiento</h3>
-          <p class="resources__card-description" data-translate="recurso3Desc">
-            Manuales y guías prácticas para el mantenimiento de torres de enfriamiento.
-          </p>
-          <div class="resources__badge">
-            <span data-translate="recursoPronto">Próximamente</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Productos Section -->
+  <!-- PRODUCTOS -->
   <section id="productos" class="productos">
     <div class="container">
-      <div class="section-header text-center">
+      <div class="section-header">
+        <p class="section-eyebrow">Tecnología CTI</p>
         <h2 class="section-title" data-translate="productosTitle">Nuestros Productos</h2>
-        <p class="section-subtitle" data-translate="productosSubtitle">
-          Tecnología de vanguardia certificada por CTI para máxima eficiencia
-        </p>
+        <p class="section-subtitle" data-translate="productosSubtitle">Tecnología de vanguardia certificada por CTI para máxima eficiencia.</p>
       </div>
-      
-      <div class="grid grid-3 productos-grid">
-        <div class="card producto-card">
-          <div class="producto-card__icon">
-            <i class="fas fa-industry"></i>
-          </div>
-          <h3 class="producto-card__title" data-translate="torresTitle">Torres de Enfriamiento</h3>
-          <div class="producto-card__image-container">
-            <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torre de Enfriamiento" class="producto-card__image" loading="lazy" onclick="openProductModal('torres')">
-            <div class="producto-card__overlay">
-              <button class="producto-card__btn" onclick="openProductModal('torres')" data-translate="verGalería">Ver Galería</button>
+
+      <div class="productos-grid">
+        <div class="prod-card animate-on-scroll">
+          <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torres de Enfriamiento" class="prod-card__img" loading="lazy" onclick="openProductModal('torres')">
+          <div class="prod-card__body">
+            <h3 class="prod-card__title" data-translate="torresTitle">Torres de Enfriamiento</h3>
+            <p class="prod-card__desc" data-translate="torresVariedad">Amplia variedad de modelos de acuerdo a los requerimientos de nuestros clientes. Fabricadas en FRP, acero galvanizado e inoxidable.</p>
+            <div class="prod-card__specs">
+              <span class="prod-card__spec" data-translate="torresCapacidad">50-2000 TR</span>
+              <span class="prod-card__spec">35°C - 45°C entrada</span>
+              <span class="prod-card__spec" data-translate="torresCTI">Certificado CTI</span>
             </div>
-          </div>
-          <p class="producto-card__description" data-translate="torresVariedad">
-            Amplia variedad de modelos de acuerdo a los requerimientos y necesidades de nuestros clientes.
-          </p>
-          <p class="producto-card__section-title">Características clave</p>
-          <div class="producto-card__materials">
-            <p class="producto-card__materials-title" data-translate="torresFabricadas">Fabricadas en:</p>
-            <ul class="producto-card__materials-list">
-              <li><i class="fas fa-check-circle"></i> <span data-translate="torresFibra">Fibra de vidrio</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="torresAcero">Acero galvanizado</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="torresInox">Acero inoxidable</span></li>
-            </ul>
-          </div>
-          <p class="producto-card__section-title">Especificaciones técnicas</p>
-          <div class="producto-card__specs">
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="torresTempEntrada">Temp. Entrada:</span>
-              <span class="producto-card__spec-value">35°C - 45°C</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="torresTempSalida">Temp. Salida:</span>
-              <span class="producto-card__spec-value">29°C - 35°C</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="torresPresion">Presión:</span>
-              <span class="producto-card__spec-value">2 - 6 bar</span>
-            </div>
-          </div>
-          <div class="producto-card__features">
-            <span class="producto-card__feature" data-translate="torresCapacidad">Capacidad: 50-2000 TR</span>
-            <span class="producto-card__feature" data-translate="torresCTI">Certificado CTI</span>
+            <button class="prod-card__btn" onclick="openProductModal('torres')" data-translate="verGalería">Ver Galería</button>
           </div>
         </div>
-        
-        <div class="card producto-card">
-          <div class="producto-card__icon">
-            <i class="fas fa-cog"></i>
-          </div>
-          <h3 class="producto-card__title" data-translate="motoresTitle">Motores</h3>
-          <div class="producto-card__image-container">
-            <img src="images/motor/Motor-PU00e1gina.webp" alt="Motor CM Ventor" class="producto-card__image" loading="lazy">
-          </div>
-          <p class="producto-card__description" data-translate="motoresDesc">
-            Diseños exclusivos para Torre de Enfriamiento, con las siguientes características:
-          </p>
-          <p class="producto-card__section-title">Características clave</p>
-          <ul class="producto-card__characteristics">
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature1">Recubrimiento epóxico en interior y exterior</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature2">Sello de flecha en bronce alta eficiencia</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature3">Sellado de caja a prueba de goteo</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature4">Carcaza en hierro fundido</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="motoresFeature5">Baleros y rodamientos sellados</span></li>
-          </ul>
-          <p class="producto-card__section-title">Especificaciones técnicas</p>
-          <div class="producto-card__specs">
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="motoresPotencia">Potencia:</span>
-              <span class="producto-card__spec-value">0.5 - 100 HP</span>
+
+        <div class="prod-card animate-on-scroll">
+          <img src="images/motor/Motor-PU00e1gina.webp" alt="Motores" class="prod-card__img" loading="lazy">
+          <div class="prod-card__body">
+            <h3 class="prod-card__title" data-translate="motoresTitle">Motores</h3>
+            <p class="prod-card__desc" data-translate="motoresDesc">Diseños exclusivos para Torre de Enfriamiento. Recubrimiento epóxico, sello de flecha en bronce, carcaza en hierro fundido.</p>
+            <div class="prod-card__specs">
+              <span class="prod-card__spec">0.5 - 100 HP</span>
+              <span class="prod-card__spec">220V / 380V / 440V</span>
+              <span class="prod-card__spec" data-translate="motoresIE3">Eficiencia IE3</span>
             </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="motoresVoltaje">Voltaje:</span>
-              <span class="producto-card__spec-value">220V, 380V, 440V</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="motoresProteccion">Protección:</span>
-              <span class="producto-card__spec-value">IP55</span>
-            </div>
-          </div>
-          <div class="producto-card__features">
-            <span class="producto-card__feature" data-translate="motoresIE3">Eficiencia IE3</span>
-            <span class="producto-card__feature" data-translate="motoresMantenimiento">Bajo mantenimiento</span>
-            <span class="producto-card__feature" data-translate="motoresGarantia">Garantía 3 años</span>
           </div>
         </div>
-        
-        <div class="card producto-card">
-          <div class="producto-card__icon">
-            <i class="fas fa-fan"></i>
-          </div>
-          <h3 class="producto-card__title" data-translate="ventiladoresTitle">Ventiladores</h3>
-          <div class="producto-card__image-container">
-            <img src="images/ventilador/Imagen1.webp" alt="Ventilador CM Ventor" class="producto-card__image" loading="lazy" onclick="openProductModal('ventiladores')">
-            <div class="producto-card__overlay">
-              <button class="producto-card__btn" onclick="openProductModal('ventiladores')" data-translate="verGalería">Ver Galería</button>
+
+        <div class="prod-card animate-on-scroll">
+          <img src="images/ventilador/Imagen1.webp" alt="Ventiladores" class="prod-card__img" loading="lazy" onclick="openProductModal('ventiladores')">
+          <div class="prod-card__body">
+            <h3 class="prod-card__title" data-translate="ventiladoresTitle">Ventiladores</h3>
+            <p class="prod-card__desc" data-translate="ventiladoresDesc">Diseños personalizados en poliamida reforzada con fibra de vidrio. Alta eficiencia, bajo ruido y resistencia a la corrosión.</p>
+            <div class="prod-card__specs">
+              <span class="prod-card__spec">PAG + aluminio</span>
+              <span class="prod-card__spec">Bajo ruido</span>
+              <span class="prod-card__spec">Anticorrosión</span>
             </div>
-          </div>
-          <p class="producto-card__description" data-translate="ventiladoresDesc">
-            Diseños personalizados para su aplicación.
-          </p>
-          <p class="producto-card__section-title">Características clave</p>
-          <ul class="producto-card__characteristics">
-            <li><i class="fas fa-check-circle"></i> <span data-translate="ventiladoresFeature1">Fabricados en poliamida reforzada con fibra de vidrio (PAG), centro en aluminio inyectado</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="ventiladoresFeature2">Alta eficiencia</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="ventiladoresFeature3">Resistencia mecánica</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="ventiladoresFeature4">Bajo ruido sonoro</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="ventiladoresFeature5">Consumo de energía inferior</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="ventiladoresFeature6">Resistente a la corrosión</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="ventiladoresFeature7">Ligero</span></li>
-          </ul>
-          <p class="producto-card__section-title">Especificaciones técnicas</p>
-          <div class="producto-card__specs">
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label">Material:</span>
-              <span class="producto-card__spec-value">PAG + aluminio</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label">Aplicación:</span>
-              <span class="producto-card__spec-value">Diseño personalizado</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label">Ventaja:</span>
-              <span class="producto-card__spec-value">Alta eficiencia</span>
-            </div>
-          </div>
-          <div class="producto-card__features">
-            <span class="producto-card__feature">Bajo ruido</span>
-            <span class="producto-card__feature">Anticorrosión</span>
-            <span class="producto-card__feature">Ligero</span>
+            <button class="prod-card__btn" onclick="openProductModal('ventiladores')" data-translate="verGalería">Ver Galería</button>
           </div>
         </div>
-        
-        <div class="card producto-card">
-          <div class="producto-card__icon">
-            <i class="fas fa-layer-group"></i>
-          </div>
-          <h3 class="producto-card__title" data-translate="rellenosTitle">Rellenos Enfriadores</h3>
-          <div class="producto-card__image-container">
-            <img src="images/relleno/Relleno-Splash-Film.webp" alt="Relleno Enfriador" class="producto-card__image" loading="lazy" onclick="openProductModal('rellenos')">
-            <div class="producto-card__overlay">
-              <button class="producto-card__btn" onclick="openProductModal('rellenos')" data-translate="verGalería">Ver Galería</button>
+
+        <div class="prod-card animate-on-scroll">
+          <img src="images/relleno/Relleno-Splash-Film.webp" alt="Rellenos Enfriadores" class="prod-card__img" loading="lazy" onclick="openProductModal('rellenos')">
+          <div class="prod-card__body">
+            <h3 class="prod-card__title" data-translate="rellenosTitle">Rellenos Enfriadores</h3>
+            <p class="prod-card__desc">Splash Fill y Film Fill en PVC/PP. Alto rendimiento térmico, resistencia al ensuciamiento y vida útil de 15+ años.</p>
+            <div class="prod-card__specs">
+              <span class="prod-card__spec">PVC / PP</span>
+              <span class="prod-card__spec">-10°C a 70°C</span>
+              <span class="prod-card__spec">15+ años vida útil</span>
             </div>
-          </div>
-          <div class="producto-card__description">
-            <p class="producto-card__materials-heading" data-translate="rellenosTipos">Tipos:</p>
-            <p class="producto-card__materials-item">
-              <i class="fas fa-check-circle producto-card__materials-check"></i>
-              <span data-translate="rellenosSplash">Splash Fill</span>
-            </p>
-            <p class="producto-card__materials-note" data-translate="rellenosSplashDesc">
-              Alto rendimiento térmico en torres de contraflujo y flujo cruzado, diseño abierto y resistente al ensuciamiento. Ideal para aplicaciones de agua sucia.
-            </p>
-            <p class="producto-card__materials-item">
-              <i class="fas fa-check-circle producto-card__materials-check"></i>
-              <span data-translate="rellenosFilm">Film Fill</span>
-            </p>
-            <p class="producto-card__materials-note" data-translate="rellenosFilmDesc">
-              Entrada/salida vertical que promueve el flujo libre de escombros, ondulaciones transversales maximizan el área de superficie y crean turbulencia.
-            </p>
-            <p class="producto-card__materials-item">
-              <i class="fas fa-check-circle producto-card__materials-check"></i>
-              <span data-translate="rellenosMadera">Madera tratada</span>
-            </p>
-          </div>
-          <p class="producto-card__section-title">Especificaciones técnicas</p>
-          <div class="producto-card__specs">
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="rellenosMaterial">Material:</span>
-              <span class="producto-card__spec-value">PVC, PP</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="rellenosTemp">Temp. Operación:</span>
-              <span class="producto-card__spec-value">-10°C a 70°C</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="rellenosVidaUtil">Vida Útil:</span>
-              <span class="producto-card__spec-value">15+ años</span>
-            </div>
-          </div>
-          <div class="producto-card__features">
-            <span class="producto-card__feature">Splash / Film</span>
-            <span class="producto-card__feature">Alta eficiencia térmica</span>
+            <button class="prod-card__btn" onclick="openProductModal('rellenos')" data-translate="verGalería">Ver Galería</button>
           </div>
         </div>
-        
-        <div class="card producto-card">
-          <div class="producto-card__icon">
-            <i class="fas fa-tint"></i>
-          </div>
-          <h3 class="producto-card__title" data-translate="espreasTitle">Espreas</h3>
-          <div class="producto-card__image-container">
-            <img src="images/espreas/Espera-tipo-1.webp" alt="Esprea CM Ventor" class="producto-card__image" loading="lazy" onclick="openProductModal('espreas')">
-            <div class="producto-card__overlay">
-              <button class="producto-card__btn" onclick="openProductModal('espreas')" data-translate="verGalería">Ver Galería</button>
+
+        <div class="prod-card animate-on-scroll">
+          <img src="images/espreas/Espera-tipo-1.webp" alt="Espreas" class="prod-card__img" loading="lazy" onclick="openProductModal('espreas')">
+          <div class="prod-card__body">
+            <h3 class="prod-card__title" data-translate="espreasTitle">Espreas</h3>
+            <p class="prod-card__desc" data-translate="espreasDesc">Dispersión uniforme en 360°. Previene fugas y asegura el mejor contacto agua-relleno. Sistema auto-limpiante.</p>
+            <div class="prod-card__specs">
+              <span class="prod-card__spec">PVC / ABS / Latón</span>
+              <span class="prod-card__spec">1.5 - 6 bar</span>
+              <span class="prod-card__spec" data-translate="espreasAutoLimpieza">Auto-limpieza</span>
             </div>
-          </div>
-          <p class="producto-card__description" data-translate="espreasDesc">
-            Diseño único que provee la dispersión de agua de forma uniforme en todas las direcciones, 
-            previniendo fugas y asegurando un amplio contacto con el relleno, para conseguir el mejor 
-            funcionamiento de las Torres de Enfriamiento.
-          </p>
-          <p class="producto-card__section-title">Características clave</p>
-          <ul class="producto-card__characteristics">
-            <li><i class="fas fa-check-circle"></i> <span>Dispersión uniforme en 360°</span></li>
-            <li><i class="fas fa-check-circle"></i> <span>Reduce fugas y mejora el contacto con relleno</span></li>
-            <li><i class="fas fa-check-circle"></i> <span>Optimiza el rendimiento de la torre</span></li>
-          </ul>
-          <p class="producto-card__section-title">Especificaciones técnicas</p>
-          <div class="producto-card__specs">
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="espreasMaterial">Material:</span>
-              <span class="producto-card__spec-value">PVC, ABS, Latón</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="espreasPresion">Presión:</span>
-              <span class="producto-card__spec-value">1.5 - 6 bar</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="espreasMantenimiento">Mantenimiento:</span>
-              <span class="producto-card__spec-value" data-translate="espreasAutoLimpieza">Auto-limpieza</span>
-            </div>
-          </div>
-          <div class="producto-card__features">
-            <span class="producto-card__feature">Distribución uniforme</span>
-            <span class="producto-card__feature">Auto-limpieza</span>
+            <button class="prod-card__btn" onclick="openProductModal('espreas')" data-translate="verGalería">Ver Galería</button>
           </div>
         </div>
-        
-        <div class="card producto-card">
-          <div class="producto-card__icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3 class="producto-card__title" data-translate="vibroswitchTitle">Vibroswitch</h3>
-          <div class="producto-card__image-container">
-            <img src="images/Vibroswitch/Vibroswitch.png" alt="Vibroswitch CM Ventor" class="producto-card__image" loading="lazy">
-          </div>
-          <p class="producto-card__description" data-translate="vibroswitchDesc">
-            Equipo de seguridad que detecta vibraciones en el ventilador, proporcionando protección 
-            y prevención de daños en los equipos de enfriamiento.
-          </p>
-          <p class="producto-card__section-title">Especificaciones técnicas</p>
-          <div class="producto-card__specs">
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label">Función:</span>
-              <span class="producto-card__spec-value">Detección de vibración</span>
+
+        <div class="prod-card animate-on-scroll">
+          <img src="images/Louvers/Louvers.png" alt="Louvers" class="prod-card__img" loading="lazy" onclick="openProductModal('louvers')">
+          <div class="prod-card__body">
+            <h3 class="prod-card__title" data-translate="louversTitle">Louvers</h3>
+            <p class="prod-card__desc" data-translate="louversDesc">PVC rígido UV resistente. Reduce salpiqueo, minimiza reposición de agua y mantiene baja la caída de presión.</p>
+            <div class="prod-card__specs">
+              <span class="prod-card__spec">PVC rígido</span>
+              <span class="prod-card__spec" data-translate="louversUV">UV resistente</span>
+              <span class="prod-card__spec">Bajo ruido</span>
             </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label">Aplicación:</span>
-              <span class="producto-card__spec-value">Ventiladores de torre</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label">Enfoque:</span>
-              <span class="producto-card__spec-value">Protección preventiva</span>
-            </div>
-          </div>
-          <div class="producto-card__features">
-            <span class="producto-card__feature" data-translate="vibroswitchFeature1">Detección de vibraciones</span>
-            <span class="producto-card__feature" data-translate="vibroswitchFeature2">Equipo de seguridad</span>
-            <span class="producto-card__feature" data-translate="vibroswitchFeature3">Protección de equipos</span>
+            <button class="prod-card__btn" onclick="openProductModal('louvers')" data-translate="verGalería">Ver Galería</button>
           </div>
         </div>
-        
-        <div class="card producto-card">
-          <div class="producto-card__icon">
-            <i class="fas fa-window-maximize"></i>
-          </div>
-          <h3 class="producto-card__title" data-translate="louversTitle">Louvers</h3>
-          <div class="producto-card__image-container">
-            <img src="images/Louvers/Louvers.png" alt="Louvers CM Ventor" class="producto-card__image" loading="lazy" onclick="openProductModal('louvers')">
-            <div class="producto-card__overlay">
-              <button class="producto-card__btn" onclick="openProductModal('louvers')" data-translate="verGalería">Ver Galería</button>
+
+        <div class="prod-card animate-on-scroll">
+          <img src="images/Vibroswitch/Vibroswitch.png" alt="Vibroswitch" class="prod-card__img" loading="lazy">
+          <div class="prod-card__body">
+            <h3 class="prod-card__title" data-translate="vibroswitchTitle">Vibroswitch</h3>
+            <p class="prod-card__desc" data-translate="vibroswitchDesc">Equipo de seguridad que detecta vibraciones en el ventilador, proporcionando protección y prevención de daños.</p>
+            <div class="prod-card__specs">
+              <span class="prod-card__spec" data-translate="vibroswitchFeature1">Detección de vibraciones</span>
+              <span class="prod-card__spec" data-translate="vibroswitchFeature3">Protección preventiva</span>
             </div>
-          </div>
-          <p class="producto-card__description" data-translate="louversDesc">
-            Louvers en PVC de alta eficiencia para ventanas de Torre de Enfriamiento.
-          </p>
-          <p class="producto-card__section-title">Características clave</p>
-          <ul class="producto-card__characteristics">
-            <li><i class="fas fa-check-circle"></i> <span data-translate="louversFeature1">Fabricado en PVC rígido contra rayos UV</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="louversFeature2">Reduce el salpiqueo minimizando la reposición de agua</span></li>
-            <li><i class="fas fa-check-circle"></i> <span data-translate="louversFeature3">Reduce el ruido y mantiene baja la caída de presión</span></li>
-          </ul>
-          <p class="producto-card__section-title">Especificaciones técnicas</p>
-          <div class="producto-card__specs">
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="louversMaterial">Material:</span>
-              <span class="producto-card__spec-value">PVC rígido</span>
-            </div>
-            <div class="producto-card__spec-item">
-              <span class="producto-card__spec-label" data-translate="louversProteccion">Protección:</span>
-              <span class="producto-card__spec-value" data-translate="louversUV">UV resistente</span>
-            </div>
-          </div>
-          <div class="producto-card__features">
-            <span class="producto-card__feature">Control de salpiqueo</span>
-            <span class="producto-card__feature">Baja caída de presión</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Proyectos Section -->
-  <section id="proyectos" class="testimonials">
+  <!-- RECONOCIMIENTOS -->
+  <section class="reconocimientos">
     <div class="container">
-      <div class="testimonials__header text-center">
-        <h2 class="testimonials__title" data-translate="proyectosTitle">Proyectos Destacados</h2>
-        <p class="testimonials__subtitle" data-translate="proyectosSubtitle">
-          Casos de éxito en toda la República Mexicana
-        </p>
+      <div class="section-header">
+        <p class="section-eyebrow">Distinciones</p>
+        <h2 class="section-title" data-translate="reconocimientosTitle">Reconocimientos</h2>
+        <p class="section-subtitle" data-translate="reconocimientosSubtitle">Logros que reflejan nuestro compromiso con la excelencia.</p>
       </div>
-      
-      <div class="grid grid-3">
-        <div class="card testimonials__project-card">
-          <div class="proyecto-icon proyecto-icon--logo">
-            <img src="images/logos/ternium.png" alt="Ternium Logo" class="proyecto-logo" loading="lazy">
+
+      <div class="reconoc-grid animate-on-scroll">
+        <div class="reconoc-card">
+          <img src="images/cti-logo.png" alt="CTI" class="reconoc-logo">
+          <div>
+            <h3 class="reconoc-title" data-translate="reconocimiento1Title">Miembros de la CTI</h3>
+            <p class="reconoc-desc" data-translate="reconocimiento1Desc">Somos miembros activos del Cooling Technology Institute, participando en estándares internacionales de la industria.</p>
           </div>
-          <h3 class="testimonials__card-title">Ternium México</h3>
+        </div>
+        <div class="reconoc-card">
+          <img src="images/logos/ternium.png" alt="Ternium" class="reconoc-logo">
+          <div>
+            <h3 class="reconoc-title" data-translate="reconocimiento2Title">Desempeño Cero Accidentes</h3>
+            <p class="reconoc-desc" data-translate="reconocimiento2Desc">Comprometidos con la seguridad en el trabajo, hemos logrado mantener un desempeño de cero accidentes en nuestros proyectos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="valores">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Nuestra Cultura</p>
+        <h2 class="section-title" data-translate="valoresTitle">Nuestros Valores</h2>
+        <p class="section-subtitle" data-translate="valoresSubtitle">Los principios que guían nuestro trabajo y compromiso con la excelencia.</p>
+      </div>
+
+      <div class="valores-grid">
+        <div class="valor-item animate-on-scroll">
+          <div class="valor-icon"><i class="fas fa-user-tie"></i></div>
+          <h3 class="valor-title" data-translate="valor1Title">Profesionalismo</h3>
+          <p class="valor-desc" data-translate="valor1Desc">Los más altos estándares en cada proyecto.</p>
+        </div>
+        <div class="valor-item animate-on-scroll">
+          <div class="valor-icon"><i class="fas fa-handshake"></i></div>
+          <h3 class="valor-title" data-translate="valor2Title">Compromiso</h3>
+          <p class="valor-desc" data-translate="valor2Desc">Cumplir y superar las expectativas del cliente.</p>
+        </div>
+        <div class="valor-item animate-on-scroll">
+          <div class="valor-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3 class="valor-title" data-translate="valor3Title">Responsabilidad</h3>
+          <p class="valor-desc" data-translate="valor3Desc">Responsabilidad total de inicio a entrega.</p>
+        </div>
+        <div class="valor-item animate-on-scroll">
+          <div class="valor-icon"><i class="fas fa-gem"></i></div>
+          <h3 class="valor-title" data-translate="valor4Title">Honradez</h3>
+          <p class="valor-desc" data-translate="valor4Desc">Integridad en todas nuestras relaciones.</p>
+        </div>
+        <div class="valor-item animate-on-scroll">
+          <div class="valor-icon"><i class="fas fa-headset"></i></div>
+          <h3 class="valor-title" data-translate="valor5Title">Servicio</h3>
+          <p class="valor-desc" data-translate="valor5Desc">El cliente en el centro de todo lo que hacemos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSOS -->
+  <section id="recursos" class="recursos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Descargas</p>
+        <h2 class="section-title" data-translate="recursosTitle">Biblioteca de Recursos</h2>
+        <p class="section-subtitle" data-translate="recursosSubtitle">Descarga información corporativa, catálogos y recursos técnicos.</p>
+      </div>
+
+      <div class="recursos-grid">
+        <div class="recurso-card animate-on-scroll">
+          <div class="recurso-icon"><i class="fas fa-file-pdf"></i></div>
+          <h3 class="recurso-title" data-translate="recurso1Title">Presentación Corporativa</h3>
+          <p class="recurso-desc" data-translate="recurso1Desc">Conoce nuestra historia, valores, servicios y productos en esta presentación completa de CM Ventor.</p>
+          <div class="recurso-meta">
+            <span><i class="fas fa-file-alt"></i> PDF - 30 páginas</span>
+            <span><i class="fas fa-download"></i> Descarga gratuita</span>
+          </div>
+          <div class="recurso-actions">
+            <a href="presentacion.html" class="btn-recurso-secondary" data-translate="recursoVerWeb">Ver en Web</a>
+            <a href="resources/presentacion-corporativa.pdf" download class="btn-recurso-primary" data-translate="recursoDescargar">
+              <i class="fas fa-download"></i> Descargar
+            </a>
+          </div>
+        </div>
+
+        <div class="recurso-card recurso-card--soon animate-on-scroll">
+          <span class="recurso-badge" data-translate="recursoPronto">Próximamente</span>
+          <div class="recurso-icon"><i class="fas fa-book"></i></div>
+          <h3 class="recurso-title" data-translate="recurso2Title">Catálogo de Productos</h3>
+          <p class="recurso-desc" data-translate="recurso2Desc">Especificaciones técnicas detalladas de todos nuestros productos y servicios.</p>
+        </div>
+
+        <div class="recurso-card recurso-card--soon animate-on-scroll">
+          <span class="recurso-badge" data-translate="recursoPronto">Próximamente</span>
+          <div class="recurso-icon"><i class="fas fa-tools"></i></div>
+          <h3 class="recurso-title" data-translate="recurso3Title">Guías de Mantenimiento</h3>
+          <p class="recurso-desc" data-translate="recurso3Desc">Manuales y guías prácticas para el mantenimiento de torres de enfriamiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="proyectos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Casos de Éxito</p>
+        <h2 class="section-title" data-translate="proyectosTitle">Proyectos Destacados</h2>
+        <p class="section-subtitle" data-translate="proyectosSubtitle">Empresas líderes que confían en CM Ventor para sus sistemas de enfriamiento.</p>
+      </div>
+
+      <div class="proyectos-grid">
+        <div class="proyecto-card animate-on-scroll">
+          <img src="images/logos/ternium.png" alt="Ternium México" class="proyecto-logo">
+          <h3 class="proyecto-client">Ternium México</h3>
           <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Múltiples Plantas</p>
-          <div class="proyecto-contratos">
-            <ul class="contratos-list">
-              <li><i class="fas fa-check-circle"></i> <span data-translate="terniumContrato1">Mantenimiento preventivo y/o correctivo a torres de enfriamiento, plantas Nuevo León y Monclova</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="terniumContrato2">Mantenimiento preventivo y/o correctivo a extractores y recirculadores de Aire, Planta Guerrero Acerex</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="terniumContrato3">Limpieza de Intercambiadores de Calor, Plantas Juventud y Guerrero</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="terniumContrato4">Mantenimiento preventivo y/o Correctivo a Torres de Enfriamiento, Planta CIT Pesquería</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="terniumContrato5">Contrato de Operación y Mantenimiento a Casa de Humos Planta Largos Norte</span></li>
-            </ul>
-          </div>
+          <ul class="proyecto-lista">
+            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato1">Mantenimiento preventivo y/o correctivo a torres de enfriamiento, plantas Nuevo León y Monclova</span></li>
+            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato2">Mantenimiento a extractores y recirculadores de Aire, Planta Guerrero Acerex</span></li>
+            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato3">Limpieza de Intercambiadores de Calor, Plantas Juventud y Guerrero</span></li>
+            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato4">Mantenimiento a Torres, Planta CIT Pesquería</span></li>
+            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato5">Operación y Mantenimiento Casa de Humos, Planta Largos Norte</span></li>
+          </ul>
         </div>
-        
-        <div class="card testimonials__project-card">
-          <div class="proyecto-icon proyecto-icon--logo">
-            <img src="images/logos/Logo-Metalsa.png" alt="METALSA Logo" class="proyecto-logo" loading="lazy">
-          </div>
-          <h3 class="testimonials__card-title">METALSA</h3>
+
+        <div class="proyecto-card animate-on-scroll">
+          <img src="images/logos/Logo-Metalsa.png" alt="METALSA" class="proyecto-logo">
+          <h3 class="proyecto-client">METALSA</h3>
           <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Planta Apodaca</p>
-          <div class="proyecto-contratos">
-            <ul class="contratos-list">
-              <li><i class="fas fa-check-circle"></i> <span data-translate="metalsaContrato1">Mantenimiento preventivo y/o correctivo a Torres de Enfriamiento</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="metalsaContrato2">Mantenimiento a Extractores y Manejadoras de Aire</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="metalsaContrato3">Mantenimiento a Sistema de Bombeo</span></li>
-              <li><i class="fas fa-check-circle"></i> <span data-translate="metalsaContrato4">Mantenimiento a Tableros de control eléctrico</span></li>
-            </ul>
-          </div>
+          <ul class="proyecto-lista">
+            <li><i class="fas fa-check-circle"></i><span data-translate="metalsaContrato1">Mantenimiento preventivo y/o correctivo a Torres de Enfriamiento</span></li>
+            <li><i class="fas fa-check-circle"></i><span data-translate="metalsaContrato2">Mantenimiento a Extractores y Manejadoras de Aire</span></li>
+            <li><i class="fas fa-check-circle"></i><span data-translate="metalsaContrato3">Mantenimiento a Sistema de Bombeo</span></li>
+            <li><i class="fas fa-check-circle"></i><span data-translate="metalsaContrato4">Mantenimiento a Tableros de control eléctrico</span></li>
+          </ul>
         </div>
-        
-        <div class="card testimonials__project-card">
-          <div class="proyecto-icon proyecto-icon--logo">
-            <img src="images/logos/teksid-seeklogo.png" alt="TEKSID Logo" class="proyecto-logo" loading="lazy">
-          </div>
-          <h3 class="testimonials__card-title">TEKSID Hierro de México</h3>
-          <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Primer Cliente</p>
-          <p class="testimonials__card-description" data-translate="teksidProyectoDesc">
-            Nuestro primer cliente importante. Fabricamos nuestra primera torre de enfriamiento 
+
+        <div class="proyecto-card animate-on-scroll">
+          <img src="images/logos/teksid-seeklogo.png" alt="TEKSID" class="proyecto-logo">
+          <h3 class="proyecto-client">TEKSID Hierro de México</h3>
+          <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Primer Cliente Histórico</p>
+          <p class="proyecto-desc" data-translate="teksidProyectoDesc">
+            Nuestro primer cliente importante. Fabricamos nuestra primera torre de enfriamiento
             en 1996, marcando el inicio de nuestra trayectoria de éxito.
           </p>
-          <div class="proyecto-stats">
-            <span class="stat-badge" data-translate="primerCliente">Primer Cliente</span>
-            <span class="stat-badge-year">1996</span>
+          <div class="proyecto-badges">
+            <span class="proyecto-badge" data-translate="primerCliente">Primer Cliente</span>
+            <span class="proyecto-badge proyecto-badge--highlight">Desde 1996</span>
           </div>
         </div>
       </div>
-      
-      <div class="testimonials__stats">
-        <div class="card testimonials__stat">
-          <p class="testimonials__stat-number">30+</p>
-          <p class="testimonials__stat-label">Años de Experiencia</p>
+
+      <div class="proyectos-stats">
+        <div class="proyectos-stat">
+          <span class="proyectos-stat__number">30+</span>
+          <span class="proyectos-stat__label">Años de Experiencia</span>
         </div>
-        <div class="card testimonials__stat">
-          <p class="testimonials__stat-number">500+</p>
-          <p class="testimonials__stat-label">Proyectos Completados</p>
+        <div class="proyectos-stat">
+          <span class="proyectos-stat__number">500+</span>
+          <span class="proyectos-stat__label">Proyectos Completados</span>
         </div>
-        <div class="card testimonials__stat">
-          <p class="testimonials__stat-number">100%</p>
-          <p class="testimonials__stat-label">Satisfacción del Cliente</p>
+        <div class="proyectos-stat">
+          <span class="proyectos-stat__number">100%</span>
+          <span class="proyectos-stat__label">Satisfacción del Cliente</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Clientes Section -->
-  <section class="clients">
+  <!-- CLIENTES -->
+  <section class="clientes">
     <div class="container">
-      <div class="clients__header text-center">
-        <h2 class="clients__title" data-translate="clientesTitle">Nuestros Clientes</h2>
-        <p class="clients__subtitle" data-translate="clientesSubtitle">
-          Empresas líderes que confían en nuestros servicios y productos de calidad
-        </p>
-      </div>
-      
-      <!-- Galería de Logos -->
-      <div class="clients__logos-gallery">
-        <h3 class="clients__gallery-title" data-translate="clientesGalleryTitle">Más Clientes que Confían en Nosotros</h3>
-        <div class="clients__logos-grid">
-          <div class="clients__logo-item">
-            <img src="images/logos/ternium.png" alt="Ternium" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">Ternium</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/Logo-Metalsa.png" alt="METALSA" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">METALSA</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/teksid-seeklogo.png" alt="TEKSID" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">TEKSID</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/casos-exito-nemak-logo.jpg" alt="NEMAK" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">NEMAK</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/DeAcero.svg" alt="DeAcero" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">DeAcero</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/infra.png" alt="Infra" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">Infra</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/karcher.png" alt="Kärcher" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">Kärcher</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/logotipo-quality-tube.png" alt="Quality Tube" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">Quality Tube</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/regiopytsa.png" alt="Regio Pytsa" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">Regio Pytsa</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/schneider.png" alt="Schneider Electric" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">Schneider</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/side.jpeg" alt="SIDE" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">SIDE</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/viakon.png" alt="Viakon" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">Viakon</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/Vitromex-logo1-min_opt.jpg" alt="Vitromex" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">Vitromex</span>
-          </div>
-          <div class="clients__logo-item">
-            <img src="images/logos/tuk.avif" alt="TUK" class="clients__gallery-logo" loading="lazy">
-            <span class="clients__gallery-name">TUK</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="clients__note text-center">
-        <p class="clients__note-text" data-translate="clientesNote">
-          Trabajamos con empresas líderes en diversos sectores industriales, 
-          proporcionando soluciones confiables y de alta calidad.
-        </p>
+      <p class="clientes__label">Empresas que confían en nosotros</p>
+      <div class="clientes-grid">
+        <img src="images/logos/ternium.png"                    alt="Ternium"          class="cliente-logo" loading="lazy">
+        <img src="images/logos/Logo-Metalsa.png"               alt="METALSA"          class="cliente-logo" loading="lazy">
+        <img src="images/logos/teksid-seeklogo.png"            alt="TEKSID"           class="cliente-logo" loading="lazy">
+        <img src="images/logos/casos-exito-nemak-logo.jpg"     alt="NEMAK"            class="cliente-logo" loading="lazy">
+        <img src="images/logos/DeAcero.svg"                    alt="DeAcero"          class="cliente-logo" loading="lazy">
+        <img src="images/logos/infra.png"                      alt="Infra"            class="cliente-logo" loading="lazy">
+        <img src="images/logos/karcher.png"                    alt="Kärcher"          class="cliente-logo" loading="lazy">
+        <img src="images/logos/schneider.png"                  alt="Schneider"        class="cliente-logo" loading="lazy">
+        <img src="images/logos/viakon.png"                     alt="Viakon"           class="cliente-logo" loading="lazy">
+        <img src="images/logos/Vitromex-logo1-min_opt.jpg"     alt="Vitromex"         class="cliente-logo" loading="lazy">
+        <img src="images/logos/regiopytsa.png"                 alt="Regio Pytsa"      class="cliente-logo" loading="lazy">
+        <img src="images/logos/logotipo-quality-tube.png"      alt="Quality Tube"     class="cliente-logo" loading="lazy">
+        <img src="images/logos/side.jpeg"                      alt="SIDE"             class="cliente-logo" loading="lazy">
+        <img src="images/logos/tuk.avif"                       alt="TUK"              class="cliente-logo" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- Contacto Section -->
-  <section id="contacto" class="appointment">
-    <div class="container">
-      <div class="appointment__header text-center">
-        <h2 class="appointment__title" data-translate="contactoTitle">Contáctanos</h2>
-        <p class="appointment__subtitle" data-translate="contactoSubtitle">
-          Estamos aquí para resolver tus necesidades de enfriamiento industrial
-        </p>
-      </div>
-      
-      <div class="appointment__content">
-        <div class="appointment__info">
-          <div class="card appointment__info-card">
-            <h3 class="appointment__info-title" data-translate="contactoInfo">Información de Contacto</h3>
-            
-            <div class="appointment__contact-item">
-              <i class="fas fa-phone appointment__contact-icon"></i>
-              <div>
-                <p class="appointment__contact-label" data-translate="contactoTelefono">Teléfono</p>
-                <a href="tel:+528183277529" class="appointment__contact-value">(81) 8327-7529</a>
-                <p class="appointment__contact-note">Lun - Vie: 8:00 AM - 6:00 PM</p>
-              </div>
-            </div>
-            
-            <div class="appointment__contact-item">
-              <i class="fas fa-envelope appointment__contact-icon"></i>
-              <div>
-                <p class="appointment__contact-label" data-translate="contactoEmail">Email</p>
-                <a href="mailto:cm_ventor@prodigy.net.mx" class="appointment__contact-value">
-                  cm_ventor@prodigy.net.mx
-                </a>
-                <p class="appointment__contact-note" data-translate="contactoRespuesta">Respuesta en 24 horas</p>
-              </div>
-            </div>
-            
-            <div class="appointment__contact-item">
-              <i class="fas fa-map-marker-alt appointment__contact-icon"></i>
-              <div>
-                <p class="appointment__contact-label" data-translate="contactoDireccion">Dirección</p>
-                <p class="appointment__contact-value">
-                  Puerto Vallarta 413<br>
-                  La Fe, 66477<br>
-                  San Nicolás de los Garza, N.L.
-                </p>
-              </div>
-            </div>
-            
-            <div class="appointment__map-container">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.5!2d-100.3!3d25.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQyJzAwLjAiTiAxMDDCsDE4JzAwLjAiVw!5e0!3m2!1ses!2smx!4v1234567890!5m2!1ses!2smx&q=Puerto+Vallarta+413,+La+Fe,+66477+San+Nicolás+de+los+Garza,+N.L.,+México"
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                class="appointment__map"
-                title="Ubicación CM Ventor - Puerto Vallarta 413, La Fe, 66477 San Nicolás de los Garza, N.L."
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              </iframe>
-              <div class="appointment__map-fallback" style="display: none;">
-                <div class="appointment__map-placeholder">
-                  <i class="fas fa-map-marker-alt appointment__map-icon"></i>
-                  <p class="appointment__map-fallback-note" data-translate="contactoMapaNoDisponible">Mapa no disponible</p>
-                  <a href="https://www.google.com/maps/search/?api=1&query=Puerto+Vallarta+413,+La+Fe,+66477+San+Nicolás+de+los+Garza,+N.L.,+México" 
-                     target="_blank" 
-                     rel="noopener noreferrer"
-                     class="btn btn-primary"
-                     data-translate="contactoVerEnGoogleMaps">
-                    Ver en Google Maps
-                  </a>
-                </div>
-              </div>
-            </div>
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <!-- Formulario -->
+    <div class="contacto__form-side">
+      <p class="contacto__eyebrow">Hablemos</p>
+      <h2 class="contacto__title" data-translate="contactoTitle">Obtén tu Cotización</h2>
+      <p class="contacto__subtitle">Respondemos en menos de 24 horas. Sin compromiso.</p>
+
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="nombre" data-translate="contactoNombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" required aria-required="true" placeholder="Tu nombre">
+            <span class="form-error" id="nombre-error"></span>
           </div>
-          
-          <div class="card appointment__hours">
-            <h3 class="appointment__hours-title" data-translate="contactoHorarios">Horarios de Atención</h3>
-            <div class="appointment__hours-list">
-              <div class="appointment__hours-item">
-                <span class="appointment__hours-day" data-translate="contactoHorario1">Lunes - Viernes</span>
-                <span class="appointment__hours-time">8:00 AM - 6:00 PM</span>
-              </div>
-              <div class="appointment__hours-item">
-                <span class="appointment__hours-day" data-translate="contactoHorario2">Sábados</span>
-                <span class="appointment__hours-time">8:00 AM - 2:00 PM</span>
-              </div>
-              <div class="appointment__hours-item appointment__hours-item--closed">
-                <span class="appointment__hours-day" data-translate="contactoHorario3">Domingos</span>
-                <span class="appointment__hours-time" data-translate="contactoCerrado">Cerrado</span>
-              </div>
-            </div>
+          <div class="form-group">
+            <label class="form-label" for="empresa" data-translate="contactoEmpresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Tu empresa">
           </div>
         </div>
-        
-        <div class="appointment__form-container">
-          <form class="card appointment__form" id="contactForm">
-            <h3 class="appointment__form-title" data-translate="contactoFormTitle">Solicita una Cotización</h3>
-            
-            <div class="appointment__form-row">
-              <div class="appointment__form-group form-group-floating">
-                <input type="text" id="nombre" name="nombre" class="form-input-floating" placeholder=" " required aria-required="true">
-                <label for="nombre" class="form-label-floating" data-translate="contactoNombre">Nombre *</label>
-                <span class="form-error" id="nombre-error"></span>
-              </div>
-              
-              <div class="appointment__form-group form-group-floating">
-                <input type="text" id="empresa" name="empresa" class="form-input-floating" placeholder=" ">
-                <label for="empresa" class="form-label-floating" data-translate="contactoEmpresa">Empresa</label>
-                <span class="form-error" id="empresa-error"></span>
-              </div>
-            </div>
-            
-            <div class="appointment__form-row">
-              <div class="appointment__form-group form-group-floating">
-                <input type="email" id="email" name="email" class="form-input-floating" placeholder=" " required aria-required="true">
-                <label for="email" class="form-label-floating">Email *</label>
-                <span class="form-error" id="email-error"></span>
-              </div>
-              
-              <div class="appointment__form-group form-group-floating">
-                <input type="tel" id="telefono" name="telefono" class="form-input-floating" placeholder=" " required aria-required="true">
-                <label for="telefono" class="form-label-floating" data-translate="contactoTelefonoField">Teléfono *</label>
-                <span class="form-error" id="telefono-error"></span>
-              </div>
-            </div>
-            
-            <div class="appointment__form-group form-group-floating">
-              <select id="servicio" name="servicio" class="form-input-floating">
-                <option value="" data-translate="contactoServicioSelect">Seleccionar servicio</option>
-                <option value="instalacion" data-translate="contactoServicio1">Instalación</option>
-                <option value="mantenimiento" data-translate="contactoServicio2">Mantenimiento</option>
-                <option value="reparacion" data-translate="contactoServicio3">Reparación</option>
-                <option value="cotizacion" data-translate="contactoServicio4">Cotización de Productos</option>
-              </select>
-              <label for="servicio" class="form-label-floating" data-translate="contactoServicio">Servicio de Interés</label>
-              <span class="form-error" id="servicio-error"></span>
-            </div>
-            
-            <div class="appointment__form-group form-group-floating">
-              <textarea id="mensaje" name="mensaje" class="form-input-floating" rows="5" placeholder=" " required aria-required="true"></textarea>
-              <label for="mensaje" class="form-label-floating" data-translate="contactoMensaje">Mensaje *</label>
-              <span class="form-error" id="mensaje-error"></span>
-            </div>
-            
-            <button type="submit" class="btn btn-primary btn-large appointment__submit" data-translate="contactoEnviar">
-              Enviar Mensaje
-            </button>
-            
-            <p class="appointment__form-note" data-translate="contactoNota">
-              * Campos requeridos. Responderemos en menos de 24 horas.
-            </p>
-          </form>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Email *</label>
+            <input type="email" id="email" name="email" class="form-input" required aria-required="true" placeholder="correo@empresa.com">
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="telefono" data-translate="contactoTelefonoField">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" class="form-input" required aria-required="true" placeholder="(81) 0000-0000">
+            <span class="form-error" id="telefono-error"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="servicio" data-translate="contactoServicio">Servicio de Interés</label>
+          <select id="servicio" name="servicio" class="form-input">
+            <option value="" data-translate="contactoServicioSelect">Seleccionar servicio</option>
+            <option value="instalacion" data-translate="contactoServicio1">Instalación</option>
+            <option value="mantenimiento" data-translate="contactoServicio2">Mantenimiento</option>
+            <option value="reparacion" data-translate="contactoServicio3">Reparación</option>
+            <option value="cotizacion" data-translate="contactoServicio4">Cotización de Productos</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="mensaje" data-translate="contactoMensaje">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" class="form-input" rows="5" required aria-required="true" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+          <span class="form-error" id="mensaje-error"></span>
+        </div>
+        <button type="submit" class="form-submit" data-translate="contactoEnviar">Enviar Mensaje</button>
+        <p class="form-note" data-translate="contactoNota">* Campos requeridos. Responderemos en menos de 24 horas.</p>
+      </form>
+    </div>
+
+    <!-- Info -->
+    <div class="contacto__info-side">
+      <h3 class="contacto__info-title">Información de Contacto</h3>
+
+      <div class="contacto__info-items">
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <p class="contacto__info-label" data-translate="contactoTelefono">Teléfono</p>
+            <p class="contacto__info-value"><a href="tel:+528183277529">(81) 8327-7529</a></p>
+            <p class="contacto__info-note">Lun - Vie: 8:00 AM - 6:00 PM</p>
+          </div>
+        </div>
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <p class="contacto__info-label" data-translate="contactoEmail">Email</p>
+            <p class="contacto__info-value"><a href="mailto:cm_ventor@prodigy.net.mx">cm_ventor@prodigy.net.mx</a></p>
+            <p class="contacto__info-note" data-translate="contactoRespuesta">Respuesta en 24 horas</p>
+          </div>
+        </div>
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <p class="contacto__info-label" data-translate="contactoDireccion">Dirección</p>
+            <p class="contacto__info-value">Puerto Vallarta 413, La Fe<br>San Nicolás de los Garza, N.L.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacto__hours">
+        <p class="contacto__hours-title" data-translate="contactoHorarios">Horarios de Atención</p>
+        <div class="contacto__hours-row">
+          <span data-translate="contactoHorario1">Lunes - Viernes</span>
+          <span>8:00 AM - 6:00 PM</span>
+        </div>
+        <div class="contacto__hours-row">
+          <span data-translate="contactoHorario2">Sábados</span>
+          <span>8:00 AM - 2:00 PM</span>
+        </div>
+        <div class="contacto__hours-row closed">
+          <span data-translate="contactoHorario3">Domingos</span>
+          <span data-translate="contactoCerrado">Cerrado</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__content">
-        <div class="footer__section footer__section--main">
+      <div class="footer__grid">
+        <div>
           <div class="footer__logo">
-            <img src="images/logotipo.jpg" alt="CM Ventor Logo" class="footer__logo-icon">
-            <div class="footer__logo-text">
-              <p class="footer__logo-title">CM Ventor</p>
-              <p class="footer__logo-subtitle">Torres de Enfriamiento</p>
+            <img src="images/logotipo.jpg" alt="CM Ventor" class="footer__logo-img">
+            <div>
+              <span class="footer__logo-name">CM Ventor</span>
+              <span class="footer__logo-sub">Torres de Enfriamiento</span>
             </div>
           </div>
-          <p class="footer__description">
-            Especialistas en torres de enfriamiento con más de 30 años de experiencia, 
-            certificados por CTI y comprometidos con la calidad y la innovación.
-          </p>
+          <p class="footer__desc">Especialistas en torres de enfriamiento con más de 30 años de experiencia, certificados por CTI y comprometidos con la calidad.</p>
           <div class="footer__social">
-            <a href="#" class="footer__social-link"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="footer__social-link"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
-        
-        <div class="footer__section">
-          <h4 class="footer__section-title">Servicios</h4>
+
+        <div>
+          <h4 class="footer__col-title">Servicios</h4>
           <ul class="footer__links">
-            <li><a class="footer__link" onclick="scrollToSection('servicios')">Instalación</a></li>
-            <li><a class="footer__link" onclick="scrollToSection('servicios')">Mantenimiento</a></li>
-            <li><a class="footer__link" onclick="scrollToSection('servicios')">Reparación</a></li>
-            <li><a class="footer__link" onclick="scrollToSection('servicios')">Instalaciones Eléctricas</a></li>
+            <li><span class="footer__link" onclick="scrollToSection('servicios')">Instalación</span></li>
+            <li><span class="footer__link" onclick="scrollToSection('servicios')">Mantenimiento</span></li>
+            <li><span class="footer__link" onclick="scrollToSection('servicios')">Reparación</span></li>
+            <li><span class="footer__link" onclick="scrollToSection('servicios')">Instalaciones Eléctricas</span></li>
           </ul>
         </div>
-        
-        <div class="footer__section">
-          <h4 class="footer__section-title">Productos</h4>
+
+        <div>
+          <h4 class="footer__col-title">Productos</h4>
           <ul class="footer__links">
-            <li><a class="footer__link" onclick="scrollToSection('productos')">Torres de Enfriamiento</a></li>
-            <li><a class="footer__link" onclick="scrollToSection('productos')">Motores</a></li>
-            <li><a class="footer__link" onclick="scrollToSection('productos')">Ventiladores</a></li>
-            <li><a class="footer__link" onclick="scrollToSection('productos')">Rellenos</a></li>
+            <li><span class="footer__link" onclick="scrollToSection('productos')">Torres de Enfriamiento</span></li>
+            <li><span class="footer__link" onclick="scrollToSection('productos')">Motores</span></li>
+            <li><span class="footer__link" onclick="scrollToSection('productos')">Ventiladores</span></li>
+            <li><span class="footer__link" onclick="scrollToSection('productos')">Rellenos Enfriadores</span></li>
           </ul>
         </div>
-        
-        <div class="footer__section">
-          <h4 class="footer__section-title">Contacto</h4>
-          <p class="footer__text">
-            <span class="footer__contact-item">
-              <i class="fas fa-phone footer__contact-icon"></i>
-              (81) 8327-7529
-            </span>
-          </p>
-          <p class="footer__text">
-            <span class="footer__contact-item">
-              <i class="fas fa-envelope footer__contact-icon"></i>
-              cm_ventor@prodigy.net.mx
-            </span>
-          </p>
-          <p class="footer__text">
-            <span class="footer__contact-item">
-              <i class="fas fa-map-marker-alt footer__contact-icon"></i>
-              Puerto Vallarta 413, La Fe, 66477 San Nicolás de los Garza, N.L.
-            </span>
-          </p>
-          
-          <div class="footer__hours">
-            <p class="footer__hours-title">Horarios</p>
-            <p class="footer__hours-text">Lun - Vie: 8:00 AM - 6:00 PM</p>
-            <p class="footer__hours-text">Sábados: 8:00 AM - 2:00 PM</p>
+
+        <div>
+          <h4 class="footer__col-title">Contacto</h4>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone"></i>
+            <span>(81) 8327-7529</span>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>cm_ventor@prodigy.net.mx</span>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Puerto Vallarta 413, La Fe<br>San Nicolás de los Garza, N.L.</span>
           </div>
         </div>
       </div>
-      
+
       <div class="footer__bottom">
-        <div class="footer__bottom-content">
-          <p class="footer__copyright">
-            &copy; 2024 CM Ventor S.A. de C.V. Todos los derechos reservados.
-          </p>
-          <div class="footer__legal">
-            <a href="#privacidad" class="footer__legal-link">Aviso de Privacidad</a>
-            <span class="footer__legal-separator">|</span>
-            <a href="#terminos" class="footer__legal-link">Términos y Condiciones</a>
-          </div>
+        <p class="footer__copyright">&copy; 2024 CM Ventor S.A. de C.V. Todos los derechos reservados.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Aviso de Privacidad</a>
+          <a href="#" class="footer__legal-link">Términos y Condiciones</a>
         </div>
-        <p class="footer__note">
-          Sitio web desarrollado con los más altos estándares de calidad
-        </p>
       </div>
     </div>
   </footer>
 
-  <!-- Botón flotante de WhatsApp -->
+  <!-- WHATSAPP -->
   <div class="whatsapp-float">
-    <a href="https://wa.me/52818327529?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20torres%20de%20enfriamiento%20de%20CM%20Ventor" 
-       target="_blank" 
+    <a href="https://wa.me/52818327529?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20torres%20de%20enfriamiento%20de%20CM%20Ventor"
+       target="_blank"
        class="whatsapp-btn"
-       title="Contáctanos por WhatsApp">
+       aria-label="Contáctanos por WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
 
-  <!-- Product Modal -->
+  <!-- MODAL DE PRODUCTOS -->
   <div id="productModal" class="product-modal">
     <div class="product-modal__overlay" onclick="closeProductModal()"></div>
     <div class="product-modal__content">
-      <button class="product-modal__close" onclick="closeProductModal()">&times;</button>
+      <button class="product-modal__close" onclick="closeProductModal()" aria-label="Cerrar">&times;</button>
       <h3 class="product-modal__title" id="modalTitle"></h3>
       <div class="product-modal__gallery">
-        <div class="product-modal__main">
-          <img id="modalMainImage" src="" alt="" class="product-modal__main-img">
-        </div>
+        <img id="modalMainImage" src="" alt="" class="product-modal__main-img">
         <div class="product-modal__thumbs" id="modalThumbs"></div>
       </div>
       <div class="product-modal__description" id="modalDescription"></div>
@@ -1401,6 +877,26 @@
   </div>
 
   <script src="js/script-v2.js"></script>
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+      document.getElementById('scrollToTop').classList.toggle('visible', window.scrollY > 400);
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Form submit placeholder
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Mensaje enviado. Nos pondremos en contacto contigo en menos de 24 horas.');
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
-
