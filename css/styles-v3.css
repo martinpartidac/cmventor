@@ -1917,4 +1917,79 @@ a { color: inherit; text-decoration: none; }
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+
+}
+
+/* ===================================
+   MOBILE FIXES
+   =================================== */
+
+/* Stats bar: 2 columnas en mobile */
+@media (max-width: 540px) {
+  .stats-bar__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Hero: padding y título más ajustados */
+@media (max-width: 480px) {
+  .hero__content { padding: 6rem 0 3rem; }
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn-primary,
+  .hero__actions .btn-outline { width: 100%; text-align: center; }
+  .hero__trust { gap: 1rem; }
+}
+
+/* Empresa: ocultar número gigante en mobile pequeño */
+@media (max-width: 480px) {
+  .empresa__big-number { display: none; }
+  .empresa { padding: 4rem 0; }
+  .empresa__pillars { grid-template-columns: 1fr; }
+  .empresa__instalaciones { flex-direction: column; }
+}
+
+/* Servicios: item más compacto en mobile */
+@media (max-width: 480px) {
+  .servicios { padding: 4rem 0; }
+  .servicios__item { grid-template-columns: 40px 1fr; gap: 1rem; padding: 1.5rem 0; }
+  .servicios__number { font-size: 1.5rem; }
+  .servicios__item-tags { display: none; }
+}
+
+/* Secciones: reducir padding en mobile */
+@media (max-width: 640px) {
+  .caracteristicas,
+  .reconocimientos,
+  .valores,
+  .recursos,
+  .proyectos,
+  .clientes { padding: 4rem 0; }
+  .section-header { margin-bottom: 2rem; }
+}
+
+/* Proyectos stats: horizontal en mobile */
+@media (max-width: 480px) {
+  .proyectos-stats { grid-template-columns: 1fr; }
+  .proyectos-stat { padding: 2rem 1.5rem; }
+  .proyectos-stat__number { font-size: 3rem; }
+}
+
+/* Contacto: padding reducido en mobile */
+@media (max-width: 480px) {
+  .contacto__form-side { padding: 3rem 1.25rem; }
+  .contacto__info-side { padding: 3rem 1.25rem; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* Footer: padding en mobile */
+@media (max-width: 540px) {
+  .footer { padding: 3rem 0 1.5rem; }
+  .footer__grid { gap: 2rem; }
+}
+
+/* Header: ocultar lang en mobile muy pequeño */
+@media (max-width: 360px) {
+  .header__actions .lang-wrapper { display: none; }
 }
