@@ -18,7 +18,7 @@
     
     /* Colores de texto */
     --text-dark: #1f2937;
-    --text-light: #4b5563;
+    --text-light: #334155;
     --text-gray: #9ca3af;
     
     /* Fondos */
@@ -264,8 +264,8 @@ a:hover {
 .producto-card:hover,
 .testimonials__project-card:hover {
     transform: translateY(-2px);
-    border-color: var(--card-border-hover);
-    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.1);
+    border-color: var(--cm-blue);
+    box-shadow: 0 14px 32px rgba(30, 64, 175, 0.14);
 }
 
 /* ===================================
@@ -711,7 +711,7 @@ a:hover {
     justify-content: center;
     width: 24px;
     height: 24px;
-    background: #10b981;
+    background: var(--cm-blue);
     color: var(--bg-white);
     border-radius: 50%;
     font-size: 0.75rem;
@@ -1535,6 +1535,16 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+.section-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cm-blue), var(--cm-yellow));
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
 @media (min-width: 768px) {
     .section-header {
         margin-bottom: 2.5rem;
@@ -2304,7 +2314,7 @@ a:hover {
    =================================== */
 
 .footer {
-    background: linear-gradient(135deg, var(--text-dark), #0f172a);
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
     color: var(--bg-white);
     padding-top: 6rem;
     padding-bottom: 3rem;
@@ -3465,6 +3475,8 @@ a:hover {
 }
 
 .producto-card {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -3484,6 +3496,17 @@ a:hover {
     .producto-card {
         padding: 1.75rem;
     }
+}
+
+.producto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cm-blue), var(--cm-yellow));
+    border-radius: 2px 2px 0 0;
 }
 
 .producto-card:hover {
