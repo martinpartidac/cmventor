@@ -87,6 +87,36 @@ Sitio web corporativo de **CM Ventor S.A. de C.V.**, empresa de torres de enfria
 
 ---
 
+## Flujo de trabajo con GitHub
+
+El proyecto usa Git y está desplegado en GitHub Pages. Para subir cambios:
+
+```bash
+# 1. Ver qué archivos cambiaron
+git status
+
+# 2. Agregar los archivos modificados
+git add nombre-del-archivo.css
+# o todos los cambios:
+git add -A
+
+# 3. Hacer commit con mensaje descriptivo
+git commit -m "Descripción del cambio"
+
+# 4. Subir a GitHub (se publica automáticamente en GitHub Pages)
+git push origin main
+```
+
+GitHub Pages tarda **1-2 minutos** en reflejar los cambios después del push.
+El sitio live es: **https://martinpartidac.github.io/cmventor/**
+
+Para ver cambios localmente sin subir, abrir directamente el archivo:
+```
+open /Users/luismartinpartida/cmventor/index.html
+```
+
+---
+
 ## Contacto de la empresa
 
 - **Teléfono:** (81) 8327-7529
