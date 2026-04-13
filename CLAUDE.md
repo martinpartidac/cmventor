@@ -120,7 +120,49 @@ open /Users/luismartinpartida/cmventor/index.html
 ## Contacto de la empresa
 
 - **Teléfono:** (81) 8327-7529
-- **Email:** cm_ventor@prodigy.net.mx
+- **Email actual:** cm_ventor@prodigy.net.mx
 - **Dirección:** Puerto Vallarta 413, La Fe, 66477, San Nicolás de los Garza, N.L.
 - **Horario:** Lun–Vie 8:00–18:00, Sáb 8:00–14:00
 - **WhatsApp:** wa.me/52818327529
+
+---
+
+## Dominio y hosting — situación actual
+
+### Dominio: cmventor.com
+- El dominio **cmventor.com** existía y estaba activo antes
+- Estaba alojado en **IONOS** (antes 1&1), IP del servidor: `74.208.253.230`
+- El panel de control era **Plesk**
+- La empresa que administraba todo era **Asociados Web** — contacto: `jaime.lopez@asociadosweb.net`
+- El backup del sitio anterior está en: `/Users/luismartinpartida/Documents/backup_cmventor.com_2602252048`
+
+### Estado actual
+- El sitio **está publicado en GitHub Pages**: https://martinpartidac.github.io/cmventor/
+- El dominio `cmventor.com` aún **no está conectado** al nuevo sitio
+- Para conectar el dominio a GitHub Pages se necesita el código EPP/AuthCode de IONOS
+
+### Para recuperar el dominio
+1. Contactar a **jaime.lopez@asociadosweb.net** y pedir el código EPP de `cmventor.com`
+2. O contactar a IONOS directamente con datos de la empresa para recuperar acceso
+3. Una vez con el código EPP, transferir el dominio a una cuenta propia (Namecheap, GoDaddy o el mismo IONOS)
+4. Apuntar el dominio a GitHub Pages siguiendo: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+
+### Correos @cmventor.com
+- Los correos anteriores **no se pudieron recuperar** — el backup de email estaba vacío
+- Una vez recuperado el dominio, opciones para correos:
+  - **Google Workspace** (~$6 USD/mes/usuario) — la más profesional
+  - **Zoho Mail** (gratis hasta 5 usuarios) — buena opción económica
+  - **IONOS Mail** (~$1-3 USD/mes) — si se deja el dominio en IONOS
+
+### Advertencia de seguridad
+El sitio WordPress anterior estaba **comprometido con malware** — tenía una tarea programada que descargaba código desde pastebin.com cada minuto. El nuevo sitio en GitHub Pages no tiene este problema.
+
+---
+
+## Sitio anterior (WordPress)
+
+- El backup completo está en: `/Users/luismartinpartida/Documents/backup_cmventor.com_2602252048`
+- Era un sitio **WordPress 6.0.5**
+- Tenía **65 imágenes** en `wp-content/uploads/` — muchas ya están en el proyecto actual
+- Base de datos: `admin_ventor` en MySQL
+- Para extraer imágenes del backup: `zstd -d backup_user-data_2602252048.tzst -o /tmp/user-data.tar && tar -xf /tmp/user-data.tar httpdocs/wp-content/uploads/`
