@@ -147,6 +147,13 @@ open /Users/luismartinpartida/cmventor/index.html
 3. Una vez con el código EPP, transferir el dominio a una cuenta propia (Namecheap, GoDaddy o el mismo IONOS)
 4. Apuntar el dominio a GitHub Pages siguiendo: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
 
+### Situación con Asociados Web (abril 2026)
+- Se les contactó pidiendo acceso a IONOS o el código EPP
+- Respondieron que **no pueden dar acceso a IONOS** y preguntaron cómo teníamos su correo
+- Están siendo evasivos — **no pedir acceso a IONOS**, solo pedir el código EPP
+- El código EPP no da acceso a ninguna cuenta, solo sirve para transferir el dominio — están obligados a darlo
+- Si siguen negándose, el cliente (dueño de CM Ventor) debe contactar a **IONOS directamente** como titular del dominio y solicitarlo sin pasar por Asociados Web
+
 ### Correos @cmventor.com
 - Los correos anteriores **no se pudieron recuperar** — el backup de email estaba vacío
 - Una vez recuperado el dominio, opciones para correos:
