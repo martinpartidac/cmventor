@@ -5,7 +5,13 @@
 
 // Variables globales
 let isScrolled = false;
-let currentLanguage = localStorage.getItem('cmventor-language') || 'es';
+let currentLanguage = localStorage.getItem('cmventor-language') || detectBrowserLanguage();
+
+function detectBrowserLanguage() {
+    const languages = navigator.languages || [navigator.language || 'es'];
+    const isEnglish = languages.some(function(lang) { return lang.toLowerCase().startsWith('en'); });
+    return isEnglish ? 'en' : 'es';
+}
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
