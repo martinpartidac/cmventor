@@ -1930,7 +1930,7 @@ a { color: inherit; text-decoration: none; }
 
 .product-modal__description {
   color: var(--text-muted);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
