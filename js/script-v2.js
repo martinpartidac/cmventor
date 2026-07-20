@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initLanguage();
     initScrollToTop();
     initActiveSectionIndicator();
-    initScrollAnimations();
     initFormValidation();
 });
 
@@ -29,12 +28,12 @@ function initScrollHeader() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             if (!isScrolled) {
-                header.classList.add('header--scrolled');
+                header.classList.add('scrolled');
                 isScrolled = true;
             }
         } else {
             if (isScrolled) {
-                header.classList.remove('header--scrolled');
+                header.classList.remove('scrolled');
                 isScrolled = false;
             }
         }
@@ -75,91 +74,38 @@ function initActiveSectionIndicator() {
     
     if (sections.length === 0 || navLinks.length === 0) return;
     
+    let ticking = false;
+
     function updateActiveSection() {
         let current = '';
         const scrollPosition = window.scrollY + 150;
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            
+
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('data-section') === current) {
                 link.classList.add('active');
             }
         });
-    }
-    
-    window.addEventListener('scroll', updateActiveSection);
-    updateActiveSection(); // Llamar al cargar la página
-}
 
-// ===================================
-// SCROLL ANIMATIONS (FADE-IN)
-// ===================================
-function initScrollAnimations() {
-    // Verificar si el usuario prefiere animaciones reducidas
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    // NO aplicar animaciones a elementos críticos del viewport inicial
-    // Solo animar elementos que están fuera del viewport inicial
-    
-    if (prefersReducedMotion) {
-        // Si el usuario prefiere animaciones reducidas, mostrar todo inmediatamente
-        const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in');
-        animatedElements.forEach(el => {
-            el.classList.add('visible');
-        });
-        return;
+        ticking = false;
     }
-    
-    // Asegurar que contenido crítico sea visible inmediatamente
-    const criticalElements = document.querySelectorAll('.hero, .hero__content, .hero__text, .profile__header, .services__header, .section-header');
-    criticalElements.forEach(el => {
-        el.style.opacity = '1';
-        el.style.visibility = 'visible';
-    });
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-    
-    // Solo agregar animación a elementos específicos que NO están en el viewport inicial
-    // Excluir hero, header y contenido crítico del viewport inicial
-    const animatedElements = document.querySelectorAll('.producto-card, .service-card, .testimonial-card');
-    
-    animatedElements.forEach((el, index) => {
-        const rect = el.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        const isInInitialViewport = rect.top < viewportHeight && rect.top > -100;
-        
-        if (!isInInitialViewport) {
-            // Solo animar elementos fuera del viewport inicial
-            el.classList.add('fade-in-up');
-            el.style.transitionDelay = `${Math.min(index * 0.05, 0.3)}s`;
-            observer.observe(el);
-        } else {
-            // Elementos en viewport inicial: mostrar inmediatamente sin animación
-            el.style.opacity = '1';
-            el.style.visibility = 'visible';
-            el.classList.add('visible');
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(updateActiveSection);
+            ticking = true;
         }
     });
+    updateActiveSection(); // Llamar al cargar la página
 }
 
 // ===================================
@@ -169,7 +115,7 @@ function initFormValidation() {
     const form = document.getElementById('contactForm');
     if (!form) return;
     
-    const inputs = form.querySelectorAll('.form-input-floating');
+    const inputs = form.querySelectorAll('.form-input');
     
     inputs.forEach(input => {
         // Validación en tiempo real al perder el foco
@@ -262,11 +208,11 @@ function toggleMobileMenu() {
     
     if (!mobileToggle || !navMenu) return;
     
-    mobileToggle.classList.toggle('header__mobile-toggle--open');
-    navMenu.classList.toggle('header__nav--open');
-    
+    mobileToggle.classList.toggle('open');
+    navMenu.classList.toggle('open');
+
     // Prevenir scroll del body cuando el menú está abierto
-    if (navMenu.classList.contains('header__nav--open')) {
+    if (navMenu.classList.contains('open')) {
         document.body.style.overflow = 'hidden';
     } else {
         document.body.style.overflow = '';
@@ -276,11 +222,11 @@ function toggleMobileMenu() {
 function closeMobileMenu() {
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
-    
+
     if (!mobileToggle || !navMenu) return;
-    
-    mobileToggle.classList.remove('header__mobile-toggle--open');
-    navMenu.classList.remove('header__nav--open');
+
+    mobileToggle.classList.remove('open');
+    navMenu.classList.remove('open');
     document.body.style.overflow = '';
 }
 
@@ -330,7 +276,7 @@ function initContactForm() {
         
         // Validar todos los campos
         let isValid = true;
-        const inputs = form.querySelectorAll('.form-input-floating[required]');
+        const inputs = form.querySelectorAll('.form-input[required]');
         
         inputs.forEach(input => {
             if (!validateField(input)) {
@@ -371,7 +317,7 @@ function initContactForm() {
             form.reset();
             
             // Resetear labels flotantes y errores
-            const inputs = form.querySelectorAll('.form-input-floating');
+            const inputs = form.querySelectorAll('.form-input');
             inputs.forEach(input => {
                 input.classList.remove('error');
                 const errorElement = document.getElementById(`${input.name}-error`);
@@ -408,6 +354,8 @@ function showNotification(message, type = 'success') {
     // Crear elemento de notificación
     const notification = document.createElement('div');
     notification.className = `notification notification--${type}`;
+    notification.setAttribute('role', 'status');
+    notification.setAttribute('aria-live', 'polite');
     notification.textContent = message;
     
     // Estilos en línea (puedes moverlos al CSS)
@@ -472,35 +420,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-// ===================================
-// ANIMACIONES AL SCROLL (Opcional)
-// ===================================
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // Observar elementos que queremos animar
-    const animatedElements = document.querySelectorAll('.card, .services__card, .hero__text, .hero__image');
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
-}
-
-// Inicializar animaciones de scroll (opcional)
-// Descomenta si quieres activar las animaciones al scroll
-// window.addEventListener('load', initScrollAnimations);
 
 // ===================================
 // UTILIDADES
