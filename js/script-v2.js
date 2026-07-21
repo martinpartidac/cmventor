@@ -211,11 +211,13 @@ function initMobileMenu() {
 function toggleMobileMenu() {
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
-    
+    const navOverlay = document.getElementById('navOverlay');
+
     if (!mobileToggle || !navMenu) return;
-    
+
     mobileToggle.classList.toggle('open');
     navMenu.classList.toggle('open');
+    if (navOverlay) navOverlay.classList.toggle('open');
 
     // Prevenir scroll del body cuando el menú está abierto
     if (navMenu.classList.contains('open')) {
@@ -225,14 +227,22 @@ function toggleMobileMenu() {
     }
 }
 
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeMobileMenu();
+    }
+});
+
 function closeMobileMenu() {
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
+    const navOverlay = document.getElementById('navOverlay');
 
     if (!mobileToggle || !navMenu) return;
 
     mobileToggle.classList.remove('open');
     navMenu.classList.remove('open');
+    if (navOverlay) navOverlay.classList.remove('open');
     document.body.style.overflow = '';
 }
 
