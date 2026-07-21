@@ -9,10 +9,10 @@
   <meta property="og:description" content="Más de 30 años fabricando y manteniendo torres de enfriamiento certificadas por CTI en toda la República Mexicana.">
   <meta property="og:image" content="images/logotipo.jpg">
   <link rel="icon" type="image/jpeg" href="images/logotipo.jpg">
+  <meta name="theme-color" content="#0f172a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles-v3.css">
   <script src="js/translations.js"></script>
 </head>
@@ -21,7 +21,7 @@
   <a href="#inicio" class="skip-to-content">Saltar al contenido principal</a>
 
   <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba">
-    <i class="fas fa-arrow-up"></i>
+    <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-arrow-up"></use></svg>
   </button>
 
   <!-- HEADER -->
@@ -29,13 +29,13 @@
     <div class="container">
       <div class="header__inner">
 
-        <div class="header__logo" onclick="scrollToSection('inicio')">
+        <button type="button" class="header__logo" onclick="scrollToSection('inicio')">
           <img src="images/logotipo.jpg" alt="CM Ventor" class="header__logo-img">
           <div>
-            <span class="header__logo-name">CM Ventor</span>
+            <span class="header__logo-name" translate="no">CM Ventor</span>
             <span class="header__logo-sub">Torres de Enfriamiento</span>
           </div>
-        </div>
+        </button>
 
         <nav class="header__nav" id="navMenu">
           <a class="header__nav-link" href="#inicio"      onclick="scrollToSection('inicio'); return false;"    data-section="inicio"    data-translate="navInicio">Inicio</a>
@@ -49,13 +49,13 @@
         <div class="header__actions">
           <div class="lang-wrapper">
             <button class="lang-btn" id="langBtn" onclick="toggleLanguageMenu()">
-              <i class="fas fa-globe"></i>
+              <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-globe"></use></svg>
               <span id="currentLang">ES</span>
-              <i class="fas fa-chevron-down"></i>
+              <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-chevron-down"></use></svg>
             </button>
             <div class="lang-menu" id="languageMenu">
-              <button class="lang-option" onclick="changeLanguage('es')"><span>🇲🇽</span> Español</button>
-              <button class="lang-option" onclick="changeLanguage('en')"><span>🇺🇸</span> English</button>
+              <button class="lang-option" onclick="changeLanguage('es')"><span aria-hidden="true">🇲🇽</span> Español</button>
+              <button class="lang-option" onclick="changeLanguage('en')"><span aria-hidden="true">🇺🇸</span> English</button>
             </div>
           </div>
           <button class="btn-cta" onclick="scrollToSection('contacto')" data-translate="btnContacto">Contacto</button>
@@ -72,16 +72,16 @@
   <!-- HERO -->
   <section id="inicio" class="hero">
     <div class="hero__bg">
-      <img src="images/torre.webp" alt="" class="hero__bg-img" loading="eager">
+      <img src="images/torre.webp" alt="" class="hero__bg-img" loading="eager" fetchpriority="high">
       <div class="hero__bg-overlay"></div>
     </div>
 
     <div class="container">
       <div class="hero__content">
         <span class="hero__eyebrow">
-          <i class="fas fa-certificate"></i>
+          <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-certificate"></use></svg>
           <span data-translate="heroFeature1">Certificados CTI</span>
-          &nbsp;·&nbsp; San Nicolás de los Garza, N.L.
+          <span class="eyebrow-location">&nbsp;·&nbsp; San Nicolás de los Garza, N.L.</span>
         </span>
 
         <h1 class="hero__title">
@@ -106,15 +106,15 @@
 
         <div class="hero__trust">
           <div class="hero__trust-item">
-            <span class="hero__trust-icon"><i class="fas fa-check"></i></span>
+            <span class="hero__trust-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check"></use></svg></span>
             <span data-translate="heroFeature1">Certificados CTI</span>
           </div>
           <div class="hero__trust-item">
-            <span class="hero__trust-icon"><i class="fas fa-check"></i></span>
+            <span class="hero__trust-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check"></use></svg></span>
             <span data-translate="heroFeature2">30+ Años de Experiencia</span>
           </div>
           <div class="hero__trust-item">
-            <span class="hero__trust-icon"><i class="fas fa-check"></i></span>
+            <span class="hero__trust-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check"></use></svg></span>
             <span data-translate="heroFeature3">Cobertura Nacional</span>
           </div>
         </div>
@@ -123,14 +123,14 @@
 
     <div class="hero__quick-contact">
       <div class="hero__contact-pill">
-        <i class="fas fa-phone"></i>
+        <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-phone"></use></svg>
         <div>
           <p class="hero__contact-label" data-translate="heroLlamanos">Llámanos</p>
           <p class="hero__contact-value">(81) 8327-7529</p>
         </div>
       </div>
       <div class="hero__contact-pill">
-        <i class="fas fa-envelope"></i>
+        <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-envelope"></use></svg>
         <div>
           <p class="hero__contact-label" data-translate="heroEscribenos">Escríbenos</p>
           <p class="hero__contact-value">cm_ventor@prodigy.net.mx</p>
@@ -176,14 +176,14 @@
           </div>
           <div class="empresa__instalaciones">
             <div class="empresa__instalacion">
-              <i class="fas fa-warehouse"></i>
+              <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-warehouse"></use></svg>
               <div>
                 <p class="empresa__instalacion-number">1500 m²</p>
                 <p class="empresa__instalacion-label" data-translate="instalacionesBodega">Bodega de Fabricación</p>
               </div>
             </div>
             <div class="empresa__instalacion">
-              <i class="fas fa-building"></i>
+              <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-building"></use></svg>
               <div>
                 <p class="empresa__instalacion-number">150 m²</p>
                 <p class="empresa__instalacion-label" data-translate="instalacionesOficinas">Oficinas</p>
@@ -206,7 +206,7 @@
 
           <div class="empresa__pillars">
             <div class="empresa__pillar">
-              <div class="empresa__pillar-icon"><i class="fas fa-bullseye"></i></div>
+              <div class="empresa__pillar-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-bullseye"></use></svg></div>
               <p class="empresa__pillar-title" data-translate="mision">Misión</p>
               <ul class="empresa__pillar-list">
                 <li data-translate="mision1">Innovar con tecnología avanzada</li>
@@ -215,7 +215,7 @@
               </ul>
             </div>
             <div class="empresa__pillar">
-              <div class="empresa__pillar-icon"><i class="fas fa-eye"></i></div>
+              <div class="empresa__pillar-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-eye"></use></svg></div>
               <p class="empresa__pillar-title" data-translate="vision">Visión</p>
               <ul class="empresa__pillar-list">
                 <li data-translate="vision1">Líder en el mercado mexicano</li>
@@ -224,7 +224,7 @@
               </ul>
             </div>
             <div class="empresa__pillar">
-              <div class="empresa__pillar-icon"><i class="fas fa-award"></i></div>
+              <div class="empresa__pillar-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-award"></use></svg></div>
               <p class="empresa__pillar-title" data-translate="certificaciones">Certificaciones</p>
               <ul class="empresa__pillar-list">
                 <li>CTI — Cooling Technology Institute</li>
@@ -233,7 +233,7 @@
               </ul>
             </div>
             <div class="empresa__pillar">
-              <div class="empresa__pillar-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="empresa__pillar-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-shield-alt"></use></svg></div>
               <p class="empresa__pillar-title">Seguridad</p>
               <ul class="empresa__pillar-list">
                 <li>Cero accidentes en obra</li>
@@ -276,7 +276,7 @@
               <span class="servicios__tag" data-translate="servicio1Feature3">Mantenimiento preventivo</span>
             </div>
           </div>
-          <div class="servicios__item-icon"><i class="fas fa-tools"></i></div>
+          <div class="servicios__item-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-tools"></use></svg></div>
         </div>
 
         <div class="servicios__item animate-on-scroll">
@@ -293,7 +293,7 @@
               <span class="servicios__tag" data-translate="servicio2Feature3">Automatización de control</span>
             </div>
           </div>
-          <div class="servicios__item-icon"><i class="fas fa-bolt"></i></div>
+          <div class="servicios__item-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-bolt"></use></svg></div>
         </div>
 
         <div class="servicios__item animate-on-scroll">
@@ -310,7 +310,7 @@
               <span class="servicios__tag" data-translate="servicio3Feature3">Diagnóstico técnico</span>
             </div>
           </div>
-          <div class="servicios__item-icon"><i class="fas fa-cogs"></i></div>
+          <div class="servicios__item-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-cogs"></use></svg></div>
         </div>
 
         <div class="servicios__item animate-on-scroll">
@@ -327,7 +327,7 @@
               <span class="servicios__tag" data-translate="servicio4Feature3">Soldadura especializada</span>
             </div>
           </div>
-          <div class="servicios__item-icon"><i class="fas fa-wrench"></i></div>
+          <div class="servicios__item-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-wrench"></use></svg></div>
         </div>
       </div>
     </div>
@@ -344,32 +344,32 @@
 
       <div class="caract-grid">
         <div class="caract-item animate-on-scroll">
-          <div class="caract-icon"><i class="fas fa-clock"></i></div>
+          <div class="caract-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-clock"></use></svg></div>
           <h3 class="caract-title" data-translate="feature1Title">Vida Útil Extendida</h3>
           <p class="caract-desc" data-translate="feature1Desc">Al menos 2 veces más vida útil que una torre de acero galvanizado, garantizando una inversión a largo plazo.</p>
         </div>
         <div class="caract-item animate-on-scroll">
-          <div class="caract-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="caract-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-shield-alt"></use></svg></div>
           <h3 class="caract-title" data-translate="feature2Title">Resistencia a la Corrosión</h3>
           <p class="caract-desc" data-translate="feature2Desc">No se oxida ni corroe, con alta resistencia a tratamientos químicos agresivos del agua.</p>
         </div>
         <div class="caract-item animate-on-scroll">
-          <div class="caract-icon"><i class="fas fa-tools"></i></div>
+          <div class="caract-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-tools"></use></svg></div>
           <h3 class="caract-title" data-translate="feature3Title">Mantenimiento Mínimo</h3>
           <p class="caract-desc" data-translate="feature3Desc">Construcción en FRP reduce significativamente el tiempo y costos de mantenimiento de nuestros equipos.</p>
         </div>
         <div class="caract-item animate-on-scroll">
-          <div class="caract-icon"><i class="fas fa-bolt"></i></div>
+          <div class="caract-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-bolt"></use></svg></div>
           <h3 class="caract-title" data-translate="feature4Title">Eficiencia Energética</h3>
           <p class="caract-desc" data-translate="feature4Desc">Nuestras unidades superan los requisitos de eficiencia energética para reducir costos operativos.</p>
         </div>
         <div class="caract-item animate-on-scroll">
-          <div class="caract-icon"><i class="fas fa-leaf"></i></div>
+          <div class="caract-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-leaf"></use></svg></div>
           <h3 class="caract-title" data-translate="feature5Title">Sostenibilidad</h3>
           <p class="caract-desc" data-translate="feature5Desc">Ahorro de agua, alta eficiencia y sin problemas de fugas, contribuyendo al cuidado del medio ambiente.</p>
         </div>
         <div class="caract-item animate-on-scroll">
-          <div class="caract-icon"><i class="fas fa-certificate"></i></div>
+          <div class="caract-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-certificate"></use></svg></div>
           <h3 class="caract-title" data-translate="feature6Title">Certificación CTI</h3>
           <p class="caract-desc" data-translate="feature6Desc">Más de 30 años de experiencia con certificación del Cooling Technology Institute, garantía de calidad.</p>
         </div>
@@ -388,7 +388,7 @@
 
       <div class="productos-grid">
         <div class="prod-card animate-on-scroll">
-          <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torres de Enfriamiento" class="prod-card__img" loading="lazy" onclick="openProductModal('torres')">
+          <img src="images/torres enfriamiento/torre de enfriamiento-1.webp" alt="Torres de Enfriamiento" class="prod-card__img" loading="lazy">
           <div class="prod-card__body">
             <h3 class="prod-card__title" data-translate="torresTitle">Torres de Enfriamiento</h3>
             <p class="prod-card__desc" data-translate="torresVariedad">Amplia variedad de modelos de acuerdo a los requerimientos de nuestros clientes. Fabricadas en FRP, acero galvanizado e inoxidable.</p>
@@ -415,7 +415,7 @@
         </div>
 
         <div class="prod-card animate-on-scroll">
-          <img src="images/ventilador/Imagen1.webp" alt="Ventiladores" class="prod-card__img" loading="lazy" onclick="openProductModal('ventiladores')">
+          <img src="images/ventilador/Imagen1.webp" alt="Ventiladores" class="prod-card__img" loading="lazy">
           <div class="prod-card__body">
             <h3 class="prod-card__title" data-translate="ventiladoresTitle">Ventiladores</h3>
             <p class="prod-card__desc" data-translate="ventiladoresDesc">Diseños personalizados en poliamida reforzada con fibra de vidrio. Alta eficiencia, bajo ruido y resistencia a la corrosión.</p>
@@ -429,7 +429,7 @@
         </div>
 
         <div class="prod-card animate-on-scroll">
-          <img src="images/relleno/Relleno-Splash-Film.webp" alt="Rellenos Enfriadores" class="prod-card__img" loading="lazy" onclick="openProductModal('rellenos')">
+          <img src="images/relleno/Relleno-Splash-Film.webp" alt="Rellenos Enfriadores" class="prod-card__img" loading="lazy">
           <div class="prod-card__body">
             <h3 class="prod-card__title" data-translate="rellenosTitle">Rellenos Enfriadores</h3>
             <p class="prod-card__desc">Splash Fill y Film Fill en PVC/PP. Alto rendimiento térmico, resistencia al ensuciamiento y vida útil de 15+ años.</p>
@@ -443,7 +443,7 @@
         </div>
 
         <div class="prod-card animate-on-scroll">
-          <img src="images/espreas/Espera-tipo-1.webp" alt="Espreas" class="prod-card__img" loading="lazy" onclick="openProductModal('espreas')">
+          <img src="images/espreas/Espera-tipo-1.webp" alt="Espreas" class="prod-card__img" loading="lazy">
           <div class="prod-card__body">
             <h3 class="prod-card__title" data-translate="espreasTitle">Espreas</h3>
             <p class="prod-card__desc" data-translate="espreasDesc">Dispersión uniforme en 360°. Previene fugas y asegura el mejor contacto agua-relleno. Sistema auto-limpiante.</p>
@@ -457,7 +457,7 @@
         </div>
 
         <div class="prod-card animate-on-scroll">
-          <img src="images/Louvers/Louvers.png" alt="Louvers" class="prod-card__img" loading="lazy" onclick="openProductModal('louvers')">
+          <img src="images/Louvers/Louvers.png" alt="Louvers" class="prod-card__img" loading="lazy">
           <div class="prod-card__body">
             <h3 class="prod-card__title" data-translate="louversTitle">Louvers</h3>
             <p class="prod-card__desc" data-translate="louversDesc">PVC rígido UV resistente. Reduce salpiqueo, minimiza reposición de agua y mantiene baja la caída de presión.</p>
@@ -524,27 +524,27 @@
 
       <div class="valores-grid">
         <div class="valor-item animate-on-scroll">
-          <div class="valor-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="valor-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-user-tie"></use></svg></div>
           <h3 class="valor-title" data-translate="valor1Title">Profesionalismo</h3>
           <p class="valor-desc" data-translate="valor1Desc">Los más altos estándares en cada proyecto.</p>
         </div>
         <div class="valor-item animate-on-scroll">
-          <div class="valor-icon"><i class="fas fa-handshake"></i></div>
+          <div class="valor-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-handshake"></use></svg></div>
           <h3 class="valor-title" data-translate="valor2Title">Compromiso</h3>
           <p class="valor-desc" data-translate="valor2Desc">Cumplir y superar las expectativas del cliente.</p>
         </div>
         <div class="valor-item animate-on-scroll">
-          <div class="valor-icon"><i class="fas fa-balance-scale"></i></div>
+          <div class="valor-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-balance-scale"></use></svg></div>
           <h3 class="valor-title" data-translate="valor3Title">Responsabilidad</h3>
           <p class="valor-desc" data-translate="valor3Desc">Responsabilidad total de inicio a entrega.</p>
         </div>
         <div class="valor-item animate-on-scroll">
-          <div class="valor-icon"><i class="fas fa-gem"></i></div>
+          <div class="valor-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-gem"></use></svg></div>
           <h3 class="valor-title" data-translate="valor4Title">Honradez</h3>
           <p class="valor-desc" data-translate="valor4Desc">Integridad en todas nuestras relaciones.</p>
         </div>
         <div class="valor-item animate-on-scroll">
-          <div class="valor-icon"><i class="fas fa-headset"></i></div>
+          <div class="valor-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-headset"></use></svg></div>
           <h3 class="valor-title" data-translate="valor5Title">Servicio</h3>
           <p class="valor-desc" data-translate="valor5Desc">El cliente en el centro de todo lo que hacemos.</p>
         </div>
@@ -563,31 +563,31 @@
 
       <div class="recursos-grid">
         <div class="recurso-card animate-on-scroll">
-          <div class="recurso-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="recurso-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-file-pdf"></use></svg></div>
           <h3 class="recurso-title" data-translate="recurso1Title">Presentación Corporativa</h3>
           <p class="recurso-desc" data-translate="recurso1Desc">Conoce nuestra historia, valores, servicios y productos en esta presentación completa de CM Ventor.</p>
           <div class="recurso-meta">
-            <span><i class="fas fa-file-alt"></i> PDF - 30 páginas</span>
-            <span><i class="fas fa-download"></i> Descarga gratuita</span>
+            <span><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-file-alt"></use></svg> PDF - 30 páginas</span>
+            <span><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-download"></use></svg> Descarga gratuita</span>
           </div>
           <div class="recurso-actions">
             <a href="presentacion.html" class="btn-recurso-secondary" data-translate="recursoVerWeb">Ver en Web</a>
             <a href="resources/presentacion-corporativa.pdf" download class="btn-recurso-primary" data-translate="recursoDescargar">
-              <i class="fas fa-download"></i> Descargar
+              <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-download"></use></svg> Descargar
             </a>
           </div>
         </div>
 
         <div class="recurso-card recurso-card--soon animate-on-scroll">
           <span class="recurso-badge" data-translate="recursoPronto">Próximamente</span>
-          <div class="recurso-icon"><i class="fas fa-book"></i></div>
+          <div class="recurso-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-book"></use></svg></div>
           <h3 class="recurso-title" data-translate="recurso2Title">Catálogo de Productos</h3>
           <p class="recurso-desc" data-translate="recurso2Desc">Especificaciones técnicas detalladas de todos nuestros productos y servicios.</p>
         </div>
 
         <div class="recurso-card recurso-card--soon animate-on-scroll">
           <span class="recurso-badge" data-translate="recursoPronto">Próximamente</span>
-          <div class="recurso-icon"><i class="fas fa-tools"></i></div>
+          <div class="recurso-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-tools"></use></svg></div>
           <h3 class="recurso-title" data-translate="recurso3Title">Guías de Mantenimiento</h3>
           <p class="recurso-desc" data-translate="recurso3Desc">Manuales y guías prácticas para el mantenimiento de torres de enfriamiento.</p>
         </div>
@@ -608,32 +608,32 @@
         <div class="proyecto-card animate-on-scroll">
           <img src="images/logos/ternium.png" alt="Ternium México" class="proyecto-logo">
           <h3 class="proyecto-client">Ternium México</h3>
-          <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Múltiples Plantas</p>
+          <p class="proyecto-location"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-map-marker-alt"></use></svg> Múltiples Plantas</p>
           <ul class="proyecto-lista">
-            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato1">Mantenimiento preventivo y/o correctivo a torres de enfriamiento, plantas Nuevo León y Monclova</span></li>
-            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato2">Mantenimiento a extractores y recirculadores de Aire, Planta Guerrero Acerex</span></li>
-            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato3">Limpieza de Intercambiadores de Calor, Plantas Juventud y Guerrero</span></li>
-            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato4">Mantenimiento a Torres, Planta CIT Pesquería</span></li>
-            <li><i class="fas fa-check-circle"></i><span data-translate="terniumContrato5">Operación y Mantenimiento Casa de Humos, Planta Largos Norte</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="terniumContrato1">Mantenimiento preventivo y/o correctivo a torres de enfriamiento, plantas Nuevo León y Monclova</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="terniumContrato2">Mantenimiento a extractores y recirculadores de Aire, Planta Guerrero Acerex</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="terniumContrato3">Limpieza de Intercambiadores de Calor, Plantas Juventud y Guerrero</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="terniumContrato4">Mantenimiento a Torres, Planta CIT Pesquería</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="terniumContrato5">Operación y Mantenimiento Casa de Humos, Planta Largos Norte</span></li>
           </ul>
         </div>
 
         <div class="proyecto-card animate-on-scroll">
           <img src="images/logos/Logo-Metalsa.png" alt="METALSA" class="proyecto-logo">
           <h3 class="proyecto-client">METALSA</h3>
-          <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Planta Apodaca</p>
+          <p class="proyecto-location"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-map-marker-alt"></use></svg> Planta Apodaca</p>
           <ul class="proyecto-lista">
-            <li><i class="fas fa-check-circle"></i><span data-translate="metalsaContrato1">Mantenimiento preventivo y/o correctivo a Torres de Enfriamiento</span></li>
-            <li><i class="fas fa-check-circle"></i><span data-translate="metalsaContrato2">Mantenimiento a Extractores y Manejadoras de Aire</span></li>
-            <li><i class="fas fa-check-circle"></i><span data-translate="metalsaContrato3">Mantenimiento a Sistema de Bombeo</span></li>
-            <li><i class="fas fa-check-circle"></i><span data-translate="metalsaContrato4">Mantenimiento a Tableros de control eléctrico</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="metalsaContrato1">Mantenimiento preventivo y/o correctivo a Torres de Enfriamiento</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="metalsaContrato2">Mantenimiento a Extractores y Manejadoras de Aire</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="metalsaContrato3">Mantenimiento a Sistema de Bombeo</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg><span data-translate="metalsaContrato4">Mantenimiento a Tableros de control eléctrico</span></li>
           </ul>
         </div>
 
         <div class="proyecto-card animate-on-scroll">
           <img src="images/logos/teksid-seeklogo.png" alt="TEKSID" class="proyecto-logo">
           <h3 class="proyecto-client">TEKSID Hierro de México</h3>
-          <p class="proyecto-location"><i class="fas fa-map-marker-alt"></i> Primer Cliente Histórico</p>
+          <p class="proyecto-location"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-map-marker-alt"></use></svg> Primer Cliente Histórico</p>
           <p class="proyecto-desc" data-translate="teksidProyectoDesc">
             Nuestro primer cliente importante. Fabricamos nuestra primera torre de enfriamiento
             en 1996, marcando el inicio de nuestra trayectoria de éxito.
@@ -693,27 +693,27 @@
       <h2 class="contacto__title" data-translate="contactoTitle">Obtén tu Cotización</h2>
       <p class="contacto__subtitle">Respondemos en menos de 24 horas. Sin compromiso.</p>
 
-      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+      <form id="contactForm">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="nombre" data-translate="contactoNombre">Nombre *</label>
-            <input type="text" id="nombre" name="nombre" class="form-input" required aria-required="true" placeholder="Tu nombre">
+            <input type="text" id="nombre" name="nombre" class="form-input" required aria-required="true" placeholder="Tu nombre" autocomplete="name">
             <span class="form-error" id="nombre-error"></span>
           </div>
           <div class="form-group">
             <label class="form-label" for="empresa" data-translate="contactoEmpresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Tu empresa">
+            <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Tu empresa" autocomplete="organization">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="email">Email *</label>
-            <input type="email" id="email" name="email" class="form-input" required aria-required="true" placeholder="correo@empresa.com">
+            <input type="email" id="email" name="email" class="form-input" required aria-required="true" placeholder="correo@empresa.com" autocomplete="email" spellcheck="false">
             <span class="form-error" id="email-error"></span>
           </div>
           <div class="form-group">
             <label class="form-label" for="telefono" data-translate="contactoTelefonoField">Teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" class="form-input" required aria-required="true" placeholder="(81) 0000-0000">
+            <input type="tel" id="telefono" name="telefono" class="form-input" required aria-required="true" placeholder="(81) 0000-0000" autocomplete="tel">
             <span class="form-error" id="telefono-error"></span>
           </div>
         </div>
@@ -729,7 +729,7 @@
         </div>
         <div class="form-group">
           <label class="form-label" for="mensaje" data-translate="contactoMensaje">Mensaje *</label>
-          <textarea id="mensaje" name="mensaje" class="form-input" rows="5" required aria-required="true" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+          <textarea id="mensaje" name="mensaje" class="form-input" rows="5" required aria-required="true" placeholder="Cuéntanos sobre tu proyecto…"></textarea>
           <span class="form-error" id="mensaje-error"></span>
         </div>
         <button type="submit" class="form-submit" data-translate="contactoEnviar">Enviar Mensaje</button>
@@ -743,7 +743,7 @@
 
       <div class="contacto__info-items">
         <div class="contacto__info-item">
-          <div class="contacto__info-icon"><i class="fas fa-phone"></i></div>
+          <div class="contacto__info-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-phone"></use></svg></div>
           <div>
             <p class="contacto__info-label" data-translate="contactoTelefono">Teléfono</p>
             <p class="contacto__info-value"><a href="tel:+528183277529">(81) 8327-7529</a></p>
@@ -751,7 +751,7 @@
           </div>
         </div>
         <div class="contacto__info-item">
-          <div class="contacto__info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contacto__info-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-envelope"></use></svg></div>
           <div>
             <p class="contacto__info-label" data-translate="contactoEmail">Email</p>
             <p class="contacto__info-value"><a href="mailto:cm_ventor@prodigy.net.mx">cm_ventor@prodigy.net.mx</a></p>
@@ -759,7 +759,7 @@
           </div>
         </div>
         <div class="contacto__info-item">
-          <div class="contacto__info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contacto__info-icon"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-map-marker-alt"></use></svg></div>
           <div>
             <p class="contacto__info-label" data-translate="contactoDireccion">Dirección</p>
             <p class="contacto__info-value">Puerto Vallarta 413, La Fe<br>San Nicolás de los Garza, N.L.</p>
@@ -793,50 +793,50 @@
           <div class="footer__logo">
             <img src="images/logotipo.jpg" alt="CM Ventor" class="footer__logo-img">
             <div>
-              <span class="footer__logo-name">CM Ventor</span>
+              <span class="footer__logo-name" translate="no">CM Ventor</span>
               <span class="footer__logo-sub">Torres de Enfriamiento</span>
             </div>
           </div>
           <p class="footer__desc">Especialistas en torres de enfriamiento con más de 30 años de experiencia, certificados por CTI y comprometidos con la calidad.</p>
           <div class="footer__social">
-            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-facebook"></use></svg></a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-linkedin"></use></svg></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-youtube"></use></svg></a>
           </div>
         </div>
 
         <div>
           <h4 class="footer__col-title">Servicios</h4>
           <ul class="footer__links">
-            <li><span class="footer__link" onclick="scrollToSection('servicios')">Instalación</span></li>
-            <li><span class="footer__link" onclick="scrollToSection('servicios')">Mantenimiento</span></li>
-            <li><span class="footer__link" onclick="scrollToSection('servicios')">Reparación</span></li>
-            <li><span class="footer__link" onclick="scrollToSection('servicios')">Instalaciones Eléctricas</span></li>
+            <li><button type="button" class="footer__link" onclick="scrollToSection('servicios')">Instalación</button></li>
+            <li><button type="button" class="footer__link" onclick="scrollToSection('servicios')">Mantenimiento</button></li>
+            <li><button type="button" class="footer__link" onclick="scrollToSection('servicios')">Reparación</button></li>
+            <li><button type="button" class="footer__link" onclick="scrollToSection('servicios')">Instalaciones Eléctricas</button></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer__col-title">Productos</h4>
           <ul class="footer__links">
-            <li><span class="footer__link" onclick="scrollToSection('productos')">Torres de Enfriamiento</span></li>
-            <li><span class="footer__link" onclick="scrollToSection('productos')">Motores</span></li>
-            <li><span class="footer__link" onclick="scrollToSection('productos')">Ventiladores</span></li>
-            <li><span class="footer__link" onclick="scrollToSection('productos')">Rellenos Enfriadores</span></li>
+            <li><button type="button" class="footer__link" onclick="scrollToSection('productos')">Torres de Enfriamiento</button></li>
+            <li><button type="button" class="footer__link" onclick="scrollToSection('productos')">Motores</button></li>
+            <li><button type="button" class="footer__link" onclick="scrollToSection('productos')">Ventiladores</button></li>
+            <li><button type="button" class="footer__link" onclick="scrollToSection('productos')">Rellenos Enfriadores</button></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer__col-title">Contacto</h4>
           <div class="footer__contact-item">
-            <i class="fas fa-phone"></i>
+            <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-phone"></use></svg>
             <span>(81) 8327-7529</span>
           </div>
           <div class="footer__contact-item">
-            <i class="fas fa-envelope"></i>
+            <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-envelope"></use></svg>
             <span>cm_ventor@prodigy.net.mx</span>
           </div>
           <div class="footer__contact-item">
-            <i class="fas fa-map-marker-alt"></i>
+            <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-map-marker-alt"></use></svg>
             <span>Puerto Vallarta 413, La Fe<br>San Nicolás de los Garza, N.L.</span>
           </div>
         </div>
@@ -858,7 +858,7 @@
        target="_blank"
        class="whatsapp-btn"
        aria-label="Contáctanos por WhatsApp">
-      <i class="fab fa-whatsapp"></i>
+      <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-whatsapp"></use></svg>
     </a>
   </div>
 
@@ -878,24 +878,16 @@
 
   <script src="js/script-v2.js"></script>
   <script>
-    // Header scroll effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 50);
-      document.getElementById('scrollToTop').classList.toggle('visible', window.scrollY > 400);
-    });
-
-    // Scroll animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-
-    // Form submit placeholder
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      alert('Mensaje enviado. Nos pondremos en contacto contigo en menos de 24 horas.');
-      e.target.reset();
+    // Scroll-triggered reveal animations
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const animatedEls = document.querySelectorAll('.animate-on-scroll');
+    if (prefersReducedMotion) {
+      animatedEls.forEach(el => el.classList.add('visible'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.12 });
+      animatedEls.forEach(el => revealObserver.observe(el));
     }
   </script>
 </body>

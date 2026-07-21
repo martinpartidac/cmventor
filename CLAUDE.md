@@ -3,7 +3,7 @@
 Sitio web corporativo de **CM Ventor S.A. de C.V.**, empresa de torres de enfriamiento industrial en San Nicolás de los Garza, N.L., México. Fundada en 1990, 30+ años de experiencia, certificada por CTI.
 
 **Repositorio:** https://github.com/martinpartidac/cmventor
-**Live:** https://martinpartidac.github.io/cmventor/
+**Live:** https://cmventor.com (dominio propio, activo) — también responde en https://martinpartidac.github.io/cmventor/
 
 ---
 
@@ -11,56 +11,71 @@ Sitio web corporativo de **CM Ventor S.A. de C.V.**, empresa de torres de enfria
 
 | Archivo | Descripción |
 |---|---|
-| `index.html` | **Página principal activa (V3 — rediseño editorial)** |
-| `index-v2.html` | Respaldo del diseño anterior |
-| `index-v3.html` | Copia del diseño V3 (mismo contenido que index.html) |
-| `css/styles-v3.css` | CSS del diseño activo |
-| `css/styles-v2.css` | CSS del diseño anterior (no usar) |
-| `js/script-v2.js` | JavaScript principal (modales, scroll, navegación) |
+| `index.html` | **Página principal activa (V4 — "plano técnico/datasheet")** |
+| `index-v4.html` | Copia idéntica de V4 (mismo contenido que index.html) |
+| `index-v3.html` | Respaldo de la V3 (rediseño editorial, Montserrat/Inter) con todos los fixes de accesibilidad/perf aplicados |
+| `index-v2.html`, `index-v1.html` | Versiones anteriores, no usar |
+| `css/styles-v4.css` | CSS del diseño activo (V4) |
+| `css/styles-v3.css` | CSS de la V3 (respaldo) |
+| `icons.svg` | Sprite propio con los 34 íconos usados (reemplaza a Font Awesome/CDN) |
+| `CNAME` | Contiene `cmventor.com` — activa el dominio personalizado en GitHub Pages, no borrar |
+| `js/script-v2.js` | JavaScript principal (modales, scroll, navegación, formulario) — compartido por V3 y V4 |
 | `js/translations.js` | Textos en español e inglés para el sistema bilingüe |
 
 ---
 
-## Diseño — Reglas importantes
+## Diseño — V4 (activa)
 
 ### Colores
-- **Azul primario:** `#1e40af` (`--blue`)
-- **Azul claro:** `#3b82f6` (`--blue-light`)
-- **Azul oscuro (navy):** `#0f172a` (`--navy`)
-- **Amarillo:** `#f59e0b` (`--yellow`) — **SOLO para botones CTA principales**
-- El amarillo NO debe usarse en íconos, líneas decorativas, badges ni hovers. Solo en `btn-primary` y el highlight del título del hero.
+- **Navy:** `#0a1628` (`--navy`)
+- **Cian (líneas técnicas):** `#38bdf8` (`--cyan` / `--blue-light`)
+- **Amarillo:** `#f5b400` (`--yellow`) — **SOLO para botones CTA principales**, nunca en íconos/decoración
+- **Blanco cálido:** `#fafaf7` (`--white`)
 
-### Concepto visual (V3)
-- Secciones alternadas oscuro/claro: hero (navy) → stats (azul) → empresa (blanco) → servicios (navy) → características (gris claro) → productos (navy-mid) → reconocimientos (blanco) → valores (gris claro) → recursos (blanco) → proyectos (navy) → clientes (blanco) → contacto (split blanco/navy) → footer (navy)
-- Servicios: lista editorial numerada (01–04), no cards
-- Contacto: split screen — formulario blanco izquierda, info oscura derecha
-- Tipografía: Montserrat (títulos, 800) + Inter (cuerpo)
+### Tipografía
+- **IBM Plex Sans** (títulos y cuerpo) + **IBM Plex Mono** (specs, números, datos tabulares)
+
+### Concepto visual
+- Estética de "plano técnico / ficha de datos": textura sutil de grid cian sobre secciones oscuras (`.blueprint-grid`)
+- Hero: layout dividido (texto izquierda, diagrama SVG de una torre de enfriamiento a la derecha que **se dibuja solo al cargar** vía `stroke-dashoffset`, respeta `prefers-reduced-motion`)
+- Servicios: códigos tipo industrial (`INST`/`ELEC`/`MANT`/`SOLD`) en vez de numeración decorativa 01-04
+- Specs de producto: filas monospace tipo datasheet, no pastillas
+- Números "fantasma" grandes y translúcidos repetidos como hilo visual (Empresa, Stats bar, Proyectos-stats) — el "30" de Empresa es el elemento de firma
+- Recursos: cards con esquina doblada (efecto documento físico)
+- Motion: solo fundido simple en scroll (`.animate-on-scroll`), sin slide — el único momento de animación fuerte es el diagrama del hero
+- Íconos: sprite propio `icons.svg` con `<svg class="icon"><use href="icons.svg#icon-x"></use></svg>`, NO usar Font Awesome/CDN
+
+### V3 (respaldo, `index-v3.html`)
+Rediseño editorial anterior — Montserrat/Inter, azul `#1e40af`, servicios numerados 01-04, specs en pastillas. Ya no es la versión activa pero se mantiene actualizada con los mismos fixes de accesibilidad/tipografía/íconos.
 
 ---
 
-## Estructura de secciones (index.html)
+## Estructura de secciones (igual en V3 y V4, cambia el estilo)
 
-1. **Hero** — foto de torre de fondo con overlay oscuro, título grande, 2 CTAs
-2. **Stats bar** — azul, números 30+ / 500+ / 100% / 14+
+1. **Hero** — V4: layout dividido con diagrama SVG; V3: foto de torre con overlay
+2. **Stats bar** — números 30+ / 500+ / 100% / 14+
 3. **Empresa** — split asimétrico, número "30" decorativo, historia, misión/visión/cert/seguridad
-4. **Servicios** — lista editorial oscura 01-04
-5. **Características** — 6 cards en grid sobre gris claro
-6. **Productos** — 7 cards oscuras (Torres, Motores, Ventiladores, Rellenos, Espreas, Louvers, Vibroswitch)
+4. **Servicios** — V4: códigos INST/ELEC/MANT/SOLD; V3: numeración 01-04
+5. **Características** — 6 cards en grid
+6. **Productos** — 7 cards (Torres, Motores, Ventiladores, Rellenos, Espreas, Louvers, Vibroswitch)
 7. **Reconocimientos** — CTI + Ternium cero accidentes
 8. **Valores** — 5 valores en grid
-9. **Recursos** — 3 cards (1 disponible: Presentación Corporativa PDF; 2 próximamente)
+9. **Recursos** — 3 cards (1 disponible: Presentación Corporativa PDF; 2 próximamente — pendiente)
 10. **Proyectos** — 3 clientes (Ternium, METALSA, TEKSID) + stats row grande
 11. **Clientes** — 14 logos en strip con grayscale/hover
 12. **Contacto** — split screen con formulario + info + horarios
-13. **Footer** — 4 columnas sobre navy
+13. **Footer** — 4 columnas
 
 ---
 
 ## Pendientes de contenido
 
+- **⚠️ El formulario de contacto no envía nada a ningún lado** — `initContactForm` en `js/script-v2.js` solo simula el envío (`setTimeout` + `console.log`), no hay integración real con backend/correo. Cualquier mensaje que llene un cliente se pierde. Prioridad alta: conectar a un servicio real (Formspree, EmailJS, endpoint propio, etc.)
 - **Testimoniales / citas de clientes** — pedirle a contactos en Ternium, METALSA y TEKSID una frase corta sobre CM Ventor. Agregarlas en la sección de Proyectos Destacados.
+- **Fotos reales de proyectos instalados** — la sección Proyectos solo tiene logos + listas de texto, sin fotos de instalaciones reales
 - **Catálogo de Productos PDF** — marcado como "Próximamente" en Biblioteca de Recursos
 - **Guías de Mantenimiento PDF** — marcado como "Próximamente" en Biblioteca de Recursos
+- **Datos estructurados (schema.org)** — no hay markup de Organization/LocalBusiness/Product para SEO
 
 ---
 
@@ -108,7 +123,7 @@ git push origin main
 ```
 
 GitHub Pages tarda **1-2 minutos** en reflejar los cambios después del push.
-El sitio live es: **https://martinpartidac.github.io/cmventor/**
+El sitio live es: **https://cmventor.com** (también responde en https://martinpartidac.github.io/cmventor/)
 
 Para ver cambios localmente sin subir, abrir directamente el archivo:
 ```
@@ -127,42 +142,30 @@ open /Users/luismartinpartida/cmventor/index.html
 
 ---
 
-## Dominio y hosting — situación actual
+## Dominio y hosting — situación actual (resuelta, 21-jul-2026)
 
-### Dominio: cmventor.com
-- El dominio **cmventor.com** existía y estaba activo antes
-- Estaba alojado en **IONOS** (antes 1&1), IP del servidor: `74.208.253.230`
-- El panel de control era **Plesk**
-- La empresa que administraba todo era **Asociados Web** — contacto: `jaime.lopez@asociadosweb.net`
-- El backup del sitio anterior está en: `/Users/luismartinpartida/Documents/backup_cmventor.com_2602252048`
+### Estado actual — ✅ funcionando
+- El dominio **cmventor.com** ya apunta al sitio nuevo y seguro en GitHub Pages, con SSL válido
+- Nameservers: `carrera.ns.cloudflare.com` / `eoin.ns.cloudflare.com` (Cloudflare, plan free)
+- El registro **A** apunta a las 4 IPs de GitHub Pages (`185.199.108/109/110/111.153`), en modo DNS-only (sin proxy naranja)
+- El **CNAME** `www` → `martinpartidac.github.io`
+- Archivo `CNAME` en el repo (contiene `cmventor.com`) — es lo que activa el dominio personalizado en GitHub Pages, **no borrar**
+- El **registro del dominio** (WHOIS) sigue estando en **GoDaddy** — no en Cloudflare todavía. Pendiente sin urgencia: usar el código EPP que se obtuvo para transferir el registro a una cuenta propia de Cloudflare y dejar de depender de la cuenta de GoDaddy de terceros
 
-### Estado actual
-- El sitio **está publicado en GitHub Pages**: https://martinpartidac.github.io/cmventor/
-- El dominio `cmventor.com` aún **no está conectado** al nuevo sitio
-- Para conectar el dominio a GitHub Pages se necesita el código EPP/AuthCode de IONOS
+### Correo @cmventor.com — ✅ funcionando vía IONOS
+- El correo (~15 cuentas del personal) sigue alojado en **IONOS Mail**, en una cuenta de terceros (ligada a quien administraba la página antes / posiblemente Asociados Web)
+- Registros **MX** en Cloudflare apuntando de vuelta a IONOS: `mx00.ionos.mx` y `mx01.ionos.mx`, ambos prioridad 10
+- **Riesgo pendiente**: esa cuenta de IONOS no es propiedad de CM Ventor — a futuro conviene migrar a un proveedor propio (Zoho Mail recomendado, ~$60 USD/mes para 15 cuentas, con migración IMAP) para no depender de terceros para el correo del negocio
 
-### Para recuperar el dominio
-1. Contactar a **jaime.lopez@asociadosweb.net** y pedir el código EPP de `cmventor.com`
-2. O contactar a IONOS directamente con datos de la empresa para recuperar acceso
-3. Una vez con el código EPP, transferir el dominio a una cuenta propia (Namecheap, GoDaddy o el mismo IONOS)
-4. Apuntar el dominio a GitHub Pages siguiendo: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+### Historial de la disputa (abril–julio 2026)
+- El dominio estaba originalmente en IONOS, administrado por **Asociados Web** (jaime.lopez@asociadosweb.net), quien fue evasivo al pedir el código EPP
+- El sitio WordPress anterior estaba **comprometido con malware** (tarea cron descargando de pastebin.com cada minuto) — motivo original de la migración a un sitio estático
+- 17-jul-2026: el dominio se transfirió de IONOS a **GoDaddy** (por vías que no quedaron del todo claras)
+- 20/21-jul-2026: un contacto de WhatsApp ("Soporte", +52 81 2593 4034, quien administraba la página antes) cooperó tras un pago de $1,000 MXN — cambió los nameservers a Cloudflare y ayudó a restaurar el correo
+- Detalle completo de esta historia en la memoria de Claude (`project_cmventor.md`), no hace falta repetirlo aquí salvo para referencia rápida
 
-### Situación con Asociados Web (abril 2026)
-- Se les contactó pidiendo acceso a IONOS o el código EPP
-- Respondieron que **no pueden dar acceso a IONOS** y preguntaron cómo teníamos su correo
-- Están siendo evasivos — **no pedir acceso a IONOS**, solo pedir el código EPP
-- El código EPP no da acceso a ninguna cuenta, solo sirve para transferir el dominio — están obligados a darlo
-- Si siguen negándose, el cliente (dueño de CM Ventor) debe contactar a **IONOS directamente** como titular del dominio y solicitarlo sin pasar por Asociados Web
-
-### Correos @cmventor.com
-- Los correos anteriores **no se pudieron recuperar** — el backup de email estaba vacío
-- Una vez recuperado el dominio, opciones para correos:
-  - **Google Workspace** (~$6 USD/mes/usuario) — la más profesional
-  - **Zoho Mail** (gratis hasta 5 usuarios) — buena opción económica
-  - **IONOS Mail** (~$1-3 USD/mes) — si se deja el dominio en IONOS
-
-### Advertencia de seguridad
-El sitio WordPress anterior estaba **comprometido con malware** — tenía una tarea programada que descargaba código desde pastebin.com cada minuto. El nuevo sitio en GitHub Pages no tiene este problema.
+### Advertencia de seguridad (ya resuelta)
+El sitio WordPress anterior estaba comprometido con malware. El sitio actual en GitHub Pages es estático (sin backend, sin WordPress) y no tiene ese problema.
 
 ---
 

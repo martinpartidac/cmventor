@@ -9,11 +9,11 @@
   <meta property="og:description" content="Más de 30 años fabricando y manteniendo torres de enfriamiento certificadas por CTI en toda la República Mexicana.">
   <meta property="og:image" content="images/logotipo.jpg">
   <link rel="icon" type="image/jpeg" href="images/logotipo.jpg">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#0a1628">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles-v3.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-v4.css">
   <script src="js/translations.js"></script>
 </head>
 <body>
@@ -70,13 +70,8 @@
   </header>
 
   <!-- HERO -->
-  <section id="inicio" class="hero">
-    <div class="hero__bg">
-      <img src="images/torre.webp" alt="" class="hero__bg-img" loading="eager" fetchpriority="high">
-      <div class="hero__bg-overlay"></div>
-    </div>
-
-    <div class="container">
+  <section id="inicio" class="hero blueprint-grid">
+    <div class="container hero__grid">
       <div class="hero__content">
         <span class="hero__eyebrow">
           <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-certificate"></use></svg>
@@ -119,6 +114,28 @@
           </div>
         </div>
       </div>
+
+      <div class="hero__diagram" aria-hidden="true">
+        <svg class="hero__diagram-svg" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg">
+          <path pathLength="100" style="--draw-order:0" d="M70,400 L70,160 L110,80 L210,80 L250,160 L250,400" />
+          <path pathLength="100" style="--draw-order:1" d="M50,400 L270,400" />
+          <path pathLength="100" style="--draw-order:2" d="M90,205 L110,215 L130,205 L150,215 L170,205 L190,215 L210,205 L230,215" />
+          <path pathLength="100" style="--draw-order:3" d="M90,235 L110,245 L130,235 L150,245 L170,235 L190,245 L210,235 L230,245" />
+          <path pathLength="100" style="--draw-order:4" d="M90,265 L110,275 L130,265 L150,275 L170,265 L190,275 L210,265 L230,275" />
+          <path pathLength="100" style="--draw-order:5" d="M90,295 L110,305 L130,295 L150,305 L170,295 L190,305 L210,295 L230,305" />
+          <circle pathLength="100" style="--draw-order:6" cx="160" cy="80" r="26" />
+          <path pathLength="100" style="--draw-order:7" d="M160,80 L160,58" />
+          <path pathLength="100" style="--draw-order:7" d="M160,80 L141,94" />
+          <path pathLength="100" style="--draw-order:7" d="M160,80 L179,94" />
+          <path pathLength="100" style="--draw-order:8" d="M140,54 L140,26" />
+          <path pathLength="100" style="--draw-order:9" d="M160,50 L160,18" />
+          <path pathLength="100" style="--draw-order:8" d="M180,54 L180,26" />
+          <path pathLength="100" style="--draw-order:10" d="M290,80 L290,400 M282,80 L298,80 M282,400 L298,400" />
+          <circle class="hero__diagram-fill" style="--draw-order:11" cx="112" cy="343" r="3.5" />
+          <circle class="hero__diagram-fill" style="--draw-order:12" cx="160" cy="352" r="3.5" />
+          <circle class="hero__diagram-fill" style="--draw-order:13" cx="208" cy="343" r="3.5" />
+        </svg>
+      </div>
     </div>
 
     <div class="hero__quick-contact">
@@ -144,18 +161,22 @@
     <div class="container">
       <div class="stats-bar__grid">
         <div class="stats-bar__item">
+          <span class="stats-bar__ghost" aria-hidden="true">30+</span>
           <span class="stats-bar__number">30+</span>
           <span class="stats-bar__label">Años de Experiencia</span>
         </div>
         <div class="stats-bar__item">
+          <span class="stats-bar__ghost" aria-hidden="true">500+</span>
           <span class="stats-bar__number">500+</span>
           <span class="stats-bar__label">Proyectos Completados</span>
         </div>
         <div class="stats-bar__item">
+          <span class="stats-bar__ghost" aria-hidden="true">100%</span>
           <span class="stats-bar__number">100%</span>
           <span class="stats-bar__label">Satisfacción del Cliente</span>
         </div>
         <div class="stats-bar__item">
+          <span class="stats-bar__ghost" aria-hidden="true">14+</span>
           <span class="stats-bar__number">14+</span>
           <span class="stats-bar__label">Clientes Industriales</span>
         </div>
@@ -249,7 +270,7 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section id="servicios" class="servicios">
+  <section id="servicios" class="servicios blueprint-grid">
     <div class="container">
       <div class="servicios__header">
         <div>
@@ -263,7 +284,7 @@
 
       <div class="servicios__list">
         <div class="servicios__item animate-on-scroll">
-          <span class="servicios__number">01</span>
+          <span class="servicios__number">INST</span>
           <div class="servicios__item-body">
             <h3 class="servicios__item-title" data-translate="servicio1Title">Instalación y Reparación</h3>
             <p class="servicios__item-desc" data-translate="servicio1Desc">
@@ -280,7 +301,7 @@
         </div>
 
         <div class="servicios__item animate-on-scroll">
-          <span class="servicios__number">02</span>
+          <span class="servicios__number">ELEC</span>
           <div class="servicios__item-body">
             <h3 class="servicios__item-title" data-translate="servicio2Title">Instalaciones Eléctricas</h3>
             <p class="servicios__item-desc" data-translate="servicio2Desc">
@@ -297,7 +318,7 @@
         </div>
 
         <div class="servicios__item animate-on-scroll">
-          <span class="servicios__number">03</span>
+          <span class="servicios__number">MANT</span>
           <div class="servicios__item-body">
             <h3 class="servicios__item-title" data-translate="servicio3Title">Mantenimiento Especializado</h3>
             <p class="servicios__item-desc" data-translate="servicio3Desc">
@@ -314,7 +335,7 @@
         </div>
 
         <div class="servicios__item animate-on-scroll">
-          <span class="servicios__number">04</span>
+          <span class="servicios__number">SOLD</span>
           <div class="servicios__item-body">
             <h3 class="servicios__item-title" data-translate="servicio4Title">Pailería y Soldadura</h3>
             <p class="servicios__item-desc" data-translate="servicio4Desc">
@@ -378,7 +399,7 @@
   </section>
 
   <!-- PRODUCTOS -->
-  <section id="productos" class="productos">
+  <section id="productos" class="productos blueprint-grid">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Tecnología CTI</p>
@@ -596,7 +617,7 @@
   </section>
 
   <!-- PROYECTOS -->
-  <section id="proyectos" class="proyectos">
+  <section id="proyectos" class="proyectos blueprint-grid">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Casos de Éxito</p>
@@ -647,14 +668,17 @@
 
       <div class="proyectos-stats">
         <div class="proyectos-stat">
+          <span class="proyectos-stat__ghost" aria-hidden="true">30+</span>
           <span class="proyectos-stat__number">30+</span>
           <span class="proyectos-stat__label">Años de Experiencia</span>
         </div>
         <div class="proyectos-stat">
+          <span class="proyectos-stat__ghost" aria-hidden="true">500+</span>
           <span class="proyectos-stat__number">500+</span>
           <span class="proyectos-stat__label">Proyectos Completados</span>
         </div>
         <div class="proyectos-stat">
+          <span class="proyectos-stat__ghost" aria-hidden="true">100%</span>
           <span class="proyectos-stat__number">100%</span>
           <span class="proyectos-stat__label">Satisfacción del Cliente</span>
         </div>
@@ -786,7 +810,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer blueprint-grid">
     <div class="container">
       <div class="footer__grid">
         <div>
